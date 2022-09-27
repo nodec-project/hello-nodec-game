@@ -1,5 +1,7 @@
 # hello-nodec
 
+![](./gallery/screenshot.png)
+
 ## Quick Start
 
 1. Clone this repository.
@@ -52,3 +54,5 @@
 
      for example: `C:/Users/{your-name}/{path-to-project}/hello-nodec/nodec/apps/hello-nodec/resources`
 
+5. Enjoy
+   ![](./gallery/screenshot.png)
