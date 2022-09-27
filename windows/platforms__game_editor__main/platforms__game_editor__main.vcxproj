@@ -157,6 +157,7 @@
   <ItemGroup>
     <ClInclude Include="..\..\nodec\platforms\projects\game_editor\targets\windows\main\Application.hpp" />
     <ClInclude Include="..\..\nodec\platforms\projects\game_editor\targets\windows\main\Editor.hpp" />
+    <ClInclude Include="..\..\nodec\platforms\projects\game_editor\targets\windows\main\EditorConfig.hpp" />
     <ClInclude Include="..\..\nodec\platforms\projects\game_editor\targets\windows\main\EditorWindows\AssetImportWindow.hpp" />
     <ClInclude Include="..\..\nodec\platforms\projects\game_editor\targets\windows\main\EditorWindows\ControlWindow.hpp" />
     <ClInclude Include="..\..\nodec\platforms\projects\game_editor\targets\windows\main\EditorWindows\SceneSerializationWindow.hpp" />

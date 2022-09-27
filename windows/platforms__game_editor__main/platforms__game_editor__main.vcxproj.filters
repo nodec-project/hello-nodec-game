@@ -39,6 +39,9 @@
     <ClInclude Include="..\..\nodec\platforms\projects\game_editor\targets\windows\main\ResourceImporter.hpp">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\nodec\platforms\projects\game_editor\targets\windows\main\EditorConfig.hpp">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\nodec\platforms\projects\game_editor\targets\windows\main\Editor.cpp">

@@ -32,4 +32,23 @@
    * macOS
      * Not supported yet.
 
-4. Update the resource path.
+4. Add your editor config file.
+   * Windows
+     * location: [`windows/apps__hello_nodec`](windows/apps__hello_nodec/)
+
+   <b>`editor-config.json`</b>
+
+   ```json
+   {
+       "config": {
+           "resource_path": "{path to the resource folder}"
+       }
+   }
+   ```
+   
+   * <b>resource_path</b>
+  
+     The path to the [`apps/hello-nodec/resources`](nodec/apps/hello-nodec/resources).
+
+     for example: `C:/Users/{your-name}/{path-to-project}/hello-nodec/nodec/apps/hello-nodec/resources`
+

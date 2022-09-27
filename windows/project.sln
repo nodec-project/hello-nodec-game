@@ -15,6 +15,11 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "platforms__game_editor__mai
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "platforms__game_engine__common", "platforms__game_engine__common\platforms__game_engine__common.vcxproj", "{CD884FA1-137C-428F-A299-9920B8333CCD}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ソリューション項目", "ソリューション項目", "{D002F809-DA31-4F75-AC74-B798A77DA93E}"
+	ProjectSection(SolutionItems) = preProject
+		..\nodec\.clang-format = ..\nodec\.clang-format
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
