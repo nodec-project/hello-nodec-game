@@ -29,5 +29,8 @@
     <ClInclude Include="..\..\nodec\apps\hello-nodec\src\light_particle.hpp">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\nodec\apps\hello-nodec\src\object_spawn_system.hpp">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

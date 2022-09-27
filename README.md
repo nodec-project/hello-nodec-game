@@ -15,10 +15,10 @@
 
 2. Build dependencies.
    * assimp
-     * [assimp](nodec/modules/assimp/)
+     * `nodec/modules/assimp`
   
    * DirectXTex
-     * [DirectXTex](nodec/platforms/sdks/DirectXTex/)
+     * `nodec/platforms/sdks/DirectXTex/`
      
 
 3. Open the project according to the desired platform.
@@ -48,7 +48,7 @@
    
    * <b>resource_path</b>
   
-     The path to the [`apps/hello-nodec/resources`](nodec/apps/hello-nodec/resources/).
+     The path to the `nodec/apps/hello-nodec/resources`.
 
      for example: `C:/Users/{your-name}/{path-to-project}/hello-nodec/nodec/apps/hello-nodec/resources`
 

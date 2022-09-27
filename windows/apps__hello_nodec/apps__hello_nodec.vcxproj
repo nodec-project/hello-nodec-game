@@ -160,6 +160,7 @@
     <ClInclude Include="..\..\nodec\apps\hello-nodec\src\app.hpp" />
     <ClInclude Include="..\..\nodec\apps\hello-nodec\src\camera_controller.hpp" />
     <ClInclude Include="..\..\nodec\apps\hello-nodec\src\light_particle.hpp" />
+    <ClInclude Include="..\..\nodec\apps\hello-nodec\src\object_spawn_system.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
