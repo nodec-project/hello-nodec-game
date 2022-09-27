@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ソース ファイル">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="ヘッダー ファイル">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="リソース ファイル">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\include\Audio\AudioPlatform.hpp">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\include\Audio\SouceVoice.hpp">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\include\Engine.hpp">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\include\Exceptions.hpp">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\include\Graphics\ConstantBuffer.hpp">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\include\Graphics\DxgiInfoLogger.hpp">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\include\Graphics\GeometryBuffer.hpp">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\include\Graphics\Graphics.hpp">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\include\Graphics\IndexBuffer.hpp">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\include\Graphics\InputLayout.hpp">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\include\Graphics\PixelShader.hpp">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\include\Graphics\RasterizerState.hpp">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\include\Graphics\SamplerState.hpp">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\include\Graphics\TextureView.hpp">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\include\Graphics\VertexBuffer.hpp">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\include\Graphics\VertexShader.hpp">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\include\ImguiManager.hpp">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\include\imgui_impl_dx11.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\include\imgui_impl_win32.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\include\Logging.hpp">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\include\Rendering\MaterialBackend.hpp">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\include\Rendering\MeshBackend.hpp">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\include\Rendering\RenderingSystem.hpp">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\include\Rendering\SceneRenderer.hpp">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\include\Rendering\ShaderBackend.hpp">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\include\Rendering\TextureBackend.hpp">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\include\Resources\ResourceLoader.hpp">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\include\Resources\ResourcesModuleBackend.hpp">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\include\SceneAudio\AudioClipBackend.hpp">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\include\SceneAudio\AudioSourceActivity.hpp">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\include\SceneAudio\SceneAudioSystem.hpp">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\include\SceneSerialization\SceneSerializationModuleBackend.hpp">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\include\ScreenHandler.hpp">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\include\WinDesktopApplication.hpp">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\include\Window.hpp">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\src\Graphics\DxgiInfoLogger.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\src\Graphics\Graphics.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\src\imgui_impl_dx11.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\src\imgui_impl_win32.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\src\Logging.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\src\Window.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\src\Rendering\SceneRenderer.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

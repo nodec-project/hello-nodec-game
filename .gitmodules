@@ -1,0 +1,3 @@
+[submodule "nodec"]
+	path = nodec
+	url = https://github.com/ContentsViewer/nodec.git
