@@ -61,21 +61,25 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
     <Import Project="..\platforms__game_engine__common\game_engine_common_interface.props" />
     <Import Project="..\platforms__game_editor__main\game_editor_interface.props" />
+    <Import Project="shader.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
     <Import Project="..\platforms__game_engine__common\game_engine_common_interface.props" />
     <Import Project="..\platforms__game_editor__main\game_editor_interface.props" />
+    <Import Project="shader.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
     <Import Project="..\platforms__game_engine__common\game_engine_common_interface.props" />
     <Import Project="..\platforms__game_editor__main\game_editor_interface.props" />
+    <Import Project="shader.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
     <Import Project="..\platforms__game_engine__common\game_engine_common_interface.props" />
     <Import Project="..\platforms__game_editor__main\game_editor_interface.props" />
+    <Import Project="shader.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -161,6 +165,20 @@
     <ClInclude Include="..\..\nodec\apps\hello-nodec\src\camera_controller.hpp" />
     <ClInclude Include="..\..\nodec\apps\hello-nodec\src\light_particle.hpp" />
     <ClInclude Include="..\..\nodec\apps\hello-nodec\src\object_spawn_system.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="..\..\nodec\apps\hello-nodec\resources\org.nodec-rendering.essentials\shaders\image\pixel.hlsl">
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">PSMain</EntryPointName>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">PSMain</EntryPointName>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
+    </FxCompile>
+    <FxCompile Include="..\..\nodec\apps\hello-nodec\resources\org.nodec-rendering.essentials\shaders\image\vertex.hlsl">
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">VSMain</EntryPointName>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vertex</ShaderType>
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">VSMain</EntryPointName>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Vertex</ShaderType>
+    </FxCompile>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
