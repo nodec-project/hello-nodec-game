@@ -42,13 +42,13 @@
 
    ```json
    {
-       "font": {
-           "path": "{path to the font path}",
-           "pixel_size": 18.0
-       },
        "config": {
+           "font": {
+               "path": "{path to the font path}",
+               "pixel_size": 18.0
+           },
            "resource_path": "{path to the resource folder}"
-       },
+       }
    }
    ```
    
