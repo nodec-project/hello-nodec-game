@@ -35,6 +35,9 @@
     <ClInclude Include="..\..\nodec\apps\hello-nodec\src\object_spawn_system.hpp">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\nodec\apps\hello-nodec\src\scene_transition_system.hpp">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="..\..\nodec\apps\hello-nodec\resources\org.nodec-rendering.essentials\shaders\image\pixel.hlsl">

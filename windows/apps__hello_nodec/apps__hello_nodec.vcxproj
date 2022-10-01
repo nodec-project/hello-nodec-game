@@ -165,6 +165,7 @@
     <ClInclude Include="..\..\nodec\apps\hello-nodec\src\camera_controller.hpp" />
     <ClInclude Include="..\..\nodec\apps\hello-nodec\src\light_particle.hpp" />
     <ClInclude Include="..\..\nodec\apps\hello-nodec\src\object_spawn_system.hpp" />
+    <ClInclude Include="..\..\nodec\apps\hello-nodec\src\scene_transition_system.hpp" />
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="..\..\nodec\apps\hello-nodec\resources\org.nodec-rendering.essentials\shaders\image\pixel.hlsl">
