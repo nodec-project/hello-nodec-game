@@ -6,7 +6,7 @@
 
 1. Clone this repository.
    ```sh
-   git clone --recursive {url}
+   git clone --recursive https://github.com/ContentsViewer/hello-nodec.git
    ```
 
    If you have already clone it without submodule clones, clone submodule recursively.
