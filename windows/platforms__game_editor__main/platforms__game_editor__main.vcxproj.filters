@@ -50,5 +50,8 @@
     <ClCompile Include="..\..\nodec\platforms\projects\game_editor\targets\windows\main\WinMain.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\nodec\platforms\projects\game_editor\targets\windows\main\InspectorGUI\InspectorGUI.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

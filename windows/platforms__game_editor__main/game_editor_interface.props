@@ -5,7 +5,7 @@
   <PropertyGroup />
   <ItemDefinitionGroup>
     <ClCompile>
-      <AdditionalIncludeDirectories>$(SolutionDir)..\nodec\modules\imgui\include;$(SolutionDir)..\nodec\modules\imwindows\include;$(SolutionDir)..\nodec\modules\imessentials\include;$(SolutionDir)..\nodec\modules\nodec_scene_editor\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\nodec\modules\imgui\include;$(SolutionDir)..\nodec\modules\imwindows\include;$(SolutionDir)..\nodec\modules\imessentials\include;$(SolutionDir)..\nodec\modules\nodec_scene_editor\include;$(SolutionDir)..\nodec\modules\imguizmo\ImGuizmo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup />

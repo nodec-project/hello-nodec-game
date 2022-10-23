@@ -167,7 +167,22 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\nodec\platforms\projects\game_editor\targets\windows\main\Editor.cpp" />
+    <ClCompile Include="..\..\nodec\platforms\projects\game_editor\targets\windows\main\InspectorGUI\InspectorGUI.cpp" />
     <ClCompile Include="..\..\nodec\platforms\projects\game_editor\targets\windows\main\WinMain.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\modules__imelements\modules__imelements.vcxproj">
+      <Project>{8492c4cc-c785-4c6d-8506-1ba07cc0f680}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\modules__imguizmo\modules__imguizmo.vcxproj">
+      <Project>{7d0f7b59-cd77-4cbc-835d-6882569c0ed3}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\modules__imgui\modules__imgui.vcxproj">
+      <Project>{ce2a67e7-ebab-4c9a-b602-d7f77983ec71}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\nodec\nodec.vcxproj">
+      <Project>{fff84f6f-987c-4fda-9be1-34c38f3c428e}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
