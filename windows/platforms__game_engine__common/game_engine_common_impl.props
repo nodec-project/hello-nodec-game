@@ -5,7 +5,8 @@
   <PropertyGroup />
   <ItemDefinitionGroup>
     <ClCompile>
-      <AdditionalIncludeDirectories>$(SolutionDir)..\nodec\platforms\projects\game_engine\targets\windows\common\include;$(SolutionDir)..\nodec\platforms\sdks\DirectXTex\DirectXTex\DirectXTex;$(SolutionDir)..\nodec\modules\imgui\include;$(SolutionDir)..\nodec\platforms\sdks\freetype\freetype-windows-binaries\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\nodec\platforms\projects\game_engine\targets\windows\common\include;$(SolutionDir)..\nodec\platforms\sdks\DirectXTex\DirectXTex\DirectXTex;$(SolutionDir)..\nodec\modules\imgui\include;$(SolutionDir)..\nodec\platforms\sdks\freetype\freetype-windows-binaries\include;$(SolutionDir)..\nodec\platforms\sdks\bullet3\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BT_THREADSAFE=1;BT_USE_DOUBLE_PRECISION;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup />

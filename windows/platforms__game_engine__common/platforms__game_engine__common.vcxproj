@@ -119,8 +119,8 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <Lib>
-      <AdditionalLibraryDirectories>$(SolutionDir)..\nodec\platforms\sdks\DirectXTex\DirectXTex\DirectXTex\Bin\Desktop_2022\x64\Debug;$(SolutionDir)..\nodec\platforms\sdks\freetype\freetype-windows-binaries\release static\vs2015-2022\win64</AdditionalLibraryDirectories>
-      <AdditionalDependencies>DirectXTex.lib;freetype.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\nodec\platforms\sdks\DirectXTex\DirectXTex\DirectXTex\Bin\Desktop_2022\x64\Debug;$(SolutionDir)..\nodec\platforms\sdks\freetype\freetype-windows-binaries\release static\vs2015-2022\win64;$(SolutionDir)..\nodec\platforms\sdks\bullet3\bin</AdditionalLibraryDirectories>
+      <AdditionalDependencies>DirectXTex.lib;freetype.lib;LinearMath_vs2010_x64_debug.lib;BulletDynamics_vs2010_x64_debug.lib;BulletCollision_vs2010_x64_debug.lib</AdditionalDependencies>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -140,7 +140,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <Lib>
-      <AdditionalLibraryDirectories>$(SolutionDir)..\nodec\platforms\sdks\DirectXTex\DirectXTex\DirectXTex\Bin\Desktop_2022\x64\Release;$(SolutionDir)..\nodec\platforms\sdks\freetype\freetype-windows-binaries\release static\vs2015-2022\win64</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\nodec\platforms\sdks\DirectXTex\DirectXTex\DirectXTex\Bin\Desktop_2022\x64\Release;$(SolutionDir)..\nodec\platforms\sdks\freetype\freetype-windows-binaries\release static\vs2015-2022\win64;$(SolutionDir)..\nodec\platforms\sdks\bullet3\bin</AdditionalLibraryDirectories>
       <AdditionalDependencies>DirectXTex.lib;freetype.lib</AdditionalDependencies>
     </Lib>
   </ItemDefinitionGroup>
@@ -165,6 +165,7 @@
     <ClInclude Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\include\imgui_impl_dx11.h" />
     <ClInclude Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\include\imgui_impl_win32.h" />
     <ClInclude Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\include\Logging.hpp" />
+    <ClInclude Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\include\Physics\Physics.hpp" />
     <ClInclude Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\include\Rendering\MaterialBackend.hpp" />
     <ClInclude Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\include\Rendering\MeshBackend.hpp" />
     <ClInclude Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\include\Rendering\RenderingSystem.hpp" />
