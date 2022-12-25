@@ -113,6 +113,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -167,6 +168,7 @@
     <ClInclude Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\include\Logging.hpp" />
     <ClInclude Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\include\Physics\PhysicsSystemBackend.hpp" />
     <ClInclude Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\include\Physics\RigidBodyActivity.hpp" />
+    <ClInclude Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\include\Physics\RigidBodyBackend.hpp" />
     <ClInclude Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\include\Rendering\MaterialBackend.hpp" />
     <ClInclude Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\include\Rendering\MeshBackend.hpp" />
     <ClInclude Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\include\Rendering\RenderingSystem.hpp" />
@@ -191,6 +193,8 @@
     <ClCompile Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\src\Logging.cpp" />
     <ClCompile Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\src\Physics\PhysicsSystemBackend.cpp" />
     <ClCompile Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\src\Rendering\SceneRenderer.cpp" />
+    <ClCompile Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\src\SceneAudio\SceneAudioSystem.cpp" />
+    <ClCompile Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\src\SceneSerialization\SceneSerializationModuleBackend.cpp" />
     <ClCompile Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\src\Window.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

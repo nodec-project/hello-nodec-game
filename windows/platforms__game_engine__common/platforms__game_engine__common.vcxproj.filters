@@ -123,6 +123,9 @@
     <ClInclude Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\include\Physics\PhysicsSystemBackend.hpp">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\include\Physics\RigidBodyBackend.hpp">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\include\Physics\RigidBodyActivity.hpp">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
@@ -150,6 +153,12 @@
       <Filter>ソース ファイル</Filter>
     </ClCompile>
     <ClCompile Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\src\Physics\PhysicsSystemBackend.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\src\SceneAudio\SceneAudioSystem.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\src\SceneSerialization\SceneSerializationModuleBackend.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>
