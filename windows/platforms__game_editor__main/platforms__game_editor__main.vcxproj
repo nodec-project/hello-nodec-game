@@ -168,7 +168,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\nodec\platforms\projects\game_editor\targets\windows\main\Editor.cpp" />
+    <ClCompile Include="..\..\nodec\platforms\projects\game_editor\targets\windows\main\EditorWindows\SceneViewWindow.cpp" />
     <ClCompile Include="..\..\nodec\platforms\projects\game_editor\targets\windows\main\InspectorGUI\InspectorGUI.cpp" />
+    <ClCompile Include="..\..\nodec\platforms\projects\game_editor\targets\windows\main\ResourceExporter.cpp" />
     <ClCompile Include="..\..\nodec\platforms\projects\game_editor\targets\windows\main\WinMain.cpp" />
   </ItemGroup>
   <ItemGroup>
