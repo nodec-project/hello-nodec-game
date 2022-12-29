@@ -169,6 +169,7 @@
     <ClInclude Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\include\Physics\PhysicsSystemBackend.hpp" />
     <ClInclude Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\include\Physics\RigidBodyActivity.hpp" />
     <ClInclude Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\include\Physics\RigidBodyBackend.hpp" />
+    <ClInclude Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\include\Physics\RigidBodyMotionState.hpp" />
     <ClInclude Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\include\Rendering\MaterialBackend.hpp" />
     <ClInclude Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\include\Rendering\MeshBackend.hpp" />
     <ClInclude Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\include\Rendering\RenderingSystem.hpp" />
@@ -186,6 +187,7 @@
     <ClInclude Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\include\Window.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\src\Engine.cpp" />
     <ClCompile Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\src\Graphics\DxgiInfoLogger.cpp" />
     <ClCompile Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\src\Graphics\Graphics.cpp" />
     <ClCompile Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\src\imgui_impl_dx11.cpp" />

@@ -129,6 +129,9 @@
     <ClInclude Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\include\Physics\RigidBodyActivity.hpp">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\include\Physics\RigidBodyMotionState.hpp">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\src\Graphics\DxgiInfoLogger.cpp">
@@ -159,6 +162,9 @@
       <Filter>ソース ファイル</Filter>
     </ClCompile>
     <ClCompile Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\src\SceneSerialization\SceneSerializationModuleBackend.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\nodec\platforms\projects\game_engine\targets\windows\common\src\Engine.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>

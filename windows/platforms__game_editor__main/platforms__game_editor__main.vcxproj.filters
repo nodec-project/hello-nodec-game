@@ -59,5 +59,8 @@
     <ClCompile Include="..\..\nodec\platforms\projects\game_editor\targets\windows\main\ResourceExporter.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\nodec\platforms\projects\game_editor\targets\windows\main\EditorWindows\SceneViewWindow.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
