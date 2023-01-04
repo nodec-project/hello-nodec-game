@@ -13,9 +13,9 @@
 "valid": 1,
 "data": {
 "scenes": [
-"org.nodec.hello-nodec/scenes/text_a.scene",
-"org.nodec.hello-nodec/scenes/text_b.scene",
-"org.nodec.hello-nodec/scenes/text_c.scene"
+"org.nodec.hello-nodec-game/scenes/text_a.scene",
+"org.nodec.hello-nodec-game/scenes/text_b.scene",
+"org.nodec.hello-nodec-game/scenes/text_c.scene"
 ],
 "current_scene_index": 0
 }
@@ -72,7 +72,7 @@
 "ptr_wrapper": {
 "valid": 1,
 "data": {
-"scene_name": "org.nodec.hello-nodec/scenes/serena.scene"
+"scene_name": "org.nodec.hello-nodec-game/scenes/serena.scene"
 }
 }
 },
@@ -216,10 +216,10 @@
 "valid": 1,
 "data": {
 "meshes": [
-"org.nodec-rendering.essentials/meshes/sphere.mesh"
+"org.nodec.game-engine/meshes/sphere.mesh"
 ],
 "materials": [
-"org.nodec-rendering.essentials/materials/pbr-defer-default.material"
+"org.nodec.game-engine/materials/pbr-defer-default.material"
 ]
 }
 }
@@ -303,10 +303,10 @@
 "valid": 1,
 "data": {
 "meshes": [
-"org.nodec-rendering.essentials/meshes/sphere.mesh"
+"org.nodec.game-engine/meshes/sphere.mesh"
 ],
 "materials": [
-"org.nodec.hello-nodec/materials/pbr-defer-rustediron2.material"
+"org.nodec.hello-nodec-game/materials/pbr-defer-rustediron2.material"
 ]
 }
 }
@@ -418,10 +418,10 @@
 "valid": 1,
 "data": {
 "meshes": [
-"org.nodec-rendering.essentials/meshes/sphere.mesh"
+"org.nodec.game-engine/meshes/sphere.mesh"
 ],
 "materials": [
-"org.nodec-rendering.essentials/materials/pbr-defer-default.material"
+"org.nodec.game-engine/materials/pbr-defer-default.material"
 ]
 }
 }
@@ -515,12 +515,12 @@
 "valid": 1,
 "data": {
 "meshes": [
-"org.nodec.hello-nodec/models/retrotv/Cube.001##mesh-0.mesh",
-"org.nodec.hello-nodec/models/retrotv/Cube.001##mesh-1.mesh"
+"org.nodec.hello-nodec-game/models/retrotv/Cube.001##mesh-0.mesh",
+"org.nodec.hello-nodec-game/models/retrotv/Cube.001##mesh-1.mesh"
 ],
 "materials": [
-"org.nodec.hello-nodec/models/retrotv/Main.material",
-"org.nodec.hello-nodec/models/retrotv/Screen.material"
+"org.nodec.hello-nodec-game/models/retrotv/Main.material",
+"org.nodec.hello-nodec-game/models/retrotv/Screen.material"
 ]
 }
 }
@@ -571,10 +571,10 @@
 "valid": 1,
 "data": {
 "meshes": [
-"org.nodec.hello-nodec/models/retrotv/Cube.002##mesh-3.mesh"
+"org.nodec.hello-nodec-game/models/retrotv/Cube.002##mesh-3.mesh"
 ],
 "materials": [
-"org.nodec.hello-nodec/models/retrotv/Main.material"
+"org.nodec.hello-nodec-game/models/retrotv/Main.material"
 ]
 }
 }
@@ -628,10 +628,10 @@
 "valid": 1,
 "data": {
 "meshes": [
-"org.nodec.hello-nodec/models/retrotv/Circle.001##mesh-2.mesh"
+"org.nodec.hello-nodec-game/models/retrotv/Circle.001##mesh-2.mesh"
 ],
 "materials": [
-"org.nodec.hello-nodec/models/retrotv/Main.material"
+"org.nodec.hello-nodec-game/models/retrotv/Main.material"
 ]
 }
 }
@@ -773,10 +773,10 @@
 "valid": 1,
 "data": {
 "meshes": [
-"org.nodec-rendering.essentials/meshes/cube.mesh"
+"org.nodec.game-engine/meshes/cube.mesh"
 ],
 "materials": [
-"org.nodec-rendering.essentials/materials/pbr-defer-default.material"
+"org.nodec.game-engine/materials/pbr-defer-default.material"
 ]
 }
 }
@@ -830,10 +830,10 @@
 "valid": 1,
 "data": {
 "meshes": [
-"org.nodec-rendering.essentials/meshes/cube.mesh"
+"org.nodec.game-engine/meshes/cube.mesh"
 ],
 "materials": [
-"org.nodec-rendering.essentials/materials/pbr-defer-default.material"
+"org.nodec.game-engine/materials/pbr-defer-default.material"
 ]
 }
 }
@@ -887,10 +887,10 @@
 "valid": 1,
 "data": {
 "meshes": [
-"org.nodec-rendering.essentials/meshes/cube.mesh"
+"org.nodec.game-engine/meshes/cube.mesh"
 ],
 "materials": [
-"org.nodec-rendering.essentials/materials/pbr-defer-default.material"
+"org.nodec.game-engine/materials/pbr-defer-default.material"
 ]
 }
 }
@@ -944,10 +944,10 @@
 "valid": 1,
 "data": {
 "meshes": [
-"org.nodec-rendering.essentials/meshes/cube.mesh"
+"org.nodec.game-engine/meshes/cube.mesh"
 ],
 "materials": [
-"org.nodec-rendering.essentials/materials/pbr-defer-default.material"
+"org.nodec.game-engine/materials/pbr-defer-default.material"
 ]
 }
 }
@@ -1001,10 +1001,10 @@
 "valid": 1,
 "data": {
 "meshes": [
-"org.nodec-rendering.essentials/meshes/cube.mesh"
+"org.nodec.game-engine/meshes/cube.mesh"
 ],
 "materials": [
-"org.nodec-rendering.essentials/materials/pbr-defer-default.material"
+"org.nodec.game-engine/materials/pbr-defer-default.material"
 ]
 }
 }
@@ -1102,10 +1102,10 @@
 "valid": 1,
 "data": {
 "meshes": [
-"org.nodec-rendering.essentials/meshes/cube.mesh"
+"org.nodec.game-engine/meshes/cube.mesh"
 ],
 "materials": [
-"org.nodec-rendering.essentials/materials/pbr-defer-default.material"
+"org.nodec.game-engine/materials/pbr-defer-default.material"
 ]
 }
 }
@@ -1159,10 +1159,10 @@
 "valid": 1,
 "data": {
 "meshes": [
-"org.nodec-rendering.essentials/meshes/cube.mesh"
+"org.nodec.game-engine/meshes/cube.mesh"
 ],
 "materials": [
-"org.nodec-rendering.essentials/materials/pbr-defer-default.material"
+"org.nodec.game-engine/materials/pbr-defer-default.material"
 ]
 }
 }
@@ -1216,10 +1216,10 @@
 "valid": 1,
 "data": {
 "meshes": [
-"org.nodec-rendering.essentials/meshes/cube.mesh"
+"org.nodec.game-engine/meshes/cube.mesh"
 ],
 "materials": [
-"org.nodec-rendering.essentials/materials/pbr-defer-default.material"
+"org.nodec.game-engine/materials/pbr-defer-default.material"
 ]
 }
 }
@@ -1317,10 +1317,10 @@
 "valid": 1,
 "data": {
 "meshes": [
-"org.nodec-rendering.essentials/meshes/cube.mesh"
+"org.nodec.game-engine/meshes/cube.mesh"
 ],
 "materials": [
-"org.nodec-rendering.essentials/materials/pbr-defer-default.material"
+"org.nodec.game-engine/materials/pbr-defer-default.material"
 ]
 }
 }
@@ -1374,10 +1374,10 @@
 "valid": 1,
 "data": {
 "meshes": [
-"org.nodec-rendering.essentials/meshes/cube.mesh"
+"org.nodec.game-engine/meshes/cube.mesh"
 ],
 "materials": [
-"org.nodec-rendering.essentials/materials/pbr-defer-default.material"
+"org.nodec.game-engine/materials/pbr-defer-default.material"
 ]
 }
 }
@@ -1431,10 +1431,10 @@
 "valid": 1,
 "data": {
 "meshes": [
-"org.nodec-rendering.essentials/meshes/cube.mesh"
+"org.nodec.game-engine/meshes/cube.mesh"
 ],
 "materials": [
-"org.nodec-rendering.essentials/materials/pbr-defer-default.material"
+"org.nodec.game-engine/materials/pbr-defer-default.material"
 ]
 }
 }
@@ -1488,10 +1488,10 @@
 "valid": 1,
 "data": {
 "meshes": [
-"org.nodec-rendering.essentials/meshes/cube.mesh"
+"org.nodec.game-engine/meshes/cube.mesh"
 ],
 "materials": [
-"org.nodec-rendering.essentials/materials/pbr-defer-default.material"
+"org.nodec.game-engine/materials/pbr-defer-default.material"
 ]
 }
 }
@@ -1589,10 +1589,10 @@
 "valid": 1,
 "data": {
 "meshes": [
-"org.nodec-rendering.essentials/meshes/cube.mesh"
+"org.nodec.game-engine/meshes/cube.mesh"
 ],
 "materials": [
-"org.nodec-rendering.essentials/materials/pbr-defer-default.material"
+"org.nodec.game-engine/materials/pbr-defer-default.material"
 ]
 }
 }
@@ -1646,10 +1646,10 @@
 "valid": 1,
 "data": {
 "meshes": [
-"org.nodec-rendering.essentials/meshes/cube.mesh"
+"org.nodec.game-engine/meshes/cube.mesh"
 ],
 "materials": [
-"org.nodec-rendering.essentials/materials/pbr-defer-default.material"
+"org.nodec.game-engine/materials/pbr-defer-default.material"
 ]
 }
 }
@@ -1703,10 +1703,10 @@
 "valid": 1,
 "data": {
 "meshes": [
-"org.nodec-rendering.essentials/meshes/cube.mesh"
+"org.nodec.game-engine/meshes/cube.mesh"
 ],
 "materials": [
-"org.nodec-rendering.essentials/materials/pbr-defer-default.material"
+"org.nodec.game-engine/materials/pbr-defer-default.material"
 ]
 }
 }
@@ -1804,10 +1804,10 @@
 "valid": 1,
 "data": {
 "meshes": [
-"org.nodec-rendering.essentials/meshes/cube.mesh"
+"org.nodec.game-engine/meshes/cube.mesh"
 ],
 "materials": [
-"org.nodec-rendering.essentials/materials/pbr-defer-default.material"
+"org.nodec.game-engine/materials/pbr-defer-default.material"
 ]
 }
 }
@@ -1861,10 +1861,10 @@
 "valid": 1,
 "data": {
 "meshes": [
-"org.nodec-rendering.essentials/meshes/cube.mesh"
+"org.nodec.game-engine/meshes/cube.mesh"
 ],
 "materials": [
-"org.nodec-rendering.essentials/materials/pbr-defer-default.material"
+"org.nodec.game-engine/materials/pbr-defer-default.material"
 ]
 }
 }
@@ -1918,10 +1918,10 @@
 "valid": 1,
 "data": {
 "meshes": [
-"org.nodec-rendering.essentials/meshes/cube.mesh"
+"org.nodec.game-engine/meshes/cube.mesh"
 ],
 "materials": [
-"org.nodec-rendering.essentials/materials/pbr-defer-default.material"
+"org.nodec.game-engine/materials/pbr-defer-default.material"
 ]
 }
 }
@@ -1975,10 +1975,10 @@
 "valid": 1,
 "data": {
 "meshes": [
-"org.nodec-rendering.essentials/meshes/cube.mesh"
+"org.nodec.game-engine/meshes/cube.mesh"
 ],
 "materials": [
-"org.nodec-rendering.essentials/materials/pbr-defer-default.material"
+"org.nodec.game-engine/materials/pbr-defer-default.material"
 ]
 }
 }
@@ -2126,15 +2126,15 @@
 "effects": [
 {
 "enabled": false,
-"material": "org.nodec-rendering.essentials/materials/post-processings/ssao.material"
+"material": "org.nodec.game-engine/materials/post-processings/ssao.material"
 },
 {
 "enabled": false,
-"material": "org.nodec-rendering.essentials/materials/post-processings/bloom.material"
+"material": "org.nodec.game-engine/materials/post-processings/bloom.material"
 },
 {
 "enabled": true,
-"material": "org.nodec-rendering.essentials/materials/post-processings/hdr.material"
+"material": "org.nodec.game-engine/materials/post-processings/hdr.material"
 }
 ]
 }
@@ -2213,10 +2213,10 @@
 "valid": 1,
 "data": {
 "meshes": [
-"org.nodec-rendering.essentials/meshes/plane.mesh"
+"org.nodec.game-engine/meshes/plane.mesh"
 ],
 "materials": [
-"org.nodec-rendering.essentials/materials/pbr-defer-default.material"
+"org.nodec.game-engine/materials/pbr-defer-default.material"
 ]
 }
 }
@@ -2270,10 +2270,10 @@
 "valid": 1,
 "data": {
 "meshes": [
-"org.nodec-rendering.essentials/meshes/cube.mesh"
+"org.nodec.game-engine/meshes/cube.mesh"
 ],
 "materials": [
-"org.nodec-rendering.essentials/materials/pbr-defer-default.material"
+"org.nodec.game-engine/materials/pbr-defer-default.material"
 ]
 }
 }
@@ -2328,8 +2328,8 @@
 "valid": 1,
 "data": {
 "text": "Hello World!",
-"font": "org.nodec.hello-nodec/fonts/Noto_Sans_JP/NotoSansJP-Regular.otf",
-"material": "org.nodec-rendering.essentials/materials/image-default.material",
+"font": "org.nodec.hello-nodec-game/fonts/Noto_Sans_JP/NotoSansJP-Regular.otf",
+"material": "org.nodec.game-engine/materials/image-default.material",
 "pixel_size": 100,
 "pixels_per_unit": 100,
 "color": {
@@ -2357,7 +2357,7 @@
 "ptr_wrapper": {
 "valid": 1,
 "data": {
-"clip": "org.nodec.hello-nodec/audios/dodon.wav",
+"clip": "org.nodec.hello-nodec-game/audios/dodon.wav",
 "is_playing": true,
 "loop": false
 }
@@ -2445,8 +2445,8 @@
 "ptr_wrapper": {
 "valid": 1,
 "data": {
-"image": "org.nodec.hello-nodec/textures/proto/marker.png",
-"material": "org.nodec-rendering.essentials/materials/image-default.material",
+"image": "org.nodec.hello-nodec-game/textures/proto/marker.png",
+"material": "org.nodec.game-engine/materials/image-default.material",
 "pixels_per_unit": 100
 }
 }
@@ -2524,10 +2524,10 @@
 "valid": 1,
 "data": {
 "meshes": [
-"org.nodec-rendering.essentials/meshes/cube.mesh"
+"org.nodec.game-engine/meshes/cube.mesh"
 ],
 "materials": [
-"org.nodec-rendering.essentials/materials/pbr-defer-default.material"
+"org.nodec.game-engine/materials/pbr-defer-default.material"
 ]
 }
 }

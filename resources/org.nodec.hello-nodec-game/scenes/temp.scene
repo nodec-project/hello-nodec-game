@@ -48,10 +48,10 @@
 "id": 2147483652,
 "data": {
 "meshes": [
-"org.nodec-rendering.essentials/meshes/sphere.mesh"
+"org.nodec.game-engine/meshes/sphere.mesh"
 ],
 "materials": [
-"org.nodec-rendering.essentials/materials/pbr-defer-default.material"
+"org.nodec.game-engine/materials/pbr-defer-default.material"
 ]
 }
 }

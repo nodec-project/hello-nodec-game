@@ -48,8 +48,8 @@
 "valid": 1,
 "data": {
 "text": "B",
-"font": "org.nodec.hello-nodec/fonts/Noto_Sans_JP/NotoSansJP-Regular.otf",
-"material": "org.nodec-rendering.essentials/materials/image-default.material",
+"font": "org.nodec.hello-nodec-game/fonts/Noto_Sans_JP/NotoSansJP-Regular.otf",
+"material": "org.nodec.game-engine/materials/image-default.material",
 "pixel_size": 100,
 "pixels_per_unit": 100,
 "color": {

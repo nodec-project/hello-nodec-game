@@ -47,8 +47,8 @@
 "ptr_wrapper": {
 "id": 2147483652,
 "data": {
-"image": "org.nodec.hello-nodec/private/serena01.png",
-"material": "org.nodec-rendering.essentials/materials/image-default.material",
+"image": "org.nodec.hello-nodec-game/private/serena01.png",
+"material": "org.nodec.game-engine/materials/image-default.material",
 "pixels_per_unit": 100
 }
 }

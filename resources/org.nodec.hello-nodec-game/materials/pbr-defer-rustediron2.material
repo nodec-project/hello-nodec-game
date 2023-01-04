@@ -1,6 +1,6 @@
 {
     "material": {
-        "shader": "org.nodec-rendering.essentials/shaders/pbr-defer",
+        "shader": "org.nodec.game-engine/shaders/pbr-defer",
         "cull_mode": 2,
         "float_properties": [],
         "vector4_properties": [],
@@ -8,7 +8,7 @@
             {
                 "key": "albedo",
                 "value": {
-                    "texture": "org.nodec.hello-nodec/textures/rustediron2/rustediron2_basecolor.png",
+                    "texture": "org.nodec.hello-nodec-game/textures/rustediron2/rustediron2_basecolor.png",
                     "sampler": {
                         "filter_mode": 1,
                         "wrap_mode": 0
@@ -18,7 +18,7 @@
             {
                 "key": "normal",
                 "value": {
-                    "texture": "org.nodec.hello-nodec/textures/rustediron2/rustediron2_normal.png",
+                    "texture": "org.nodec.hello-nodec-game/textures/rustediron2/rustediron2_normal.png",
                     "sampler": {
                         "filter_mode": 1,
                         "wrap_mode": 0
@@ -28,7 +28,7 @@
             {
                 "key": "metallic",
                 "value": {
-                    "texture": "org.nodec.hello-nodec/textures/rustediron2/rustediron2_metallic.png",
+                    "texture": "org.nodec.hello-nodec-game/textures/rustediron2/rustediron2_metallic.png",
                     "sampler": {
                         "filter_mode": 1,
                         "wrap_mode": 0
@@ -38,7 +38,7 @@
             {
                 "key": "roughness",
                 "value": {
-                    "texture": "org.nodec.hello-nodec/textures/rustediron2/rustediron2_roughness.png",
+                    "texture": "org.nodec.hello-nodec-game/textures/rustediron2/rustediron2_roughness.png",
                     "sampler": {
                         "filter_mode": 1,
                         "wrap_mode": 0

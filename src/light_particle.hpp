@@ -27,7 +27,7 @@ public:
             std::uniform_real_distribution<float> random_float(0.0, 1.0); // random floats between [0.0, 1.0]
             std::default_random_engine generator;
 
-            auto proto_light = resource_registry.get_resource<SerializableSceneGraph>("org.nodec.hello-nodec/scenes/particle-light.scene").get();
+            auto proto_light = resource_registry.get_resource<SerializableSceneGraph>("org.nodec.hello-nodec-game/scenes/particle-light.scene").get();
 
             constexpr int COUNT = 100;
             for (int i = 0; i < COUNT; ++i) {
