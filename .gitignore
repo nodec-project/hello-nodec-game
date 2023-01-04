@@ -1,4 +1,6 @@
 
+build-*
+
 # VS Code build folder
 build
 
