@@ -1,5 +1,13 @@
 # hello-nodec
 
+English | [日本語](./README_jp.md)
+
+> ⚠️ **WARNING: This document is old!**
+> 
+> Please see the [Japanese documentation](./README_jp.md) for the latest information.
+>
+> We don't have enough time to translate this language version...
+
 ![](./gallery/screenshot.png)
 
 ## Quick Start
