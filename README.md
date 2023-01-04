@@ -3,7 +3,7 @@
 English | [日本語](./README_jp.md)
 
 > ⚠️ **WARNING: This document is old!**
-> 
+>
 > Please see the [Japanese documentation](./README_jp.md) for the latest information.
 >
 > We don't have enough time to translate this language version...
@@ -13,6 +13,7 @@ English | [日本語](./README_jp.md)
 ## Quick Start
 
 1. Clone this repository.
+
    ```sh
    git clone --recursive https://github.com/ContentsViewer/hello-nodec.git
    ```
@@ -29,15 +30,13 @@ English | [日本語](./README_jp.md)
   
    * DirectXTex
      * `nodec/platforms/sdks/DirectXTex/`
-     
 
 3. Open the project according to the desired platform.
    * Windows
      * Environment
        * Visual Studio 2022
-    
-     1. Open the project file `project.sln`.
 
+     1. Open the project file `project.sln`.
 
    * macOS
      * Not supported yet.
@@ -59,7 +58,7 @@ English | [日本語](./README_jp.md)
        }
    }
    ```
-   
+
    * <b>resource_path</b>
   
      The path to the `nodec/apps/hello-nodec/resources`.
@@ -68,4 +67,3 @@ English | [日本語](./README_jp.md)
 
 5. Enjoy
    ![](./gallery/screenshot.png)
-
