@@ -4,69 +4,75 @@
 #include "object_spawn_system.hpp"
 #include "scene_transition_system.hpp"
 
-using namespace nodec;
-using namespace nodec_engine;
-using namespace nodec_input;
-using namespace nodec_scene;
-using namespace nodec_scene::components;
-using namespace nodec_screen;
-using namespace nodec_resources;
-using namespace nodec_rendering::components;
-using namespace nodec_rendering::resources;
-using namespace nodec_scene_serialization;
-using namespace nodec_scene_audio::resources;
-using namespace nodec_scene_audio::components;
-using namespace nodec_world;
-using namespace nodec_input::keyboard;
-using namespace nodec_input::mouse;
-
-class HelloWorld {
+class HelloNodecGameApplication {
 public:
-    HelloWorld(NodecEngine &engine)
-        : engine{engine} {
-        // engine.stepped().connect([=](NodecEngine &engine) { on_stepped(engine); });
-        // engine.initialized().connect([=](NodecEngine &engine) { on_initialized(engine); });
-        nodec::logging::InfoStream(__FILE__, __LINE__) << "[HelloWorld::HelloWorld] >>> Hello :)";
+    HelloNodecGameApplication(nodec_application::Application &app)
+        // Get engine services.
+        : resources_(app.get_service<nodec_resources::Resources>()),
+          scene_loader_(app.get_service<nodec_scene_serialization::SceneLoader>()),
+          scene_serialization_(app.get_service<nodec_scene_serialization::SceneSerialization>()) {
+        using namespace nodec;
+        using namespace nodec_input;
+        using namespace nodec_scene;
+        using namespace nodec_scene::components;
+        using namespace nodec_screen;
+        using namespace nodec_resources;
+        using namespace nodec_rendering::components;
+        using namespace nodec_rendering::resources;
+        using namespace nodec_scene_serialization;
+        using namespace nodec_scene_audio::resources;
+        using namespace nodec_scene_audio::components;
+        using namespace nodec_world;
+        using namespace nodec_input::keyboard;
+        using namespace nodec_input::mouse;
 
-        auto &world = engine.get_module<World>();
-        auto &input_devices = engine.get_module<InputDevices>();
-        auto &serialization = engine.get_module<SceneSerialization>();
-        auto &resources = engine.get_module<Resources>();
-        auto &scene_loader = engine.get_module<SceneLoader>();
+        logging::InfoStream(__FILE__, __LINE__) << "[HelloNodecGameApplication::HelloNodecGameApplication] >>> Hello :)";
+
+        // --- Get services ---
+        auto &world = app.get_service<World>();
+        auto &input_devices = app.get_service<InputDevices>();
+        auto &screen = app.get_service<Screen>();
 
         auto keyboard = input_devices.get_available_devices<Keyboard>().front();
         auto mouse = input_devices.get_available_devices<Mouse>().front();
 
-#ifdef EDITOR_MODE
-        using namespace nodec_scene_editor;
-        auto &editor = engine.get_module<SceneEditor>();
+        // --- Setup screen ---
+        {
+            // screen.set_size({1920, 1080});
+            // screen.set_resolution({1920, 1080});
 
-#endif
+            screen.set_size({1280, 720});
+            screen.set_resolution({1280, 720});
+
+            // screen.set_size({ 1368, 800 });
+            // screen.set_resolution({ 1368, 800 });
+
+            // screen.set_size({ 1600, 900 });
+            // screen.set_resolution({ 1600, 900 });
+
+            screen.set_title("[ Hello Nodec ]");
+        }
+
         {
             world.initialized().connect([&](World &world) { on_initialized(world); });
             world.stepped().connect([&](World &world) { on_stepped(world); });
         }
 
         {
-            camera_controller_system_ = std::make_shared<CameraControllerSystem>(world, keyboard, mouse, serialization);
+            camera_controller_system_ = std::make_shared<CameraControllerSystem>(world, keyboard, mouse, scene_serialization_);
+            light_particle = std::make_shared<LightParticle>(world, resources_.registry(), scene_serialization_);
+            object_spawn_system_ = std::make_shared<ObjectSpawnSystem>(keyboard, world, scene_serialization_, scene_loader_);
+            scene_transition_system_ = std::make_shared<SceneTransitionSystem>(world, scene_serialization_, scene_loader_);
+        }
+
+        // Set up systems if editor mode enabled.
+        {
 #ifdef EDITOR_MODE
+            using namespace nodec_scene_editor;
+            auto &editor = app.get_service<SceneEditor>();
+
             CameraControllerSystem::setup_editor(editor);
-#endif
-        }
-        {
-            light_particle = std::make_shared<LightParticle>(world, resources.registry(), serialization);
-        }
-
-        {
-            object_spawn_system_ = std::make_shared<ObjectSpawnSystem>(keyboard, world, serialization, scene_loader);
-#ifdef EDITOR_MODE
             ObjectSpawnSystem::setup_editor(editor);
-#endif
-        }
-
-        {
-            scene_transition_system_ = std::make_shared<SceneTransitionSystem>(world, serialization, scene_loader);
-#ifdef EDITOR_MODE
             SceneTransitionSystem::setup_editor(editor);
 #endif
         }
@@ -94,21 +100,21 @@ public:
         //    });
     }
 
-    ~HelloWorld() {
-        nodec::logging::InfoStream(__FILE__, __LINE__) << "[HelloWorld::~HelloWorld] >>> See you ;)";
+    ~HelloNodecGameApplication() {
+        nodec::logging::InfoStream(__FILE__, __LINE__) << "[HelloNodecGameApplication::~HelloNodecGameApplication] >>> See you ;)";
     }
 
 private:
-    void on_initialized(World &world) {
-        logging::InfoStream(__FILE__, __LINE__) << "[HelloWorld::on_initialized] engine time: " << engine.engine_time();
+    void on_initialized(nodec_world::World &world) {
+        using namespace nodec;
+        using namespace nodec_scene_serialization;
 
-        auto &resources = engine.get_module<Resources>();
+        logging::InfoStream(__FILE__, __LINE__) << "[HelloNodecGameApplication::on_initialized]";
 
+        // Load the main scene.
         {
-            auto &serialization = engine.get_module<SceneSerialization>();
-            auto mainScene = resources.registry().get_resource<SerializableSceneGraph>("org.nodec.hello-nodec-game/scenes/main.scene").get();
-
-            SceneEntityEmplacer{mainScene, world.scene(), entities::null_entity, serialization}.emplace_all();
+            auto main_scene = resources_.registry().get_resource_direct<SerializableSceneGraph>("org.nodec.hello-nodec-game/scenes/main.scene");
+            SceneEntityEmplacer{main_scene, world.scene(), entities::null_entity, scene_serialization_}.emplace_all();
         }
 
         //{
@@ -140,45 +146,23 @@ private:
         //}
     }
 
-    void on_stepped(World &world) {
-        //world.scene().registry().remove_component<nodec_physics::components::PhysicsShape>(temp);
+    void on_stepped(nodec_world::World &world) {
     }
 
 private:
-    //SceneEntity temp;
+    // --- Game engine services ---
+    nodec_resources::Resources &resources_;
+    nodec_scene_serialization::SceneLoader &scene_loader_;
+    nodec_scene_serialization::SceneSerialization &scene_serialization_;
 
-    NodecEngine &engine;
+    // --- Sub systems ---
     std::shared_ptr<CameraControllerSystem> camera_controller_system_;
     std::shared_ptr<LightParticle> light_particle;
     std::shared_ptr<ObjectSpawnSystem> object_spawn_system_;
     std::shared_ptr<SceneTransitionSystem> scene_transition_system_;
 };
 
-void nodec_engine::on_boot(NodecEngine &engine) {
-    logging::InfoStream(__FILE__, __LINE__) << "[App] >>> booting...";
-    logging::InfoStream(__FILE__, __LINE__) << "[App] >>> Hello world!";
-
-    auto &screen = engine.get_module<Screen>();
-
-    // screen.set_size({1920, 1080});
-    // screen.set_resolution({1920, 1080});
-
-    screen.set_size({1280, 720});
-    screen.set_resolution({1280, 720});
-
-    // screen.set_size({ 1368, 800 });
-    // screen.set_resolution({ 1368, 800 });
-
-    // screen.set_size({ 1600, 900 });
-    // screen.set_resolution({ 1600, 900 });
-
-    screen.set_title("[ Hello Nodec ]");
-
-    auto &resources = engine.get_module<Resources>();
-
-    //#ifdef _DEBUG
-    // resources.set_resource_path("C:/Users/onete/OneDrive/Documents/Projects/nodec_project/nodec/apps/hello-nodec/resources");
-    //#endif // _DEBUG
-
-    engine.add_module(std::make_shared<HelloWorld>(engine));
+void nodec_application::on_configure(nodec_application::Application &app) {
+    // Make this application instance, and append it to the nodec application.
+    app.add_service<HelloNodecGameApplication>(std::make_shared<HelloNodecGameApplication>(app));
 }
