@@ -1,3 +1,4 @@
 [submodule "nodec_game_engine"]
 	path = nodec_game_engine
 	url = https://github.com/ContentsViewer/nodec_game_engine.git
+	ignore = dirty
