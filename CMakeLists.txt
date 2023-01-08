@@ -3,6 +3,9 @@ cmake_minimum_required(VERSION 3.13)
 # NOTE: Change your project name.
 project(hello_nodec_game LANGUAGES CXX)
 
+add_compile_options("$<$<C_COMPILER_ID:MSVC>:/utf-8>")
+add_compile_options("$<$<CXX_COMPILER_ID:MSVC>:/utf-8>")
+
 # The references about the best practice for executable to find dlls.
 # * https://stackoverflow.com/questions/39807664/how-to-best-tell-cmake-where-to-find-dll
 set(EXECUTABLE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/out)

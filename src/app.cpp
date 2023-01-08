@@ -1,7 +1,8 @@
 #include "app.hpp"
-#include "camera_controller.hpp"
+#include "player_control_system.hpp"
 #include "light_particle.hpp"
 #include "object_spawn_system.hpp"
+#include "bullet_system.hpp"
 #include "scene_transition_system.hpp"
 
 class HelloNodecGameApplication {
@@ -59,10 +60,11 @@ public:
         }
 
         {
-            camera_controller_system_ = std::make_shared<CameraControllerSystem>(world, keyboard, mouse, scene_serialization_);
+            player_control_system_ = std::make_shared<PlayerControlSystem>(world, keyboard, mouse, scene_serialization_);
             light_particle = std::make_shared<LightParticle>(world, resources_.registry(), scene_serialization_);
             object_spawn_system_ = std::make_shared<ObjectSpawnSystem>(keyboard, world, scene_serialization_, scene_loader_);
             scene_transition_system_ = std::make_shared<SceneTransitionSystem>(world, scene_serialization_, scene_loader_);
+            bullet_system_ = std::make_shared<BulletSystem>(scene_serialization_);
         }
 
         // Set up systems if editor mode enabled.
@@ -71,9 +73,10 @@ public:
             using namespace nodec_scene_editor;
             auto &editor = app.get_service<SceneEditor>();
 
-            CameraControllerSystem::setup_editor(editor);
+            PlayerControlSystem::setup_editor(editor);
             ObjectSpawnSystem::setup_editor(editor);
             SceneTransitionSystem::setup_editor(editor);
+            BulletSystem::setup_editor(editor);
 #endif
         }
 
@@ -156,10 +159,11 @@ private:
     nodec_scene_serialization::SceneSerialization &scene_serialization_;
 
     // --- Sub systems ---
-    std::shared_ptr<CameraControllerSystem> camera_controller_system_;
+    std::shared_ptr<PlayerControlSystem> player_control_system_;
     std::shared_ptr<LightParticle> light_particle;
     std::shared_ptr<ObjectSpawnSystem> object_spawn_system_;
     std::shared_ptr<SceneTransitionSystem> scene_transition_system_;
+    std::shared_ptr<BulletSystem> bullet_system_;
 };
 
 void nodec_application::on_configure(nodec_application::Application &app) {

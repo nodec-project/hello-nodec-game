@@ -2062,7 +2062,7 @@
 "components": [
 {
 "polymorphic_id": 2147483659,
-"polymorphic_name": "SerializableCameraController",
+"polymorphic_name": "SerializablePlayerControl",
 "ptr_wrapper": {
 "valid": 1,
 "data": {
@@ -2157,9 +2157,9 @@
 "data": {
 "shape_type": 0,
 "size": {
-"x": 10.0,
-"y": 0.0010000000474974514,
-"z": 10.0
+"x": 20.0,
+"y": 1.0,
+"z": 20.0
 },
 "radius": 0.5
 }
@@ -2181,13 +2181,13 @@
 "data": {
 "local_position": {
 "x": 0.0,
-"y": 0.0,
+"y": -1.0,
 "z": 0.0
 },
 "local_scale": {
-"x": 2.0,
-"y": 2.0,
-"z": 2.0
+"x": 20.0,
+"y": 1.0,
+"z": 20.0
 },
 "local_rotation": {
 "x": 0.0,
@@ -2213,7 +2213,7 @@
 "valid": 1,
 "data": {
 "meshes": [
-"org.nodec.game-engine/meshes/plane.mesh"
+"org.nodec.game-engine/meshes/cube.mesh"
 ],
 "materials": [
 "org.nodec.game-engine/materials/pbr-defer-default.material"

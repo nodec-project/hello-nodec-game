@@ -1,15 +1,16 @@
-#ifndef CAMERA_CONTROLLER_HPP_
-#define CAMERA_CONTROLLER_HPP_
+#ifndef PLAYER_CONTROL_SYSTEM_HPP_
+#define PLAYER_CONTROL_SYSTEM_HPP_
 
 #include "app.hpp"
+#include "bullet_system.hpp"
 
-struct CameraController {
+struct PlayerControl {
     float speed{1.0f};
 };
 
-class SerializableCameraController : public nodec_scene_serialization::BaseSerializableComponent {
+class SerializablePlayerControl : public nodec_scene_serialization::BaseSerializableComponent {
 public:
-    SerializableCameraController()
+    SerializablePlayerControl()
         : BaseSerializableComponent{this} {
     }
 
@@ -21,15 +22,15 @@ public:
     }
 };
 
-CEREAL_REGISTER_TYPE(SerializableCameraController)
-CEREAL_REGISTER_POLYMORPHIC_RELATION(nodec_scene_serialization::BaseSerializableComponent, SerializableCameraController)
+CEREAL_REGISTER_TYPE(SerializablePlayerControl)
+CEREAL_REGISTER_POLYMORPHIC_RELATION(nodec_scene_serialization::BaseSerializableComponent, SerializablePlayerControl)
 
-class CameraControllerSystem {
+class PlayerControlSystem {
 public:
-    CameraControllerSystem(nodec_world::World &world,
-                           std::shared_ptr<nodec_input::keyboard::Keyboard> keyboard,
-                           std::shared_ptr<nodec_input::mouse::Mouse> mouse,
-                           nodec_scene_serialization::SceneSerialization &serialization) {
+    PlayerControlSystem(nodec_world::World &world,
+                        std::shared_ptr<nodec_input::keyboard::Keyboard> keyboard,
+                        std::shared_ptr<nodec_input::mouse::Mouse> mouse,
+                        nodec_scene_serialization::SceneSerialization &serialization) {
         using namespace nodec;
         using namespace nodec_scene;
         using namespace nodec_input::keyboard;
@@ -64,27 +65,30 @@ public:
                 rotation_delta += event.position - prev_pos;
                 prev_pos = event.position;
             }
+
+            if (event.button & MouseButton::Left) {
+                left_pressed_ = (event.type == MouseEvent::Type::Press);
+            }
         });
 
-        serialization.register_component<CameraController, SerializableCameraController>(
-            [&](const CameraController &controller) {
-                auto serializable = std::make_unique<SerializableCameraController>();
-                serializable->speed = controller.speed;
+        serialization.register_component<PlayerControl, SerializablePlayerControl>(
+            [&](const PlayerControl &control) {
+                auto serializable = std::make_unique<SerializablePlayerControl>();
+                serializable->speed = control.speed;
                 return serializable;
             },
-            [&](const SerializableCameraController &serializable, SceneEntity entity, SceneRegistry &registry) {
-                registry.emplace_component<CameraController>(entity);
-                auto &controller = registry.get_component<CameraController>(entity);
-                controller.speed = serializable.speed;
+            [&](const SerializablePlayerControl &serializable, SceneEntity entity, SceneRegistry &registry) {
+                auto &control = registry.emplace_component<PlayerControl>(entity).first;
+                control.speed = serializable.speed;
             });
     }
 
 #ifdef EDITOR_MODE
     static void setup_editor(nodec_scene_editor::SceneEditor &editor) {
-        editor.inspector_component_registry().register_component<CameraController>(
-            "Camera Controller",
-            [](CameraController &ctrl) {
-                ImGui::DragFloat("Speed", &ctrl.speed);
+        editor.inspector_component_registry().register_component<PlayerControl>(
+            "Player Control",
+            [](PlayerControl &control) {
+                ImGui::DragFloat("Speed", &control.speed);
             });
     }
 #endif
@@ -95,10 +99,22 @@ private:
         using namespace nodec_scene;
         using namespace nodec_scene::components;
         using namespace nodec_rendering::components;
+        using namespace nodec_scene_serialization::components;
 
-        // logging::InfoStream(__FILE__, __LINE__) << world.clock().current_time() << ", " << world.clock().delta_time();
+        [&]() {
+            if (!left_pressed_) return;
+            if (world.clock().current_time() - prev_fire_time_ < 0.25f) return;
 
-        world.scene().registry().view<Transform, CameraController>().each([&](const SceneEntity &entity, Transform &trfm, CameraController &ctrl) {
+            prev_fire_time_ = world.clock().current_time();
+
+            auto bullet_entt = world.scene().create_entity();
+            world.scene().registry().emplace_component<Bullet>(bullet_entt);
+            world.scene().registry().emplace_component<NonSerialized>(bullet_entt);
+
+            logging::InfoStream(__FILE__, __LINE__) << "fire!";
+        }();
+
+        world.scene().registry().view<Transform, PlayerControl>().each([&](const SceneEntity &entity, Transform &trfm, PlayerControl &control) {
             const float delta_time = world.clock().delta_time();
 
             auto forward = math::gfx::rotate(Vector3f(0, 0, 1), trfm.local_rotation);
@@ -111,29 +127,23 @@ private:
             if (a_pressed) move_vec.x -= 1;
             if (d_pressed) move_vec.x += 1;
             if (math::norm(move_vec) > 0.001f) {
-                // logging::InfoStream(__FILE__, __LINE__) << move_vec;
                 move_vec = math::normalize(move_vec);
-                // logging::InfoStream(__FILE__, __LINE__) << trfm.local_position;
 
-                trfm.local_position += move_vec.y * forward * ctrl.speed * delta_time;
-                trfm.local_position += move_vec.x * right * ctrl.speed * delta_time;
+                trfm.local_position += move_vec.y * forward * control.speed * delta_time;
+                trfm.local_position += move_vec.x * right * control.speed * delta_time;
 
-                // logging::InfoStream(__FILE__, __LINE__) << trfm.local_position;
                 trfm.dirty = true;
             }
 
             if (math::norm(rotation_delta) > 1) {
                 constexpr float SCALE_FACTOR = 0.1f;
-                // logging::InfoStream(__FILE__, __LINE__) << rotation_delta;
 
                 // Apply rotation around the local right vector after current rotation.
-                trfm.local_rotation = math::gfx::quatenion_from_angle_axis(rotation_delta.y * SCALE_FACTOR, right) * trfm.local_rotation;
+                trfm.local_rotation = math::gfx::quaternion_from_angle_axis(rotation_delta.y * SCALE_FACTOR, right) * trfm.local_rotation;
 
-                // And apply rotation arround the world up vector.
-                trfm.local_rotation = math::gfx::quatenion_from_angle_axis(rotation_delta.x * SCALE_FACTOR, Vector3f(0.f, 1.f, 0.f)) * trfm.local_rotation;
+                // And apply rotation around the world up vector.
+                trfm.local_rotation = math::gfx::quaternion_from_angle_axis(rotation_delta.x * SCALE_FACTOR, Vector3f(0.f, 1.f, 0.f)) * trfm.local_rotation;
 
-                //trfm.local_rotation *= math::gfx::quatenion_from_angle_axis(rotation_delta.x * 0.1f, Vector3f(0, 1, 0));
-                //trfm.local_rotation *= math::gfx::quatenion_from_angle_axis(rotation_delta.y * 0.1f, Vector3f(1, 0, 0));
                 trfm.dirty = true;
                 rotation_delta.set(0, 0);
             }
@@ -147,6 +157,8 @@ private:
     bool d_pressed{false};
 
     nodec::Vector2i rotation_delta;
+    bool left_pressed_{false};
+    float prev_fire_time_{0.0f};
 };
 
 #endif
