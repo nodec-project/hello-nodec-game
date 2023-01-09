@@ -64,7 +64,7 @@ public:
             light_particle = std::make_shared<LightParticle>(world, resources_.registry(), scene_serialization_);
             object_spawn_system_ = std::make_shared<ObjectSpawnSystem>(keyboard, world, scene_serialization_, scene_loader_);
             scene_transition_system_ = std::make_shared<SceneTransitionSystem>(world, scene_serialization_, scene_loader_);
-            bullet_system_ = std::make_shared<BulletSystem>(scene_serialization_);
+            bullet_system_ = std::make_shared<BulletSystem>(world, scene_serialization_);
         }
 
         // Set up systems if editor mode enabled.

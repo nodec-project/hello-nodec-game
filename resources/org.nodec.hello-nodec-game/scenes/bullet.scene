@@ -1,0 +1,144 @@
+{
+"scene_graph": {
+"roots": [
+{
+"ptr_wrapper": {
+"valid": 1,
+"data": {
+"components": [
+{
+"polymorphic_id": 2147483649,
+"polymorphic_name": "nodec_physics::components::SerializablePhysicsShape",
+"ptr_wrapper": {
+"valid": 1,
+"data": {
+"shape_type": 1,
+"size": {
+"x": 1.0,
+"y": 1.0,
+"z": 1.0
+},
+"radius": 0.10000000149011612
+}
+}
+},
+{
+"polymorphic_id": 2147483650,
+"polymorphic_name": "nodec_physics::components::SerializableRigidBody",
+"ptr_wrapper": {
+"valid": 1,
+"data": {
+"mass": 10.0
+}
+}
+},
+{
+"polymorphic_id": 2147483651,
+"polymorphic_name": "nodec_scene::components::SerializableTransform",
+"ptr_wrapper": {
+"valid": 1,
+"data": {
+"local_position": {
+"x": 0.0,
+"y": 0.0,
+"z": 0.0
+},
+"local_scale": {
+"x": 1.0,
+"y": 1.0,
+"z": 1.0
+},
+"local_rotation": {
+"x": 0.0,
+"y": 0.0,
+"z": 0.0,
+"w": 1.0
+}
+}
+}
+},
+{
+"polymorphic_id": 2147483652,
+"polymorphic_name": "nodec_scene::components::SerializableName",
+"ptr_wrapper": {
+"valid": 1,
+"data": {
+"name": "Bullet"
+}
+}
+}
+],
+"children": [
+{
+"ptr_wrapper": {
+"valid": 1,
+"data": {
+"components": [
+{
+"polymorphic_id": 2147483653,
+"polymorphic_name": "nodec_rendering::components::SerializablePointLight",
+"ptr_wrapper": {
+"valid": 1,
+"data": {
+"color": {
+"x": 1.0,
+"y": 0.0,
+"z": 0.0,
+"w": 1.0
+},
+"intensity": 1.0,
+"range": 10.0
+}
+}
+},
+{
+"polymorphic_id": 3,
+"ptr_wrapper": {
+"valid": 1,
+"data": {
+"local_position": {
+"x": 0.0,
+"y": 0.29499998688697817,
+"z": 0.0
+},
+"local_scale": {
+"x": 0.10000000149011612,
+"y": 0.10000000149011612,
+"z": 0.10000000149011612
+},
+"local_rotation": {
+"x": 0.0,
+"y": 0.0,
+"z": 0.0,
+"w": 1.0
+}
+}
+}
+},
+{
+"polymorphic_id": 2147483654,
+"polymorphic_name": "nodec_rendering::components::SerializableMeshRenderer",
+"ptr_wrapper": {
+"valid": 1,
+"data": {
+"meshes": [
+"org.nodec.game-engine/meshes/sphere.mesh"
+],
+"materials": [
+"org.nodec.game-engine/materials/pbr-defer-default.material"
+]
+}
+}
+}
+],
+"children": []
+}
+}
+}
+]
+}
+}
+}
+]
+}
+}

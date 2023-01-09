@@ -12,8 +12,7 @@ public:
         : BaseSerializableComponent(this) {}
 
     template<class Archive>
-    void serialize(Archive& archive) {
-
+    void serialize(Archive &archive) {
     }
 };
 
@@ -22,7 +21,7 @@ CEREAL_REGISTER_POLYMORPHIC_RELATION(nodec_scene_serialization::BaseSerializable
 
 class BulletSystem {
 public:
-    BulletSystem(nodec_scene_serialization::SceneSerialization &serialization) {
+    BulletSystem(nodec_world::World &world, nodec_scene_serialization::SceneSerialization &serialization) {
         serialization.register_component<Bullet, SerializableBullet>(
             [&](const Bullet &bullet) {
                 auto serializable = std::make_unique<SerializableBullet>();
@@ -31,6 +30,11 @@ public:
             [&](const SerializableBullet &serializable, auto entt, auto &registry) {
                 auto &bullet = registry.emplace_component<Bullet>(entt).first;
             });
+
+        world.stepped().connect([&](nodec_world::World &world) { on_stepped(world); });
+    }
+
+    void on_stepped(nodec_world::World &world) {
     }
 
 #ifdef EDITOR_MODE

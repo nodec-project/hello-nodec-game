@@ -51,7 +51,6 @@ public:
             if (event.key == Key::D) {
                 d_pressed = (event.type == KeyEvent::Type::Press);
             }
-            // logging::InfoStream(__FILE__, __LINE__) << w_pressed << s_pressed << a_pressed << d_pressed;
         });
 
         mouse->mouse_event().connect([&](const nodec_input::mouse::MouseEvent &event) {
