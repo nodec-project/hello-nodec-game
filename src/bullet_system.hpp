@@ -4,6 +4,7 @@
 #include "app.hpp"
 
 struct Bullet {
+    float lifetime{10.f};
 };
 
 class SerializableBullet : public nodec_scene_serialization::BaseSerializableComponent {
@@ -35,6 +36,20 @@ public:
     }
 
     void on_stepped(nodec_world::World &world) {
+        using namespace nodec_scene;
+
+        world.scene().registry().view<Bullet>().each([&](auto entt, Bullet &bullet) {
+            bullet.lifetime -= world.clock().delta_time();
+
+            if (bullet.lifetime < 0.f) {
+                to_deletes_.emplace_back(entt);
+            }
+        });
+
+        for (const auto &entt : to_deletes_) {
+            world.scene().registry().destroy_entity(entt);
+        }
+        to_deletes_.clear();
     }
 
 #ifdef EDITOR_MODE
@@ -47,6 +62,10 @@ public:
             });
     }
 #endif
+
+private:
+    std::vector<nodec_scene::SceneEntity> to_deletes_;
+
 };
 
 #endif

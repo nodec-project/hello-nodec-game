@@ -11,7 +11,8 @@ public:
         // Get engine services.
         : resources_(app.get_service<nodec_resources::Resources>()),
           scene_loader_(app.get_service<nodec_scene_serialization::SceneLoader>()),
-          scene_serialization_(app.get_service<nodec_scene_serialization::SceneSerialization>()) {
+          scene_serialization_(app.get_service<nodec_scene_serialization::SceneSerialization>()),
+          input_devices_(app.get_service<nodec_input::InputDevices>()) {
         using namespace nodec;
         using namespace nodec_input;
         using namespace nodec_scene;
@@ -31,11 +32,10 @@ public:
 
         // --- Get services ---
         auto &world = app.get_service<World>();
-        auto &input_devices = app.get_service<InputDevices>();
         auto &screen = app.get_service<Screen>();
 
-        auto keyboard = input_devices.get_available_devices<Keyboard>().front();
-        auto mouse = input_devices.get_available_devices<Mouse>().front();
+        auto keyboard = input_devices_.get_available_devices<Keyboard>().front();
+        auto mouse = input_devices_.get_available_devices<Mouse>().front();
 
         // --- Setup screen ---
         {
@@ -60,11 +60,11 @@ public:
         }
 
         {
-            player_control_system_ = std::make_shared<PlayerControlSystem>(world, keyboard, mouse, scene_serialization_);
-            light_particle = std::make_shared<LightParticle>(world, resources_.registry(), scene_serialization_);
-            object_spawn_system_ = std::make_shared<ObjectSpawnSystem>(keyboard, world, scene_serialization_, scene_loader_);
-            scene_transition_system_ = std::make_shared<SceneTransitionSystem>(world, scene_serialization_, scene_loader_);
-            bullet_system_ = std::make_shared<BulletSystem>(world, scene_serialization_);
+            light_particle = std::make_unique<LightParticle>(world, resources_.registry(), scene_serialization_);
+            object_spawn_system_ = std::make_unique<ObjectSpawnSystem>(keyboard, world, scene_serialization_, scene_loader_);
+            scene_transition_system_ = std::make_unique<SceneTransitionSystem>(world, scene_serialization_, scene_loader_);
+            bullet_system_ = std::make_unique<BulletSystem>(world, scene_serialization_);
+            player_control_system_ = std::make_unique<PlayerControlSystem>(world, resources_, keyboard, mouse, scene_serialization_);
         }
 
         // Set up systems if editor mode enabled.
@@ -111,6 +111,9 @@ private:
     void on_initialized(nodec_world::World &world) {
         using namespace nodec;
         using namespace nodec_scene_serialization;
+        using namespace nodec_input;
+        using namespace nodec_input::keyboard;
+        using namespace nodec_input::mouse;
 
         logging::InfoStream(__FILE__, __LINE__) << "[HelloNodecGameApplication::on_initialized]";
 
@@ -157,13 +160,14 @@ private:
     nodec_resources::Resources &resources_;
     nodec_scene_serialization::SceneLoader &scene_loader_;
     nodec_scene_serialization::SceneSerialization &scene_serialization_;
+    nodec_input::InputDevices &input_devices_;
 
     // --- Sub systems ---
-    std::shared_ptr<PlayerControlSystem> player_control_system_;
-    std::shared_ptr<LightParticle> light_particle;
-    std::shared_ptr<ObjectSpawnSystem> object_spawn_system_;
-    std::shared_ptr<SceneTransitionSystem> scene_transition_system_;
-    std::shared_ptr<BulletSystem> bullet_system_;
+    std::unique_ptr<PlayerControlSystem> player_control_system_;
+    std::unique_ptr<LightParticle> light_particle;
+    std::unique_ptr<ObjectSpawnSystem> object_spawn_system_;
+    std::unique_ptr<SceneTransitionSystem> scene_transition_system_;
+    std::unique_ptr<BulletSystem> bullet_system_;
 };
 
 void nodec_application::on_configure(nodec_application::Application &app) {

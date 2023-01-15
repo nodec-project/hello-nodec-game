@@ -28,13 +28,16 @@ CEREAL_REGISTER_POLYMORPHIC_RELATION(nodec_scene_serialization::BaseSerializable
 class PlayerControlSystem {
 public:
     PlayerControlSystem(nodec_world::World &world,
+                        nodec_resources::Resources &resources,
                         std::shared_ptr<nodec_input::keyboard::Keyboard> keyboard,
                         std::shared_ptr<nodec_input::mouse::Mouse> mouse,
-                        nodec_scene_serialization::SceneSerialization &serialization) {
+                        nodec_scene_serialization::SceneSerialization &serialization)
+        : serialization_(serialization), resources_(resources) {
         using namespace nodec;
         using namespace nodec_scene;
         using namespace nodec_input::keyboard;
         using namespace nodec_input::mouse;
+        using namespace nodec_scene_serialization;
 
         world.stepped().connect([&](nodec_world::World &world) { on_stepped(world); });
         keyboard->key_event().connect([&](const nodec_input::keyboard::KeyEvent &event) {
@@ -80,6 +83,14 @@ public:
                 auto &control = registry.emplace_component<PlayerControl>(entity).first;
                 control.speed = serializable.speed;
             });
+
+        world.initialized().connect([=](nodec_world::World &world) {
+            // Resources module is invalid in the configuration phase.
+            bullet_prototype_ = resources_.registry().get_resource_direct<SerializableSceneGraph>("org.nodec.hello-nodec-game/scenes/bullet.scene");
+            if (!bullet_prototype_) {
+                logging::WarnStream(__FILE__, __LINE__) << "Failed to get bullet scene.";
+            }
+        });
     }
 
 #ifdef EDITOR_MODE
@@ -95,25 +106,26 @@ public:
 private:
     void on_stepped(nodec_world::World &world) {
         using namespace nodec;
+        using namespace nodec::entities;
         using namespace nodec_scene;
         using namespace nodec_scene::components;
         using namespace nodec_rendering::components;
         using namespace nodec_scene_serialization::components;
+        using namespace nodec_scene_serialization;
+        using namespace nodec_physics::components;
 
-        [&]() {
-            if (!left_pressed_) return;
-            if (world.clock().current_time() - prev_fire_time_ < 0.25f) return;
+        SceneEntity player_entt{null_entity};
 
-            prev_fire_time_ = world.clock().current_time();
+        {
+            auto view = world.scene().registry().view<Transform, PlayerControl>();
+            player_entt = *view.begin();
 
-            auto bullet_entt = world.scene().create_entity();
-            world.scene().registry().emplace_component<Bullet>(bullet_entt);
-            world.scene().registry().emplace_component<NonSerialized>(bullet_entt);
+            // Nothing to do more.
+            if (player_entt == null_entity) return;
 
-            logging::InfoStream(__FILE__, __LINE__) << "fire!";
-        }();
+            auto &trfm = view.get<Transform>(player_entt);
+            auto &control = view.get<PlayerControl>(player_entt);
 
-        world.scene().registry().view<Transform, PlayerControl>().each([&](const SceneEntity &entity, Transform &trfm, PlayerControl &control) {
             const float delta_time = world.clock().delta_time();
 
             auto forward = math::gfx::rotate(Vector3f(0, 0, 1), trfm.local_rotation);
@@ -146,10 +158,32 @@ private:
                 trfm.dirty = true;
                 rotation_delta.set(0, 0);
             }
-        });
+        }
+
+        [&]() {
+            if (!left_pressed_) return;
+            if (world.clock().current_time() - prev_fire_time_ < 0.25f) return;
+
+            prev_fire_time_ = world.clock().current_time();
+
+            logging::InfoStream(__FILE__, __LINE__) << "fire!";
+
+            if (!bullet_prototype_) return;
+
+            auto entt = SceneEntityEmplacer{bullet_prototype_, world.scene(), entities::null_entity, serialization_}.emplace_all();
+            auto &force = world.scene().registry().emplace_component<ImpulseForce>(entt).first;
+            auto &trfm = world.scene().registry().get_component<Transform>(entt);
+
+            auto &player_trfm = world.scene().registry().get_component<Transform>(player_entt);
+            trfm.local_position = player_trfm.local_position;
+            trfm.dirty = true;
+        }();
     }
 
 private:
+    nodec_scene_serialization::SceneSerialization &serialization_;
+    nodec_resources::Resources &resources_;
+
     bool w_pressed{false};
     bool a_pressed{false};
     bool s_pressed{false};
@@ -158,6 +192,8 @@ private:
     nodec::Vector2i rotation_delta;
     bool left_pressed_{false};
     float prev_fire_time_{0.0f};
+
+    std::shared_ptr<nodec_scene_serialization::SerializableSceneGraph> bullet_prototype_;
 };
 
 #endif
