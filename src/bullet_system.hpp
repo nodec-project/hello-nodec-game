@@ -46,9 +46,7 @@ public:
             }
         });
 
-        for (const auto &entt : to_deletes_) {
-            world.scene().registry().destroy_entity(entt);
-        }
+        world.scene().registry().destroy_entities(to_deletes_.begin(), to_deletes_.end());
         to_deletes_.clear();
     }
 

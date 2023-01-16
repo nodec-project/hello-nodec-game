@@ -177,6 +177,9 @@ private:
             auto &player_trfm = world.scene().registry().get_component<Transform>(player_entt);
             trfm.local_position = player_trfm.local_position;
             trfm.dirty = true;
+
+            auto forward = math::gfx::rotate(Vector3f(0, 0, 1), player_trfm.local_rotation);
+            force.force = forward * 100.f;
         }();
     }
 
