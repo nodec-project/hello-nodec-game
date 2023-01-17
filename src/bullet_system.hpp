@@ -22,7 +22,10 @@ CEREAL_REGISTER_POLYMORPHIC_RELATION(nodec_scene_serialization::BaseSerializable
 
 class BulletSystem {
 public:
-    BulletSystem(nodec_world::World &world, nodec_scene_serialization::SceneSerialization &serialization) {
+    BulletSystem(nodec_world::World &world, nodec_scene_serialization::SceneSerialization &serialization, nodec_physics::systems::PhysicsSystem &physics_system) {
+        using namespace nodec_physics;
+        using namespace nodec;
+
         serialization.register_component<Bullet, SerializableBullet>(
             [&](const Bullet &bullet) {
                 auto serializable = std::make_unique<SerializableBullet>();
@@ -33,10 +36,20 @@ public:
             });
 
         world.stepped().connect([&](nodec_world::World &world) { on_stepped(world); });
+
+        // physics_system.collision_stay().connect([&](const CollisionInfo &info) {
+        //     if (world.scene().registry().try_get_component<Bullet>(info.entity0)) {
+        //         world.scene().registry().destroy_entity(info.entity0);
+        //     }
+        //     if (world.scene().registry().try_get_component<Bullet>(info.entity1)) {
+        //         world.scene().registry().destroy_entity(info.entity1);
+        //     }
+        // });
     }
 
     void on_stepped(nodec_world::World &world) {
         using namespace nodec_scene;
+        using namespace nodec_physics::components;
 
         world.scene().registry().view<Bullet>().each([&](auto entt, Bullet &bullet) {
             bullet.lifetime -= world.clock().delta_time();
@@ -44,6 +57,13 @@ public:
             if (bullet.lifetime < 0.f) {
                 to_deletes_.emplace_back(entt);
             }
+        });
+
+        world.scene().registry().destroy_entities(to_deletes_.begin(), to_deletes_.end());
+        to_deletes_.clear();
+
+        world.scene().registry().view<Bullet, CollisionStay>().each([&](auto entt, Bullet, CollisionStay) {
+            to_deletes_.emplace_back(entt);
         });
 
         world.scene().registry().destroy_entities(to_deletes_.begin(), to_deletes_.end());
@@ -63,7 +83,6 @@ public:
 
 private:
     std::vector<nodec_scene::SceneEntity> to_deletes_;
-
 };
 
 #endif

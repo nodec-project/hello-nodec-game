@@ -27,12 +27,14 @@ public:
         using namespace nodec_world;
         using namespace nodec_input::keyboard;
         using namespace nodec_input::mouse;
+        using namespace nodec_physics::systems;
 
         logging::InfoStream(__FILE__, __LINE__) << "[HelloNodecGameApplication::HelloNodecGameApplication] >>> Hello :)";
 
         // --- Get services ---
         auto &world = app.get_service<World>();
         auto &screen = app.get_service<Screen>();
+        auto &physics_system = app.get_service<PhysicsSystem>();
 
         auto keyboard = input_devices_.get_available_devices<Keyboard>().front();
         auto mouse = input_devices_.get_available_devices<Mouse>().front();
@@ -63,7 +65,7 @@ public:
             light_particle = std::make_unique<LightParticle>(world, resources_.registry(), scene_serialization_);
             object_spawn_system_ = std::make_unique<ObjectSpawnSystem>(keyboard, world, scene_serialization_, scene_loader_);
             scene_transition_system_ = std::make_unique<SceneTransitionSystem>(world, scene_serialization_, scene_loader_);
-            bullet_system_ = std::make_unique<BulletSystem>(world, scene_serialization_);
+            bullet_system_ = std::make_unique<BulletSystem>(world, scene_serialization_, physics_system);
             player_control_system_ = std::make_unique<PlayerControlSystem>(world, resources_, keyboard, mouse, scene_serialization_);
         }
 

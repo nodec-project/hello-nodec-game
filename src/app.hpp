@@ -8,6 +8,7 @@
 #include <nodec_input/input_devices.hpp>
 #include <nodec_input/keyboard/keyboard.hpp>
 #include <nodec_input/mouse/mouse.hpp>
+#include <nodec_physics/components/collision_stay.hpp>
 #include <nodec_physics/components/impluse_force.hpp>
 #include <nodec_physics/components/physics_shape.hpp>
 #include <nodec_physics/components/rigid_body.hpp>
