@@ -1,0 +1,40 @@
+{
+    "material" : {
+        "shader": "org.nodec.game-engine/shaders/pbr-defer",
+        "cull_mode": 2,
+        "float_properties": [],
+        "vector4_properties": [],
+        "texture_properties": [
+            {
+                "key": "albedo",
+                "value": {
+                    "texture": "org.nodec.hello-nodec-game/textures/concrete/Tcom_Pavement_PaintedConcrete3_Base_Color.tga",
+                    "sampler": {
+                        "filter_mode": 1,
+                        "wrap_mode": 0
+                    }
+                }
+            },
+            {
+                "key": "normal",
+                "value": {
+                    "texture": "org.nodec.hello-nodec-game/textures/concrete/Tcom_Pavement_PaintedConcrete3_Base_Color.tga",
+                    "sampler": {
+                        "filter_mode": 1,
+                        "wrap_mode": 0
+                    }
+                }
+            },
+            {
+                "key": "roughness",
+                "value": {
+                    "texture": "org.nodec.hello-nodec-game/textures/concrete/Tcom_Pavement_PaintedConcrete3_Roughness.tga",
+                    "sampler": {
+                        "filter_mode": 1,
+                        "wrap_mode": 0
+                    }
+                }
+            }
+        ]
+    }
+}
