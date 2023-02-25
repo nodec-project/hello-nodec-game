@@ -18,7 +18,7 @@
             {
                 "key": "normal",
                 "value": {
-                    "texture": "org.nodec.hello-nodec-game/textures/concrete/Tcom_Pavement_PaintedConcrete3_Base_Color.tga",
+                    "texture": "org.nodec.hello-nodec-game/textures/concrete/Tcom_Pavement_PaintedConcrete3_Normal_Color.tga",
                     "sampler": {
                         "filter_mode": 1,
                         "wrap_mode": 0
