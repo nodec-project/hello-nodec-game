@@ -1,4 +1,4 @@
-# hello-nodec
+# hello-nodec-game
 
 English | [日本語](./README_jp.md)
 
