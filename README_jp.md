@@ -1,16 +1,21 @@
 # hello-nodec-game
 
+[English](./README.md) | 日本語
+
 ![](./gallery/screenshot.png)
 
-本リポジトリは、ゲームエンジン`nodec_game_engine`で動作するアプリのテンプレートプロジェクトです。
+本リポジトリは、ゲームエンジン`nodec_game_engine`を使ってアプリを作成するためのテンプレートプロジェクトです。
 
 ## 対応環境
 
-`nodec_game_engine`がサポートしている環境と同じです。
-
-現在では以下の環境がサポートされています。
-
 * Windows
+
+> ℹ️ **NOTE: ほかのプラットフォームには対応する?**
+>
+> 以下のプラットフォームに対応することを目指しています。
+>
+> * macOS
+> * Android
 
 ## クイックスタート
 
