@@ -3,7 +3,7 @@
 
 #include "app.hpp"
 
-#include <random>
+#include <nodec/random.hpp>
 
 class LightParticle {
 public:
@@ -24,8 +24,6 @@ public:
             center_entt = world.scene().create_entity("Particles");
 
             world.scene().registry().emplace_component<NonSerialized>(center_entt);
-            std::uniform_real_distribution<float> random_float(0.0, 1.0); // random floats between [0.0, 1.0]
-            std::default_random_engine generator;
 
             auto proto_light = resource_registry.get_resource<SerializableSceneGraph>("org.nodec.hello-nodec-game/scenes/particle-light.scene").get();
 
@@ -36,11 +34,11 @@ public:
                 world.scene().hierarchy_system().append_child(center_entt, entt);
                 auto &trfm = world.scene().registry().get_component<Transform>(entt);
                 Vector3f vec{
-                    random_float(generator) * 2.0f - 1.0f,
-                    random_float(generator) * 2.0f - 1.0f,
-                    random_float(generator) * 2.0f - 1.0f};
+                    random::global().uniform<float>() * 2.0f - 1.0f,
+                    random::global().uniform<float>() * 2.0f - 1.0f,
+                    random::global().uniform<float>() * 2.0f - 1.0f};
                 vec = math::normalize(vec);
-                vec *= random_float(generator) * 10.0f;
+                vec *= random::global().uniform<float>() * 10.0f;
                 trfm.local_position = vec;
                 trfm.dirty = true;
             }
