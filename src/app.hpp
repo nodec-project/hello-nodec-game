@@ -1,7 +1,7 @@
 #ifndef APP_HPP_
 #define APP_HPP_
 
-#define EDITOR_MODE
+// #define EDITOR_MODE
 
 #include <nodec_animations/animation_curve.hpp>
 #include <nodec_application/application.hpp>

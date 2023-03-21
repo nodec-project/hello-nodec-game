@@ -1,39 +1,16 @@
-#ifndef BULLET_SYSTEM_HPP_
-#define BULLET_SYSTEM_HPP_
+#ifndef SYSTEMS__BULLET_SYSTEM_HPP_
+#define SYSTEMS__BULLET_SYSTEM_HPP_
 
-#include "app.hpp"
+#include "../app.hpp"
+#include "../components/bullet.hpp"
 
-struct Bullet {
-    float lifetime{10.f};
-};
-
-class SerializableBullet : public nodec_scene_serialization::BaseSerializableComponent {
-public:
-    SerializableBullet()
-        : BaseSerializableComponent(this) {}
-
-    template<class Archive>
-    void serialize(Archive &archive) {
-    }
-};
-
-CEREAL_REGISTER_TYPE(SerializableBullet)
-CEREAL_REGISTER_POLYMORPHIC_RELATION(nodec_scene_serialization::BaseSerializableComponent, SerializableBullet)
+namespace systems {
 
 class BulletSystem {
 public:
-    BulletSystem(nodec_world::World &world, nodec_scene_serialization::SceneSerialization &serialization, nodec_physics::systems::PhysicsSystem &physics_system) {
+    BulletSystem(nodec_world::World &world, nodec_physics::systems::PhysicsSystem &physics_system) {
         using namespace nodec_physics;
         using namespace nodec;
-
-        serialization.register_component<Bullet, SerializableBullet>(
-            [&](const Bullet &bullet) {
-                auto serializable = std::make_unique<SerializableBullet>();
-                return serializable;
-            },
-            [&](const SerializableBullet &serializable, auto entt, auto &registry) {
-                auto &bullet = registry.emplace_component<Bullet>(entt).first;
-            });
 
         world.stepped().connect([&](nodec_world::World &world) { on_stepped(world); });
 
@@ -50,6 +27,7 @@ public:
     void on_stepped(nodec_world::World &world) {
         using namespace nodec_scene;
         using namespace nodec_physics::components;
+        using namespace ::components;
 
         world.scene().registry().view<Bullet>().each([&](auto entt, Bullet &bullet) {
             bullet.lifetime -= world.clock().delta_time();
@@ -70,19 +48,9 @@ public:
         to_deletes_.clear();
     }
 
-#ifdef EDITOR_MODE
-public:
-    static void setup_editor(nodec_scene_editor::SceneEditor &editor) {
-        editor.inspector_component_registry().register_component<Bullet>(
-            "Bullet",
-            [](Bullet &bullet) {
-
-            });
-    }
-#endif
-
 private:
     std::vector<nodec_scene::SceneEntity> to_deletes_;
 };
+} // namespace systems
 
 #endif

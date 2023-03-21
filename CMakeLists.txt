@@ -37,6 +37,13 @@ else()
     message(FATAL_MESSAGE "This platform does not supported.")
 endif()
 
+if(NODEC_GAME_EDITOR_ENABLED)
+    target_compile_definitions(${PROJECT_NAME}
+        PUBLIC
+        EDITOR_MODE
+    )
+endif()
+
 target_link_libraries(${PROJECT_NAME}
     nodec_game_engine
 )

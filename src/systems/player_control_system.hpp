@@ -1,30 +1,11 @@
-#ifndef PLAYER_CONTROL_SYSTEM_HPP_
-#define PLAYER_CONTROL_SYSTEM_HPP_
+#ifndef SYSTEMS__PLAYER_CONTROL_SYSTEM_HPP_
+#define SYSTEMS__PLAYER_CONTROL_SYSTEM_HPP_
 
-#include "app.hpp"
-#include "bullet_system.hpp"
+#include "../app.hpp"
+#include "../components/bullet.hpp"
+#include "../components/player_control.hpp"
 
-struct PlayerControl {
-    float speed{1.0f};
-};
-
-class SerializablePlayerControl : public nodec_scene_serialization::BaseSerializableComponent {
-public:
-    SerializablePlayerControl()
-        : BaseSerializableComponent{this} {
-    }
-
-    float speed{1.0f};
-
-    template<class Archive>
-    void serialize(Archive &archive) {
-        archive(cereal::make_nvp("speed", speed));
-    }
-};
-
-CEREAL_REGISTER_TYPE(SerializablePlayerControl)
-CEREAL_REGISTER_POLYMORPHIC_RELATION(nodec_scene_serialization::BaseSerializableComponent, SerializablePlayerControl)
-
+namespace systems {
 class PlayerControlSystem {
 public:
     PlayerControlSystem(nodec_world::World &world,
@@ -73,35 +54,14 @@ public:
             }
         });
 
-        serialization.register_component<PlayerControl, SerializablePlayerControl>(
-            [&](const PlayerControl &control) {
-                auto serializable = std::make_unique<SerializablePlayerControl>();
-                serializable->speed = control.speed;
-                return serializable;
-            },
-            [&](const SerializablePlayerControl &serializable, SceneEntity entity, SceneRegistry &registry) {
-                auto &control = registry.emplace_component<PlayerControl>(entity).first;
-                control.speed = serializable.speed;
-            });
-
         world.initialized().connect([=](nodec_world::World &world) {
             // Resources module is invalid in the configuration phase.
-            bullet_prototype_ = resources_.registry().get_resource_direct<SerializableEntity>("org.nodec.hello-nodec-game/scenes/bullet.scene");
+            bullet_prototype_ = resources_.registry().get_resource_direct<SerializableEntity>("org.nodec.hello-nodec-game/prefabs/bullet.entity");
             if (!bullet_prototype_) {
                 logging::WarnStream(__FILE__, __LINE__) << "Failed to get bullet scene.";
             }
         });
     }
-
-#ifdef EDITOR_MODE
-    static void setup_editor(nodec_scene_editor::SceneEditor &editor) {
-        editor.inspector_component_registry().register_component<PlayerControl>(
-            "Player Control",
-            [](PlayerControl &control) {
-                ImGui::DragFloat("Speed", &control.speed);
-            });
-    }
-#endif
 
 private:
     void on_stepped(nodec_world::World &world) {
@@ -113,6 +73,7 @@ private:
         using namespace nodec_scene_serialization::components;
         using namespace nodec_scene_serialization;
         using namespace nodec_physics::components;
+        using namespace ::components;
 
         SceneEntity player_entt{null_entity};
 
@@ -198,5 +159,5 @@ private:
 
     std::shared_ptr<nodec_scene_serialization::SerializableEntity> bullet_prototype_;
 };
-
+} // namespace systems
 #endif

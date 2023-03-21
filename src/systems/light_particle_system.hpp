@@ -1,14 +1,15 @@
-#ifndef LIGHT_PARTICLE_HPP_
-#define LIGHT_PARTICLE_HPP_
+#ifndef SYSTEMS__LIGHT_PARTICLE_HPP_
+#define SYSTEMS__LIGHT_PARTICLE_HPP_
 
-#include "app.hpp"
+#include "../app.hpp"
 
 #include <nodec/random.hpp>
 
-class LightParticle {
+namespace systems {
+class LightParticleSystem {
 public:
-    LightParticle(nodec_world::World &world, nodec::resource_management::ResourceRegistry &resource_registry,
-                  nodec_scene_serialization::SceneSerialization &serialization) {
+    LightParticleSystem(nodec_world::World &world, nodec::resource_management::ResourceRegistry &resource_registry,
+                        nodec_scene_serialization::SceneSerialization &serialization) {
         using namespace nodec;
         using namespace nodec_rendering::components;
         using namespace nodec_scene::components;
@@ -25,7 +26,7 @@ public:
 
             world.scene().registry().emplace_component<NonSerialized>(center_entt);
 
-            auto proto_light = resource_registry.get_resource_direct<SerializableEntity>("org.nodec.hello-nodec-game/scenes/particle-light.scene");
+            auto proto_light = resource_registry.get_resource_direct<SerializableEntity>("org.nodec.hello-nodec-game/prefabs/particle-light.entity");
 
             constexpr int COUNT = 100;
             for (int i = 0; i < COUNT; ++i) {
@@ -57,5 +58,6 @@ private:
     nodec_scene::SceneEntity center_entt{nodec::entities::null_entity};
     nodec_animations::AnimationCurve curve;
 };
+} // namespace systems
 
 #endif

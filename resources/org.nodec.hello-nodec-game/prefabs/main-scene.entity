@@ -2075,7 +2075,7 @@
             "components": [
               {
                 "polymorphic_id": 2147483659,
-                "polymorphic_name": "SerializablePlayerControl",
+                "polymorphic_name": "components::PlayerControl",
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
