@@ -25,12 +25,12 @@ public:
 
             world.scene().registry().emplace_component<NonSerialized>(center_entt);
 
-            auto proto_light = resource_registry.get_resource<SerializableSceneGraph>("org.nodec.hello-nodec-game/scenes/particle-light.scene").get();
+            auto proto_light = resource_registry.get_resource_direct<SerializableEntity>("org.nodec.hello-nodec-game/scenes/particle-light.scene");
 
             constexpr int COUNT = 100;
             for (int i = 0; i < COUNT; ++i) {
                 auto entt = world.scene().create_entity("light");
-                SceneEntityEmplacer{proto_light, world.scene(), entt, serialization}.emplace_all();
+                EntityEmplacer(serialization).emplace(proto_light.get(), entt, world.scene());
                 world.scene().hierarchy_system().append_child(center_entt, entt);
                 auto &trfm = world.scene().registry().get_component<Transform>(entt);
                 Vector3f vec{

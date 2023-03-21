@@ -1,26 +1,48 @@
 {
-  "scene_graph": {
-    "roots": [
+  "entity": {
+    "components": [
+      {
+        "polymorphic_id": 2147483650,
+        "polymorphic_name": "nodec_scene::components::SerializableTransform",
+        "ptr_wrapper": {
+          "valid": 1,
+          "data": {
+            "local_position": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "local_scale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "local_rotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            }
+          }
+        }
+      },
+      {
+        "polymorphic_id": 2147483651,
+        "polymorphic_name": "nodec_scene::components::SerializableName",
+        "ptr_wrapper": {
+          "valid": 1,
+          "data": {
+            "name": "Main Scene"
+          }
+        }
+      }
+    ],
+    "children": [
       {
         "ptr_wrapper": {
           "valid": 1,
           "data": {
             "components": [
-              {
-                "polymorphic_id": 2147483649,
-                "polymorphic_name": "SerializableSceneTransition",
-                "ptr_wrapper": {
-                  "valid": 1,
-                  "data": {
-                    "scenes": [
-                      "org.nodec.hello-nodec-game/scenes/text_a.scene",
-                      "org.nodec.hello-nodec-game/scenes/text_b.scene",
-                      "org.nodec.hello-nodec-game/scenes/text_c.scene"
-                    ],
-                    "current_scene_index": 0
-                  }
-                }
-              },
               {
                 "polymorphic_id": 2147483650,
                 "polymorphic_name": "nodec_scene::components::SerializableTransform",
@@ -66,16 +88,6 @@
           "valid": 1,
           "data": {
             "components": [
-              {
-                "polymorphic_id": 2147483652,
-                "polymorphic_name": "SerializableObjectSpawner",
-                "ptr_wrapper": {
-                  "valid": 1,
-                  "data": {
-                    "scene_name": "org.nodec.hello-nodec-game/scenes/serena.scene"
-                  }
-                }
-              },
               {
                 "polymorphic_id": 2,
                 "ptr_wrapper": {

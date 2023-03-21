@@ -1,16 +1,16 @@
 #include "app.hpp"
 #include "player_control_system.hpp"
 #include "light_particle.hpp"
-#include "object_spawn_system.hpp"
+//#include "object_spawn_system.hpp"
 #include "bullet_system.hpp"
-#include "scene_transition_system.hpp"
+//#include "scene_transition_system.hpp"
 
 class HelloNodecGameApplication {
 public:
     HelloNodecGameApplication(nodec_application::Application &app)
         // Get engine services.
         : resources_(app.get_service<nodec_resources::Resources>()),
-          scene_loader_(app.get_service<nodec_scene_serialization::SceneLoader>()),
+          entity_loader_(app.get_service<nodec_scene_serialization::EntityLoader>()),
           scene_serialization_(app.get_service<nodec_scene_serialization::SceneSerialization>()),
           input_devices_(app.get_service<nodec_input::InputDevices>()) {
         using namespace nodec;
@@ -63,8 +63,8 @@ public:
 
         {
             light_particle = std::make_unique<LightParticle>(world, resources_.registry(), scene_serialization_);
-            object_spawn_system_ = std::make_unique<ObjectSpawnSystem>(keyboard, world, scene_serialization_, scene_loader_);
-            scene_transition_system_ = std::make_unique<SceneTransitionSystem>(world, scene_serialization_, scene_loader_);
+            //object_spawn_system_ = std::make_unique<ObjectSpawnSystem>(keyboard, world, scene_serialization_, scene_loader_);
+            //scene_transition_system_ = std::make_unique<SceneTransitionSystem>(world, scene_serialization_, scene_loader_);
             bullet_system_ = std::make_unique<BulletSystem>(world, scene_serialization_, physics_system);
             player_control_system_ = std::make_unique<PlayerControlSystem>(world, resources_, keyboard, mouse, scene_serialization_);
         }
@@ -76,8 +76,8 @@ public:
             auto &editor = app.get_service<SceneEditor>();
 
             PlayerControlSystem::setup_editor(editor);
-            ObjectSpawnSystem::setup_editor(editor);
-            SceneTransitionSystem::setup_editor(editor);
+            //ObjectSpawnSystem::setup_editor(editor);
+            //SceneTransitionSystem::setup_editor(editor);
             BulletSystem::setup_editor(editor);
 #endif
         }
@@ -121,8 +121,9 @@ private:
 
         // Load the main scene.
         {
-            auto main_scene = resources_.registry().get_resource_direct<SerializableSceneGraph>("org.nodec.hello-nodec-game/scenes/main.scene");
-            SceneEntityEmplacer{main_scene, world.scene(), entities::null_entity, scene_serialization_}.emplace_all();
+            entity_loader_.load_async("org.nodec.hello-nodec-game/prefabs/main-scene.entity");
+            //auto main_scene = resources_.registry().get_resource_direct<SerializableSceneGraph>("org.nodec.hello-nodec-game/scenes/main.scene");
+            //SceneEntityEmplacer{main_scene, world.scene(), entities::null_entity, scene_serialization_}.emplace_all();
         }
 
         //{
@@ -160,15 +161,15 @@ private:
 private:
     // --- Game engine services ---
     nodec_resources::Resources &resources_;
-    nodec_scene_serialization::SceneLoader &scene_loader_;
+    nodec_scene_serialization::EntityLoader &entity_loader_;
     nodec_scene_serialization::SceneSerialization &scene_serialization_;
     nodec_input::InputDevices &input_devices_;
 
     // --- Sub systems ---
     std::unique_ptr<PlayerControlSystem> player_control_system_;
     std::unique_ptr<LightParticle> light_particle;
-    std::unique_ptr<ObjectSpawnSystem> object_spawn_system_;
-    std::unique_ptr<SceneTransitionSystem> scene_transition_system_;
+    //std::unique_ptr<ObjectSpawnSystem> object_spawn_system_;
+    //std::unique_ptr<SceneTransitionSystem> scene_transition_system_;
     std::unique_ptr<BulletSystem> bullet_system_;
 };
 

@@ -86,7 +86,7 @@ public:
 
         world.initialized().connect([=](nodec_world::World &world) {
             // Resources module is invalid in the configuration phase.
-            bullet_prototype_ = resources_.registry().get_resource_direct<SerializableSceneGraph>("org.nodec.hello-nodec-game/scenes/bullet.scene");
+            bullet_prototype_ = resources_.registry().get_resource_direct<SerializableEntity>("org.nodec.hello-nodec-game/scenes/bullet.scene");
             if (!bullet_prototype_) {
                 logging::WarnStream(__FILE__, __LINE__) << "Failed to get bullet scene.";
             }
@@ -170,7 +170,7 @@ private:
 
             if (!bullet_prototype_) return;
 
-            auto entt = SceneEntityEmplacer{bullet_prototype_, world.scene(), entities::null_entity, serialization_}.emplace_all();
+            auto entt = EntityEmplacer(serialization_).emplace(bullet_prototype_.get(), entities::null_entity, world.scene());
             auto &force = world.scene().registry().emplace_component<ImpulseForce>(entt).first;
             auto &trfm = world.scene().registry().get_component<Transform>(entt);
 
@@ -196,7 +196,7 @@ private:
     bool left_pressed_{false};
     float prev_fire_time_{0.0f};
 
-    std::shared_ptr<nodec_scene_serialization::SerializableSceneGraph> bullet_prototype_;
+    std::shared_ptr<nodec_scene_serialization::SerializableEntity> bullet_prototype_;
 };
 
 #endif
