@@ -104,49 +104,6 @@
                   "data": {
                     "local_position": {
                       "x": 0.0,
-                      "y": 7.84499979019165,
-                      "z": 15.180000305175782
-                    },
-                    "local_scale": {
-                      "x": 1.0,
-                      "y": 1.0,
-                      "z": 1.0
-                    },
-                    "local_rotation": {
-                      "x": 0.0,
-                      "y": 0.0,
-                      "z": 0.0,
-                      "w": 1.0
-                    }
-                  }
-                }
-              },
-              {
-                "polymorphic_id": 3,
-                "ptr_wrapper": {
-                  "valid": 1,
-                  "data": {
-                    "name": "Serena Spawner"
-                  }
-                }
-              }
-            ],
-            "children": []
-          }
-        }
-      },
-      {
-        "ptr_wrapper": {
-          "valid": 1,
-          "data": {
-            "components": [
-              {
-                "polymorphic_id": 2,
-                "ptr_wrapper": {
-                  "valid": 1,
-                  "data": {
-                    "local_position": {
-                      "x": 0.0,
                       "y": 0.0,
                       "z": 0.0
                     },
