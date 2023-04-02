@@ -31,7 +31,7 @@ public:
             constexpr int COUNT = 100;
             for (int i = 0; i < COUNT; ++i) {
                 auto entt = world.scene().create_entity("light");
-                EntityEmplacer(serialization).emplace(proto_light.get(), entt, world.scene());
+                EntityBuilder(serialization).build(proto_light.get(), entt, world.scene());
                 world.scene().hierarchy_system().append_child(center_entt, entt);
                 auto &trfm = world.scene().registry().get_component<Transform>(entt);
                 Vector3f vec{

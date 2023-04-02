@@ -28,7 +28,7 @@
 #include <nodec_scene_audio/components/audio_source.hpp>
 #include <nodec_scene_audio/resources/audio_clip.hpp>
 #include <nodec_scene_serialization/components/non_serialized.hpp>
-#include <nodec_scene_serialization/entity_emplacer.hpp>
+#include <nodec_scene_serialization/entity_builder.hpp>
 #include <nodec_scene_serialization/entity_loader.hpp>
 #include <nodec_scene_serialization/scene_serialization.hpp>
 #include <nodec_screen/screen.hpp>
