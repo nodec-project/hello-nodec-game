@@ -18,7 +18,8 @@ if(MSVC)
     set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE "${EXECUTABLE_OUTPUT_DIRECTORY}")
     set(CMAKE_LIBRARY_OUTPUT_DIRECTORY_DEBUG "${EXECUTABLE_OUTPUT_DIRECTORY}")
     set(CMAKE_LIBRARY_OUTPUT_DIRECTORY_RELEASE "${EXECUTABLE_OUTPUT_DIRECTORY}")
-
+    
+    add_compile_options(/bigobj)
     # Since the static libraries is linked, no need to place them in the executable directory.
     # set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY_DEBUG "${EXECUTABLE_OUTPUT_DIRECTORY}")
     # set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY_RELEASE "${EXECUTABLE_OUTPUT_DIRECTORY}")
@@ -35,6 +36,13 @@ if(WIN32)
     )
 else()
     message(FATAL_MESSAGE "This platform does not supported.")
+endif()
+
+if(NODEC_GAME_EDITOR_ENABLED)
+    target_compile_definitions(${PROJECT_NAME}
+        PUBLIC
+        EDITOR_MODE
+    )
 endif()
 
 target_link_libraries(${PROJECT_NAME}

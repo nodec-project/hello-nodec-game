@@ -1,0 +1,1358 @@
+{
+  "entity": {
+    "components": [
+      {
+        "polymorphic_id": 2147483649,
+        "polymorphic_name": "nodec_scene_serialization::components::Prefab",
+        "ptr_wrapper": {
+          "valid": 1,
+          "data": {
+            "source": "org.nodec.hello-nodec-game/prefabs/nodec.entity",
+            "active": true
+          }
+        }
+      },
+      {
+        "polymorphic_id": 2147483650,
+        "polymorphic_name": "nodec_scene::components::SerializableTransform",
+        "ptr_wrapper": {
+          "valid": 1,
+          "data": {
+            "local_position": {
+              "x": -2.7149999141693117,
+              "y": 0.33000001311302187,
+              "z": 0.0
+            },
+            "local_scale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "local_rotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            }
+          }
+        }
+      },
+      {
+        "polymorphic_id": 2147483651,
+        "polymorphic_name": "nodec_scene::components::SerializableName",
+        "ptr_wrapper": {
+          "valid": 1,
+          "data": {
+            "name": "nodec"
+          }
+        }
+      }
+    ],
+    "children": [
+      {
+        "ptr_wrapper": {
+          "valid": 1,
+          "data": {
+            "components": [
+              {
+                "polymorphic_id": 2,
+                "ptr_wrapper": {
+                  "valid": 1,
+                  "data": {
+                    "local_position": {
+                      "x": 4.5,
+                      "y": 0.0,
+                      "z": 0.0
+                    },
+                    "local_scale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "local_rotation": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 1.0
+                    }
+                  }
+                }
+              },
+              {
+                "polymorphic_id": 3,
+                "ptr_wrapper": {
+                  "valid": 1,
+                  "data": {
+                    "name": "e"
+                  }
+                }
+              }
+            ],
+            "children": [
+              {
+                "ptr_wrapper": {
+                  "valid": 1,
+                  "data": {
+                    "components": [
+                      {
+                        "polymorphic_id": 2,
+                        "ptr_wrapper": {
+                          "valid": 1,
+                          "data": {
+                            "local_position": {
+                              "x": 0.3400000035762787,
+                              "y": 0.16500000655651093,
+                              "z": 0.0
+                            },
+                            "local_scale": {
+                              "x": 0.33000001311302187,
+                              "y": 1.0,
+                              "z": 1.0
+                            },
+                            "local_rotation": {
+                              "x": 0.0,
+                              "y": 0.0,
+                              "z": 0.7071067690849304,
+                              "w": 0.7071067690849304
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "polymorphic_id": 3,
+                        "ptr_wrapper": {
+                          "valid": 1,
+                          "data": {
+                            "name": "Bottom"
+                          }
+                        }
+                      },
+                      {
+                        "polymorphic_id": 2147483652,
+                        "polymorphic_name": "nodec_rendering::components::SerializableMeshRenderer",
+                        "ptr_wrapper": {
+                          "valid": 1,
+                          "data": {
+                            "meshes": [
+                              "org.nodec.game-engine/meshes/cube.mesh"
+                            ],
+                            "materials": [
+                              "org.nodec.game-engine/materials/pbr-defer-default.material"
+                            ]
+                          }
+                        }
+                      }
+                    ],
+                    "children": []
+                  }
+                }
+              },
+              {
+                "ptr_wrapper": {
+                  "valid": 1,
+                  "data": {
+                    "components": [
+                      {
+                        "polymorphic_id": 2,
+                        "ptr_wrapper": {
+                          "valid": 1,
+                          "data": {
+                            "local_position": {
+                              "x": 0.3400000035762787,
+                              "y": 1.0,
+                              "z": 0.0
+                            },
+                            "local_scale": {
+                              "x": 0.33000001311302187,
+                              "y": 1.0,
+                              "z": 1.0
+                            },
+                            "local_rotation": {
+                              "x": 0.0,
+                              "y": 0.0,
+                              "z": 0.7071067690849304,
+                              "w": 0.7071067690849304
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "polymorphic_id": 3,
+                        "ptr_wrapper": {
+                          "valid": 1,
+                          "data": {
+                            "name": "Top"
+                          }
+                        }
+                      },
+                      {
+                        "polymorphic_id": 4,
+                        "ptr_wrapper": {
+                          "valid": 1,
+                          "data": {
+                            "meshes": [
+                              "org.nodec.game-engine/meshes/cube.mesh"
+                            ],
+                            "materials": [
+                              "org.nodec.game-engine/materials/pbr-defer-default.material"
+                            ]
+                          }
+                        }
+                      }
+                    ],
+                    "children": []
+                  }
+                }
+              },
+              {
+                "ptr_wrapper": {
+                  "valid": 1,
+                  "data": {
+                    "components": [
+                      {
+                        "polymorphic_id": 2,
+                        "ptr_wrapper": {
+                          "valid": 1,
+                          "data": {
+                            "local_position": {
+                              "x": 0.6700000166893005,
+                              "y": 0.8949999809265137,
+                              "z": 0.0
+                            },
+                            "local_scale": {
+                              "x": 0.33000001311302187,
+                              "y": 0.5,
+                              "z": 1.0
+                            },
+                            "local_rotation": {
+                              "x": 0.0,
+                              "y": 0.0,
+                              "z": 0.0,
+                              "w": 1.0
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "polymorphic_id": 3,
+                        "ptr_wrapper": {
+                          "valid": 1,
+                          "data": {
+                            "name": "Right"
+                          }
+                        }
+                      },
+                      {
+                        "polymorphic_id": 4,
+                        "ptr_wrapper": {
+                          "valid": 1,
+                          "data": {
+                            "meshes": [
+                              "org.nodec.game-engine/meshes/cube.mesh"
+                            ],
+                            "materials": [
+                              "org.nodec.game-engine/materials/pbr-defer-default.material"
+                            ]
+                          }
+                        }
+                      }
+                    ],
+                    "children": []
+                  }
+                }
+              },
+              {
+                "ptr_wrapper": {
+                  "valid": 1,
+                  "data": {
+                    "components": [
+                      {
+                        "polymorphic_id": 2,
+                        "ptr_wrapper": {
+                          "valid": 1,
+                          "data": {
+                            "local_position": {
+                              "x": 0.0,
+                              "y": 0.5,
+                              "z": 0.0
+                            },
+                            "local_scale": {
+                              "x": 0.33000001311302187,
+                              "y": 1.0,
+                              "z": 1.0
+                            },
+                            "local_rotation": {
+                              "x": 0.0,
+                              "y": 0.0,
+                              "z": 0.0,
+                              "w": 1.0
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "polymorphic_id": 3,
+                        "ptr_wrapper": {
+                          "valid": 1,
+                          "data": {
+                            "name": "Left"
+                          }
+                        }
+                      },
+                      {
+                        "polymorphic_id": 4,
+                        "ptr_wrapper": {
+                          "valid": 1,
+                          "data": {
+                            "meshes": [
+                              "org.nodec.game-engine/meshes/cube.mesh"
+                            ],
+                            "materials": [
+                              "org.nodec.game-engine/materials/pbr-defer-default.material"
+                            ]
+                          }
+                        }
+                      }
+                    ],
+                    "children": []
+                  }
+                }
+              },
+              {
+                "ptr_wrapper": {
+                  "valid": 1,
+                  "data": {
+                    "components": [
+                      {
+                        "polymorphic_id": 2,
+                        "ptr_wrapper": {
+                          "valid": 1,
+                          "data": {
+                            "local_position": {
+                              "x": 0.3400000035762787,
+                              "y": 0.6000000238418579,
+                              "z": 0.0
+                            },
+                            "local_scale": {
+                              "x": 0.33000001311302187,
+                              "y": 1.0,
+                              "z": 1.0
+                            },
+                            "local_rotation": {
+                              "x": 0.0,
+                              "y": 0.0,
+                              "z": 0.7071067690849304,
+                              "w": 0.7071067690849304
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "polymorphic_id": 3,
+                        "ptr_wrapper": {
+                          "valid": 1,
+                          "data": {
+                            "name": "Mid"
+                          }
+                        }
+                      },
+                      {
+                        "polymorphic_id": 4,
+                        "ptr_wrapper": {
+                          "valid": 1,
+                          "data": {
+                            "meshes": [
+                              "org.nodec.game-engine/meshes/cube.mesh"
+                            ],
+                            "materials": [
+                              "org.nodec.game-engine/materials/pbr-defer-default.material"
+                            ]
+                          }
+                        }
+                      }
+                    ],
+                    "children": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "ptr_wrapper": {
+          "valid": 1,
+          "data": {
+            "components": [
+              {
+                "polymorphic_id": 2,
+                "ptr_wrapper": {
+                  "valid": 1,
+                  "data": {
+                    "local_position": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0
+                    },
+                    "local_scale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "local_rotation": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 1.0
+                    }
+                  }
+                }
+              },
+              {
+                "polymorphic_id": 3,
+                "ptr_wrapper": {
+                  "valid": 1,
+                  "data": {
+                    "name": "n"
+                  }
+                }
+              }
+            ],
+            "children": [
+              {
+                "ptr_wrapper": {
+                  "valid": 1,
+                  "data": {
+                    "components": [
+                      {
+                        "polymorphic_id": 2,
+                        "ptr_wrapper": {
+                          "valid": 1,
+                          "data": {
+                            "local_position": {
+                              "x": 0.0,
+                              "y": 0.5,
+                              "z": 0.0
+                            },
+                            "local_scale": {
+                              "x": 0.33000001311302187,
+                              "y": 1.0,
+                              "z": 1.0
+                            },
+                            "local_rotation": {
+                              "x": 0.0,
+                              "y": 0.0,
+                              "z": 0.0,
+                              "w": 1.0
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "polymorphic_id": 3,
+                        "ptr_wrapper": {
+                          "valid": 1,
+                          "data": {
+                            "name": "Left"
+                          }
+                        }
+                      },
+                      {
+                        "polymorphic_id": 4,
+                        "ptr_wrapper": {
+                          "valid": 1,
+                          "data": {
+                            "meshes": [
+                              "org.nodec.game-engine/meshes/cube.mesh"
+                            ],
+                            "materials": [
+                              "org.nodec.game-engine/materials/pbr-defer-default.material"
+                            ]
+                          }
+                        }
+                      }
+                    ],
+                    "children": []
+                  }
+                }
+              },
+              {
+                "ptr_wrapper": {
+                  "valid": 1,
+                  "data": {
+                    "components": [
+                      {
+                        "polymorphic_id": 2,
+                        "ptr_wrapper": {
+                          "valid": 1,
+                          "data": {
+                            "local_position": {
+                              "x": 0.675000011920929,
+                              "y": 0.5,
+                              "z": 0.0
+                            },
+                            "local_scale": {
+                              "x": 0.33000001311302187,
+                              "y": 1.0,
+                              "z": 1.0
+                            },
+                            "local_rotation": {
+                              "x": 0.0,
+                              "y": 0.0,
+                              "z": 0.0,
+                              "w": 1.0
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "polymorphic_id": 3,
+                        "ptr_wrapper": {
+                          "valid": 1,
+                          "data": {
+                            "name": "Right"
+                          }
+                        }
+                      },
+                      {
+                        "polymorphic_id": 4,
+                        "ptr_wrapper": {
+                          "valid": 1,
+                          "data": {
+                            "meshes": [
+                              "org.nodec.game-engine/meshes/cube.mesh"
+                            ],
+                            "materials": [
+                              "org.nodec.game-engine/materials/pbr-defer-default.material"
+                            ]
+                          }
+                        }
+                      }
+                    ],
+                    "children": []
+                  }
+                }
+              },
+              {
+                "ptr_wrapper": {
+                  "valid": 1,
+                  "data": {
+                    "components": [
+                      {
+                        "polymorphic_id": 2,
+                        "ptr_wrapper": {
+                          "valid": 1,
+                          "data": {
+                            "local_position": {
+                              "x": 0.33500000834465029,
+                              "y": 1.0,
+                              "z": 0.0
+                            },
+                            "local_scale": {
+                              "x": 0.33000001311302187,
+                              "y": 1.0,
+                              "z": 1.0
+                            },
+                            "local_rotation": {
+                              "x": 0.0,
+                              "y": 0.0,
+                              "z": 0.7071067690849304,
+                              "w": 0.7071067690849304
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "polymorphic_id": 3,
+                        "ptr_wrapper": {
+                          "valid": 1,
+                          "data": {
+                            "name": "Top"
+                          }
+                        }
+                      },
+                      {
+                        "polymorphic_id": 4,
+                        "ptr_wrapper": {
+                          "valid": 1,
+                          "data": {
+                            "meshes": [
+                              "org.nodec.game-engine/meshes/cube.mesh"
+                            ],
+                            "materials": [
+                              "org.nodec.game-engine/materials/pbr-defer-default.material"
+                            ]
+                          }
+                        }
+                      }
+                    ],
+                    "children": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "ptr_wrapper": {
+          "valid": 1,
+          "data": {
+            "components": [
+              {
+                "polymorphic_id": 2,
+                "ptr_wrapper": {
+                  "valid": 1,
+                  "data": {
+                    "local_position": {
+                      "x": 3.0,
+                      "y": 0.0,
+                      "z": 0.0
+                    },
+                    "local_scale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "local_rotation": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 1.0
+                    }
+                  }
+                }
+              },
+              {
+                "polymorphic_id": 3,
+                "ptr_wrapper": {
+                  "valid": 1,
+                  "data": {
+                    "name": "d"
+                  }
+                }
+              }
+            ],
+            "children": [
+              {
+                "ptr_wrapper": {
+                  "valid": 1,
+                  "data": {
+                    "components": [
+                      {
+                        "polymorphic_id": 2,
+                        "ptr_wrapper": {
+                          "valid": 1,
+                          "data": {
+                            "local_position": {
+                              "x": 0.3400000035762787,
+                              "y": 0.16500000655651093,
+                              "z": 0.0
+                            },
+                            "local_scale": {
+                              "x": 0.33000001311302187,
+                              "y": 1.0,
+                              "z": 1.0
+                            },
+                            "local_rotation": {
+                              "x": 0.0,
+                              "y": 0.0,
+                              "z": 0.7071067690849304,
+                              "w": 0.7071067690849304
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "polymorphic_id": 3,
+                        "ptr_wrapper": {
+                          "valid": 1,
+                          "data": {
+                            "name": "Bottom"
+                          }
+                        }
+                      },
+                      {
+                        "polymorphic_id": 4,
+                        "ptr_wrapper": {
+                          "valid": 1,
+                          "data": {
+                            "meshes": [
+                              "org.nodec.game-engine/meshes/cube.mesh"
+                            ],
+                            "materials": [
+                              "org.nodec.game-engine/materials/pbr-defer-default.material"
+                            ]
+                          }
+                        }
+                      }
+                    ],
+                    "children": []
+                  }
+                }
+              },
+              {
+                "ptr_wrapper": {
+                  "valid": 1,
+                  "data": {
+                    "components": [
+                      {
+                        "polymorphic_id": 2,
+                        "ptr_wrapper": {
+                          "valid": 1,
+                          "data": {
+                            "local_position": {
+                              "x": 0.3400000035762787,
+                              "y": 1.0,
+                              "z": 0.0
+                            },
+                            "local_scale": {
+                              "x": 0.33000001311302187,
+                              "y": 1.0,
+                              "z": 1.0
+                            },
+                            "local_rotation": {
+                              "x": 0.0,
+                              "y": 0.0,
+                              "z": 0.7071067690849304,
+                              "w": 0.7071067690849304
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "polymorphic_id": 3,
+                        "ptr_wrapper": {
+                          "valid": 1,
+                          "data": {
+                            "name": "Top"
+                          }
+                        }
+                      },
+                      {
+                        "polymorphic_id": 4,
+                        "ptr_wrapper": {
+                          "valid": 1,
+                          "data": {
+                            "meshes": [
+                              "org.nodec.game-engine/meshes/cube.mesh"
+                            ],
+                            "materials": [
+                              "org.nodec.game-engine/materials/pbr-defer-default.material"
+                            ]
+                          }
+                        }
+                      }
+                    ],
+                    "children": []
+                  }
+                }
+              },
+              {
+                "ptr_wrapper": {
+                  "valid": 1,
+                  "data": {
+                    "components": [
+                      {
+                        "polymorphic_id": 2,
+                        "ptr_wrapper": {
+                          "valid": 1,
+                          "data": {
+                            "local_position": {
+                              "x": 0.0,
+                              "y": 0.5,
+                              "z": 0.0
+                            },
+                            "local_scale": {
+                              "x": 0.33000001311302187,
+                              "y": 1.0,
+                              "z": 1.0
+                            },
+                            "local_rotation": {
+                              "x": 0.0,
+                              "y": 0.0,
+                              "z": 0.0,
+                              "w": 1.0
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "polymorphic_id": 3,
+                        "ptr_wrapper": {
+                          "valid": 1,
+                          "data": {
+                            "name": "Left"
+                          }
+                        }
+                      },
+                      {
+                        "polymorphic_id": 4,
+                        "ptr_wrapper": {
+                          "valid": 1,
+                          "data": {
+                            "meshes": [
+                              "org.nodec.game-engine/meshes/cube.mesh"
+                            ],
+                            "materials": [
+                              "org.nodec.game-engine/materials/pbr-defer-default.material"
+                            ]
+                          }
+                        }
+                      }
+                    ],
+                    "children": []
+                  }
+                }
+              },
+              {
+                "ptr_wrapper": {
+                  "valid": 1,
+                  "data": {
+                    "components": [
+                      {
+                        "polymorphic_id": 2,
+                        "ptr_wrapper": {
+                          "valid": 1,
+                          "data": {
+                            "local_position": {
+                              "x": 0.675000011920929,
+                              "y": 1.0,
+                              "z": 0.0
+                            },
+                            "local_scale": {
+                              "x": 0.33000001311302187,
+                              "y": 1.600000023841858,
+                              "z": 1.0
+                            },
+                            "local_rotation": {
+                              "x": 0.0,
+                              "y": 0.0,
+                              "z": 0.0,
+                              "w": 1.0
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "polymorphic_id": 3,
+                        "ptr_wrapper": {
+                          "valid": 1,
+                          "data": {
+                            "name": "Right"
+                          }
+                        }
+                      },
+                      {
+                        "polymorphic_id": 4,
+                        "ptr_wrapper": {
+                          "valid": 1,
+                          "data": {
+                            "meshes": [
+                              "org.nodec.game-engine/meshes/cube.mesh"
+                            ],
+                            "materials": [
+                              "org.nodec.game-engine/materials/pbr-defer-default.material"
+                            ]
+                          }
+                        }
+                      }
+                    ],
+                    "children": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "ptr_wrapper": {
+          "valid": 1,
+          "data": {
+            "components": [
+              {
+                "polymorphic_id": 2,
+                "ptr_wrapper": {
+                  "valid": 1,
+                  "data": {
+                    "local_position": {
+                      "x": 6.0,
+                      "y": 0.0,
+                      "z": 0.0
+                    },
+                    "local_scale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "local_rotation": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 1.0
+                    }
+                  }
+                }
+              },
+              {
+                "polymorphic_id": 3,
+                "ptr_wrapper": {
+                  "valid": 1,
+                  "data": {
+                    "name": "c"
+                  }
+                }
+              }
+            ],
+            "children": [
+              {
+                "ptr_wrapper": {
+                  "valid": 1,
+                  "data": {
+                    "components": [
+                      {
+                        "polymorphic_id": 2,
+                        "ptr_wrapper": {
+                          "valid": 1,
+                          "data": {
+                            "local_position": {
+                              "x": 0.0,
+                              "y": 0.5,
+                              "z": 0.0
+                            },
+                            "local_scale": {
+                              "x": 0.33000001311302187,
+                              "y": 1.0,
+                              "z": 1.0
+                            },
+                            "local_rotation": {
+                              "x": 0.0,
+                              "y": 0.0,
+                              "z": 0.0,
+                              "w": 1.0
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "polymorphic_id": 3,
+                        "ptr_wrapper": {
+                          "valid": 1,
+                          "data": {
+                            "name": "Left"
+                          }
+                        }
+                      },
+                      {
+                        "polymorphic_id": 4,
+                        "ptr_wrapper": {
+                          "valid": 1,
+                          "data": {
+                            "meshes": [
+                              "org.nodec.game-engine/meshes/cube.mesh"
+                            ],
+                            "materials": [
+                              "org.nodec.game-engine/materials/pbr-defer-default.material"
+                            ]
+                          }
+                        }
+                      }
+                    ],
+                    "children": []
+                  }
+                }
+              },
+              {
+                "ptr_wrapper": {
+                  "valid": 1,
+                  "data": {
+                    "components": [
+                      {
+                        "polymorphic_id": 2,
+                        "ptr_wrapper": {
+                          "valid": 1,
+                          "data": {
+                            "local_position": {
+                              "x": 0.3400000035762787,
+                              "y": 1.0,
+                              "z": 0.0
+                            },
+                            "local_scale": {
+                              "x": 0.33000001311302187,
+                              "y": 1.0,
+                              "z": 1.0
+                            },
+                            "local_rotation": {
+                              "x": 0.0,
+                              "y": 0.0,
+                              "z": 0.7071067690849304,
+                              "w": 0.7071067690849304
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "polymorphic_id": 3,
+                        "ptr_wrapper": {
+                          "valid": 1,
+                          "data": {
+                            "name": "Top"
+                          }
+                        }
+                      },
+                      {
+                        "polymorphic_id": 4,
+                        "ptr_wrapper": {
+                          "valid": 1,
+                          "data": {
+                            "meshes": [
+                              "org.nodec.game-engine/meshes/cube.mesh"
+                            ],
+                            "materials": [
+                              "org.nodec.game-engine/materials/pbr-defer-default.material"
+                            ]
+                          }
+                        }
+                      }
+                    ],
+                    "children": []
+                  }
+                }
+              },
+              {
+                "ptr_wrapper": {
+                  "valid": 1,
+                  "data": {
+                    "components": [
+                      {
+                        "polymorphic_id": 2,
+                        "ptr_wrapper": {
+                          "valid": 1,
+                          "data": {
+                            "local_position": {
+                              "x": 0.3400000035762787,
+                              "y": 0.16500000655651093,
+                              "z": 0.0
+                            },
+                            "local_scale": {
+                              "x": 0.33000001311302187,
+                              "y": 1.0,
+                              "z": 1.0
+                            },
+                            "local_rotation": {
+                              "x": 0.0,
+                              "y": 0.0,
+                              "z": 0.7071067690849304,
+                              "w": 0.7071067690849304
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "polymorphic_id": 3,
+                        "ptr_wrapper": {
+                          "valid": 1,
+                          "data": {
+                            "name": "Bottom"
+                          }
+                        }
+                      },
+                      {
+                        "polymorphic_id": 4,
+                        "ptr_wrapper": {
+                          "valid": 1,
+                          "data": {
+                            "meshes": [
+                              "org.nodec.game-engine/meshes/cube.mesh"
+                            ],
+                            "materials": [
+                              "org.nodec.game-engine/materials/pbr-defer-default.material"
+                            ]
+                          }
+                        }
+                      }
+                    ],
+                    "children": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "ptr_wrapper": {
+          "valid": 1,
+          "data": {
+            "components": [
+              {
+                "polymorphic_id": 2,
+                "ptr_wrapper": {
+                  "valid": 1,
+                  "data": {
+                    "local_position": {
+                      "x": 1.5,
+                      "y": 0.0,
+                      "z": 0.0
+                    },
+                    "local_scale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "local_rotation": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 1.0
+                    }
+                  }
+                }
+              },
+              {
+                "polymorphic_id": 3,
+                "ptr_wrapper": {
+                  "valid": 1,
+                  "data": {
+                    "name": "o"
+                  }
+                }
+              }
+            ],
+            "children": [
+              {
+                "ptr_wrapper": {
+                  "valid": 1,
+                  "data": {
+                    "components": [
+                      {
+                        "polymorphic_id": 2,
+                        "ptr_wrapper": {
+                          "valid": 1,
+                          "data": {
+                            "local_position": {
+                              "x": 0.675000011920929,
+                              "y": 0.5,
+                              "z": 0.0
+                            },
+                            "local_scale": {
+                              "x": 0.33000001311302187,
+                              "y": 1.0,
+                              "z": 1.0
+                            },
+                            "local_rotation": {
+                              "x": 0.0,
+                              "y": 0.0,
+                              "z": 0.0,
+                              "w": 1.0
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "polymorphic_id": 3,
+                        "ptr_wrapper": {
+                          "valid": 1,
+                          "data": {
+                            "name": "Right"
+                          }
+                        }
+                      },
+                      {
+                        "polymorphic_id": 4,
+                        "ptr_wrapper": {
+                          "valid": 1,
+                          "data": {
+                            "meshes": [
+                              "org.nodec.game-engine/meshes/cube.mesh"
+                            ],
+                            "materials": [
+                              "org.nodec.game-engine/materials/pbr-defer-default.material"
+                            ]
+                          }
+                        }
+                      }
+                    ],
+                    "children": []
+                  }
+                }
+              },
+              {
+                "ptr_wrapper": {
+                  "valid": 1,
+                  "data": {
+                    "components": [
+                      {
+                        "polymorphic_id": 2,
+                        "ptr_wrapper": {
+                          "valid": 1,
+                          "data": {
+                            "local_position": {
+                              "x": 0.0,
+                              "y": 0.5,
+                              "z": 0.0
+                            },
+                            "local_scale": {
+                              "x": 0.33000001311302187,
+                              "y": 1.0,
+                              "z": 1.0
+                            },
+                            "local_rotation": {
+                              "x": 0.0,
+                              "y": 0.0,
+                              "z": 0.0,
+                              "w": 1.0
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "polymorphic_id": 3,
+                        "ptr_wrapper": {
+                          "valid": 1,
+                          "data": {
+                            "name": "Left"
+                          }
+                        }
+                      },
+                      {
+                        "polymorphic_id": 4,
+                        "ptr_wrapper": {
+                          "valid": 1,
+                          "data": {
+                            "meshes": [
+                              "org.nodec.game-engine/meshes/cube.mesh"
+                            ],
+                            "materials": [
+                              "org.nodec.game-engine/materials/pbr-defer-default.material"
+                            ]
+                          }
+                        }
+                      }
+                    ],
+                    "children": []
+                  }
+                }
+              },
+              {
+                "ptr_wrapper": {
+                  "valid": 1,
+                  "data": {
+                    "components": [
+                      {
+                        "polymorphic_id": 2,
+                        "ptr_wrapper": {
+                          "valid": 1,
+                          "data": {
+                            "local_position": {
+                              "x": 0.3400000035762787,
+                              "y": 1.0,
+                              "z": 0.0
+                            },
+                            "local_scale": {
+                              "x": 0.33000001311302187,
+                              "y": 1.0,
+                              "z": 1.0
+                            },
+                            "local_rotation": {
+                              "x": 0.0,
+                              "y": 0.0,
+                              "z": 0.7071067690849304,
+                              "w": 0.7071067690849304
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "polymorphic_id": 3,
+                        "ptr_wrapper": {
+                          "valid": 1,
+                          "data": {
+                            "name": "Top"
+                          }
+                        }
+                      },
+                      {
+                        "polymorphic_id": 4,
+                        "ptr_wrapper": {
+                          "valid": 1,
+                          "data": {
+                            "meshes": [
+                              "org.nodec.game-engine/meshes/cube.mesh"
+                            ],
+                            "materials": [
+                              "org.nodec.game-engine/materials/pbr-defer-default.material"
+                            ]
+                          }
+                        }
+                      }
+                    ],
+                    "children": []
+                  }
+                }
+              },
+              {
+                "ptr_wrapper": {
+                  "valid": 1,
+                  "data": {
+                    "components": [
+                      {
+                        "polymorphic_id": 2,
+                        "ptr_wrapper": {
+                          "valid": 1,
+                          "data": {
+                            "local_position": {
+                              "x": 0.3400000035762787,
+                              "y": 0.16500000655651093,
+                              "z": 0.0
+                            },
+                            "local_scale": {
+                              "x": 0.33000001311302187,
+                              "y": 1.0,
+                              "z": 1.0
+                            },
+                            "local_rotation": {
+                              "x": 0.0,
+                              "y": 0.0,
+                              "z": 0.7071067690849304,
+                              "w": 0.7071067690849304
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "polymorphic_id": 3,
+                        "ptr_wrapper": {
+                          "valid": 1,
+                          "data": {
+                            "name": "Bottom"
+                          }
+                        }
+                      },
+                      {
+                        "polymorphic_id": 4,
+                        "ptr_wrapper": {
+                          "valid": 1,
+                          "data": {
+                            "meshes": [
+                              "org.nodec.game-engine/meshes/cube.mesh"
+                            ],
+                            "materials": [
+                              "org.nodec.game-engine/materials/pbr-defer-default.material"
+                            ]
+                          }
+                        }
+                      }
+                    ],
+                    "children": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ]
+  }
+}
