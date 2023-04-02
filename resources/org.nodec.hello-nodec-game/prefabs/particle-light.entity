@@ -3,6 +3,17 @@
     "components": [
       {
         "polymorphic_id": 2147483649,
+        "polymorphic_name": "nodec_scene_serialization::components::Prefab",
+        "ptr_wrapper": {
+          "valid": 1,
+          "data": {
+            "source": "org.nodec.hello-nodec-game/prefabs/particle-light.entity",
+            "active": true
+          }
+        }
+      },
+      {
+        "polymorphic_id": 2147483650,
         "polymorphic_name": "nodec_rendering::components::SerializablePointLight",
         "ptr_wrapper": {
           "valid": 1,
@@ -19,20 +30,20 @@
         }
       },
       {
-        "polymorphic_id": 2147483650,
+        "polymorphic_id": 2147483651,
         "polymorphic_name": "nodec_scene::components::SerializableTransform",
         "ptr_wrapper": {
           "valid": 1,
           "data": {
             "local_position": {
-              "x": 0.0,
-              "y": 0.0,
-              "z": 0.0
+              "x": 1.1439299583435059,
+              "y": 1.941310167312622,
+              "z": -0.6115947961807251
             },
             "local_scale": {
-              "x": 0.10000000149011612,
-              "y": 0.10000000149011612,
-              "z": 0.10000000149011612
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
             },
             "local_rotation": {
               "x": 0.0,
@@ -44,31 +55,75 @@
         }
       },
       {
-        "polymorphic_id": 2147483651,
+        "polymorphic_id": 2147483652,
         "polymorphic_name": "nodec_scene::components::SerializableName",
         "ptr_wrapper": {
           "valid": 1,
           "data": {
-            "name": "Light"
-          }
-        }
-      },
-      {
-        "polymorphic_id": 2147483652,
-        "polymorphic_name": "nodec_rendering::components::SerializableMeshRenderer",
-        "ptr_wrapper": {
-          "valid": 1,
-          "data": {
-            "meshes": [
-              "org.nodec.game-engine/meshes/sphere.mesh"
-            ],
-            "materials": [
-              "org.nodec.game-engine/materials/pbr-defer-default.material"
-            ]
+            "name": "light"
           }
         }
       }
     ],
-    "children": []
+    "children": [
+      {
+        "ptr_wrapper": {
+          "valid": 1,
+          "data": {
+            "components": [
+              {
+                "polymorphic_id": 3,
+                "ptr_wrapper": {
+                  "valid": 1,
+                  "data": {
+                    "local_position": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0
+                    },
+                    "local_scale": {
+                      "x": 0.1,
+                      "y": 0.1,
+                      "z": 0.1
+                    },
+                    "local_rotation": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 1.0
+                    }
+                  }
+                }
+              },
+              {
+                "polymorphic_id": 4,
+                "ptr_wrapper": {
+                  "valid": 1,
+                  "data": {
+                    "name": "Mesh"
+                  }
+                }
+              },
+              {
+                "polymorphic_id": 2147483653,
+                "polymorphic_name": "nodec_rendering::components::SerializableMeshRenderer",
+                "ptr_wrapper": {
+                  "valid": 1,
+                  "data": {
+                    "meshes": [
+                      "org.nodec.game-engine/meshes/sphere.mesh"
+                    ],
+                    "materials": [
+                      "org.nodec.game-engine/materials/pbr-defer-default.material"
+                    ]
+                  }
+                }
+              }
+            ],
+            "children": []
+          }
+        }
+      }
+    ]
   }
 }
