@@ -131,7 +131,9 @@ private:
 
             if (!bullet_prototype_) return;
 
-            auto entt = EntityEmplacer(serialization_).emplace(bullet_prototype_.get(), entities::null_entity, world.scene());
+            auto entt = world.scene().create_entity();
+            EntityEmplacer(serialization_).emplace(bullet_prototype_.get(), entt, world.scene());
+
             auto &force = world.scene().registry().emplace_component<ImpulseForce>(entt).first;
             auto &trfm = world.scene().registry().get_component<Transform>(entt);
 

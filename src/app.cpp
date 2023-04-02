@@ -127,7 +127,7 @@ private:
 
         // Load the main scene.
         {
-            entity_loader_.load_async("org.nodec.hello-nodec-game/prefabs/main-scene.entity");
+            entity_loader_.load_async("org.nodec.hello-nodec-game/prefabs/main-scene.entity", world.scene().create_entity());
             // auto main_scene = resources_.registry().get_resource_direct<SerializableSceneGraph>("org.nodec.hello-nodec-game/scenes/main.scene");
             // SceneEntityEmplacer{main_scene, world.scene(), entities::null_entity, scene_serialization_}.emplace_all();
         }

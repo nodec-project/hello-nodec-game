@@ -2,6 +2,17 @@
   "entity": {
     "components": [
       {
+        "polymorphic_id": 2147483649,
+        "polymorphic_name": "nodec_scene_serialization::components::Prefab",
+        "ptr_wrapper": {
+          "valid": 1,
+          "data": {
+            "source": "org.nodec.hello-nodec-game/prefabs/main-scene.entity",
+            "active": true
+          }
+        }
+      },
+      {
         "polymorphic_id": 2147483650,
         "polymorphic_name": "nodec_scene::components::SerializableTransform",
         "ptr_wrapper": {
@@ -44,8 +55,7 @@
           "data": {
             "components": [
               {
-                "polymorphic_id": 2147483650,
-                "polymorphic_name": "nodec_scene::components::SerializableTransform",
+                "polymorphic_id": 2,
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
@@ -69,8 +79,7 @@
                 }
               },
               {
-                "polymorphic_id": 2147483651,
-                "polymorphic_name": "nodec_scene::components::SerializableName",
+                "polymorphic_id": 3,
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
@@ -172,7 +181,7 @@
                   "data": {
                     "components": [
                       {
-                        "polymorphic_id": 2147483653,
+                        "polymorphic_id": 2147483652,
                         "polymorphic_name": "nodec_rendering::components::SerializablePointLight",
                         "ptr_wrapper": {
                           "valid": 1,
@@ -222,7 +231,7 @@
                         }
                       },
                       {
-                        "polymorphic_id": 2147483654,
+                        "polymorphic_id": 2147483653,
                         "polymorphic_name": "nodec_rendering::components::SerializableMeshRenderer",
                         "ptr_wrapper": {
                           "valid": 1,
@@ -251,7 +260,7 @@
           "data": {
             "components": [
               {
-                "polymorphic_id": 2147483655,
+                "polymorphic_id": 2147483654,
                 "polymorphic_name": "nodec_physics::components::SerializablePhysicsShape",
                 "ptr_wrapper": {
                   "valid": 1,
@@ -267,7 +276,7 @@
                 }
               },
               {
-                "polymorphic_id": 2147483656,
+                "polymorphic_id": 2147483655,
                 "polymorphic_name": "nodec_physics::components::SerializableRigidBody",
                 "ptr_wrapper": {
                   "valid": 1,
@@ -310,7 +319,7 @@
                 }
               },
               {
-                "polymorphic_id": 6,
+                "polymorphic_id": 5,
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
@@ -334,7 +343,7 @@
           "data": {
             "components": [
               {
-                "polymorphic_id": 2147483657,
+                "polymorphic_id": 2147483656,
                 "polymorphic_name": "nodec_rendering::components::SerializableSceneLighting",
                 "ptr_wrapper": {
                   "valid": 1,
@@ -426,7 +435,7 @@
                 }
               },
               {
-                "polymorphic_id": 6,
+                "polymorphic_id": 5,
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
@@ -523,7 +532,7 @@
                         }
                       },
                       {
-                        "polymorphic_id": 6,
+                        "polymorphic_id": 5,
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
@@ -579,7 +588,7 @@
                                 }
                               },
                               {
-                                "polymorphic_id": 6,
+                                "polymorphic_id": 5,
                                 "ptr_wrapper": {
                                   "valid": 1,
                                   "data": {
@@ -636,7 +645,7 @@
                                 }
                               },
                               {
-                                "polymorphic_id": 6,
+                                "polymorphic_id": 5,
                                 "ptr_wrapper": {
                                   "valid": 1,
                                   "data": {
@@ -781,7 +790,7 @@
                                 }
                               },
                               {
-                                "polymorphic_id": 6,
+                                "polymorphic_id": 5,
                                 "ptr_wrapper": {
                                   "valid": 1,
                                   "data": {
@@ -838,7 +847,7 @@
                                 }
                               },
                               {
-                                "polymorphic_id": 6,
+                                "polymorphic_id": 5,
                                 "ptr_wrapper": {
                                   "valid": 1,
                                   "data": {
@@ -895,7 +904,7 @@
                                 }
                               },
                               {
-                                "polymorphic_id": 6,
+                                "polymorphic_id": 5,
                                 "ptr_wrapper": {
                                   "valid": 1,
                                   "data": {
@@ -952,7 +961,7 @@
                                 }
                               },
                               {
-                                "polymorphic_id": 6,
+                                "polymorphic_id": 5,
                                 "ptr_wrapper": {
                                   "valid": 1,
                                   "data": {
@@ -1009,7 +1018,7 @@
                                 }
                               },
                               {
-                                "polymorphic_id": 6,
+                                "polymorphic_id": 5,
                                 "ptr_wrapper": {
                                   "valid": 1,
                                   "data": {
@@ -1110,7 +1119,7 @@
                                 }
                               },
                               {
-                                "polymorphic_id": 6,
+                                "polymorphic_id": 5,
                                 "ptr_wrapper": {
                                   "valid": 1,
                                   "data": {
@@ -1167,7 +1176,7 @@
                                 }
                               },
                               {
-                                "polymorphic_id": 6,
+                                "polymorphic_id": 5,
                                 "ptr_wrapper": {
                                   "valid": 1,
                                   "data": {
@@ -1224,7 +1233,7 @@
                                 }
                               },
                               {
-                                "polymorphic_id": 6,
+                                "polymorphic_id": 5,
                                 "ptr_wrapper": {
                                   "valid": 1,
                                   "data": {
@@ -1325,7 +1334,7 @@
                                 }
                               },
                               {
-                                "polymorphic_id": 6,
+                                "polymorphic_id": 5,
                                 "ptr_wrapper": {
                                   "valid": 1,
                                   "data": {
@@ -1382,7 +1391,7 @@
                                 }
                               },
                               {
-                                "polymorphic_id": 6,
+                                "polymorphic_id": 5,
                                 "ptr_wrapper": {
                                   "valid": 1,
                                   "data": {
@@ -1439,7 +1448,7 @@
                                 }
                               },
                               {
-                                "polymorphic_id": 6,
+                                "polymorphic_id": 5,
                                 "ptr_wrapper": {
                                   "valid": 1,
                                   "data": {
@@ -1496,7 +1505,7 @@
                                 }
                               },
                               {
-                                "polymorphic_id": 6,
+                                "polymorphic_id": 5,
                                 "ptr_wrapper": {
                                   "valid": 1,
                                   "data": {
@@ -1597,7 +1606,7 @@
                                 }
                               },
                               {
-                                "polymorphic_id": 6,
+                                "polymorphic_id": 5,
                                 "ptr_wrapper": {
                                   "valid": 1,
                                   "data": {
@@ -1654,7 +1663,7 @@
                                 }
                               },
                               {
-                                "polymorphic_id": 6,
+                                "polymorphic_id": 5,
                                 "ptr_wrapper": {
                                   "valid": 1,
                                   "data": {
@@ -1711,7 +1720,7 @@
                                 }
                               },
                               {
-                                "polymorphic_id": 6,
+                                "polymorphic_id": 5,
                                 "ptr_wrapper": {
                                   "valid": 1,
                                   "data": {
@@ -1812,7 +1821,7 @@
                                 }
                               },
                               {
-                                "polymorphic_id": 6,
+                                "polymorphic_id": 5,
                                 "ptr_wrapper": {
                                   "valid": 1,
                                   "data": {
@@ -1869,7 +1878,7 @@
                                 }
                               },
                               {
-                                "polymorphic_id": 6,
+                                "polymorphic_id": 5,
                                 "ptr_wrapper": {
                                   "valid": 1,
                                   "data": {
@@ -1926,7 +1935,7 @@
                                 }
                               },
                               {
-                                "polymorphic_id": 6,
+                                "polymorphic_id": 5,
                                 "ptr_wrapper": {
                                   "valid": 1,
                                   "data": {
@@ -1983,7 +1992,7 @@
                                 }
                               },
                               {
-                                "polymorphic_id": 6,
+                                "polymorphic_id": 5,
                                 "ptr_wrapper": {
                                   "valid": 1,
                                   "data": {
@@ -2015,7 +2024,7 @@
           "data": {
             "components": [
               {
-                "polymorphic_id": 2147483658,
+                "polymorphic_id": 2147483657,
                 "polymorphic_name": "nodec_rendering::components::SerializableDirectionalLight",
                 "ptr_wrapper": {
                   "valid": 1,
@@ -2074,7 +2083,7 @@
           "data": {
             "components": [
               {
-                "polymorphic_id": 2147483659,
+                "polymorphic_id": 2147483658,
                 "polymorphic_name": "components::PlayerControl",
                 "ptr_wrapper": {
                   "valid": 1,
@@ -2084,7 +2093,7 @@
                 }
               },
               {
-                "polymorphic_id": 2147483660,
+                "polymorphic_id": 2147483659,
                 "polymorphic_name": "nodec_rendering::components::SerializableCamera",
                 "ptr_wrapper": {
                   "valid": 1,
@@ -2131,7 +2140,7 @@
                 }
               },
               {
-                "polymorphic_id": 2147483661,
+                "polymorphic_id": 2147483660,
                 "polymorphic_name": "nodec_rendering::components::SerializablePostProcessing",
                 "ptr_wrapper": {
                   "valid": 1,
@@ -2164,7 +2173,7 @@
           "data": {
             "components": [
               {
-                "polymorphic_id": 7,
+                "polymorphic_id": 6,
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
@@ -2179,7 +2188,7 @@
                 }
               },
               {
-                "polymorphic_id": 8,
+                "polymorphic_id": 7,
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
@@ -2221,7 +2230,7 @@
                 }
               },
               {
-                "polymorphic_id": 6,
+                "polymorphic_id": 5,
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
@@ -2278,7 +2287,7 @@
                 }
               },
               {
-                "polymorphic_id": 6,
+                "polymorphic_id": 5,
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
@@ -2335,7 +2344,7 @@
                 }
               },
               {
-                "polymorphic_id": 2147483662,
+                "polymorphic_id": 2147483661,
                 "polymorphic_name": "nodec_rendering::components::SerializableTextRenderer",
                 "ptr_wrapper": {
                   "valid": 1,
@@ -2365,7 +2374,7 @@
           "data": {
             "components": [
               {
-                "polymorphic_id": 2147483663,
+                "polymorphic_id": 2147483662,
                 "polymorphic_name": "nodec_scene_audio::components::SerializableAudioSource",
                 "ptr_wrapper": {
                   "valid": 1,
@@ -2453,13 +2462,12 @@
                 }
               },
               {
-                "polymorphic_id": 2147483664,
+                "polymorphic_id": 2147483663,
                 "polymorphic_name": "nodec_rendering::components::SerializableImageRenderer",
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
                     "image": "org.nodec.hello-nodec-game/textures/proto/marker.png",
-                    "_image": "org.nodec.hello-nodec-game/textures/skybox/PlanetaryEarth4k.hdr",
                     "material": "org.nodec.game-engine/materials/image-default.material",
                     "pixels_per_unit": 100
                   }
@@ -2476,7 +2484,7 @@
           "data": {
             "components": [
               {
-                "polymorphic_id": 7,
+                "polymorphic_id": 6,
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
@@ -2491,7 +2499,7 @@
                 }
               },
               {
-                "polymorphic_id": 8,
+                "polymorphic_id": 7,
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
@@ -2533,7 +2541,7 @@
                 }
               },
               {
-                "polymorphic_id": 6,
+                "polymorphic_id": 5,
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
