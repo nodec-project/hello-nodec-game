@@ -9,7 +9,10 @@ class HelloNodecGameApplication {
 public:
     HelloNodecGameApplication(nodec_application::Application &app)
         // Get engine services.
-        : resources_(app.get_service<nodec_resources::Resources>()),
+        : world_(app.get_service<nodec_world::World>()),
+          screen_(app.get_service<nodec_screen::Screen>()),
+          physics_system_(app.get_service<nodec_physics::systems::PhysicsSystem>()),
+          resources_(app.get_service<nodec_resources::Resources>()),
           entity_loader_(app.get_service<nodec_scene_serialization::EntityLoader>()),
           scene_serialization_(app.get_service<nodec_scene_serialization::SceneSerialization>()),
           input_devices_(app.get_service<nodec_input::InputDevices>()) {
@@ -33,11 +36,7 @@ public:
 
         logging::InfoStream(__FILE__, __LINE__) << "[HelloNodecGameApplication::HelloNodecGameApplication] >>> Hello :)";
 
-        // --- Get services ---
-        auto &world = app.get_service<World>();
-        auto &screen = app.get_service<Screen>();
-        auto &physics_system = app.get_service<PhysicsSystem>();
-
+        // --- Get input devices ---
         auto keyboard = input_devices_.get_available_devices<Keyboard>().front();
         auto mouse = input_devices_.get_available_devices<Mouse>().front();
 
@@ -46,8 +45,8 @@ public:
             // screen.set_size({1920, 1080});
             // screen.set_resolution({1920, 1080});
 
-            screen.set_size({1280, 720});
-            screen.set_resolution({1280, 720});
+            screen_.set_size({1280, 720});
+            screen_.set_resolution({1280, 720});
 
             // screen.set_size({ 1368, 800 });
             // screen.set_resolution({ 1368, 800 });
@@ -55,12 +54,12 @@ public:
             // screen.set_size({ 1600, 900 });
             // screen.set_resolution({ 1600, 900 });
 
-            screen.set_title("[ Hello Nodec ]");
+            screen_.set_title("[ Hello Nodec ]");
         }
 
         {
-            world.initialized().connect([&](World &world) { on_initialized(world); });
-            world.stepped().connect([&](World &world) { on_stepped(world); });
+            world_.initialized().connect([&](World &world) { on_initialized(world); });
+            world_.stepped().connect([&](World &world) { on_stepped(world); });
         }
         // Register components in serialization.
         {
@@ -68,25 +67,20 @@ public:
             scene_serialization_.register_component<PlayerControl>();
         }
         {
-            light_particle = std::make_unique<LightParticleSystem>(world, resources_.registry(), scene_serialization_);
-            // object_spawn_system_ = std::make_unique<ObjectSpawnSystem>(keyboard, world, scene_serialization_, scene_loader_);
-            // scene_transition_system_ = std::make_unique<SceneTransitionSystem>(world, scene_serialization_, scene_loader_);
-            bullet_system_ = std::make_unique<BulletSystem>(world, physics_system);
-            player_control_system_ = std::make_unique<PlayerControlSystem>(world, resources_, keyboard, mouse, scene_serialization_);
+            light_particle = std::make_unique<LightParticleSystem>(world_, resources_.registry(), scene_serialization_);
+            bullet_system_ = std::make_unique<BulletSystem>(world_, physics_system_);
+            player_control_system_ = std::make_unique<PlayerControlSystem>(world_, resources_, keyboard, mouse, scene_serialization_);
         }
 
+#ifdef EDITOR_MODE
         // Set up systems if editor mode enabled.
         {
-#ifdef EDITOR_MODE
             using namespace nodec_scene_editor;
             auto &editor = app.get_service<SceneEditor>();
             Bullet::setup_editor(editor);
             PlayerControl::setup_editor(editor);
-
-            // ObjectSpawnSystem::setup_editor(editor);
-            // SceneTransitionSystem::setup_editor(editor);
-#endif
         }
+#endif
 
         //{
         //    auto &input = engine.get_module<Input>();
@@ -128,8 +122,6 @@ private:
         // Load the main scene.
         {
             entity_loader_.load_async("org.nodec.hello-nodec-game/prefabs/main-scene.entity", world.scene().create_entity());
-            // auto main_scene = resources_.registry().get_resource_direct<SerializableSceneGraph>("org.nodec.hello-nodec-game/scenes/main.scene");
-            // SceneEntityEmplacer{main_scene, world.scene(), entities::null_entity, scene_serialization_}.emplace_all();
         }
 
         //{
@@ -166,6 +158,9 @@ private:
 
 private:
     // --- Game engine services ---
+    nodec_world::World &world_;
+    nodec_screen::Screen &screen_;
+    nodec_physics::systems::PhysicsSystem &physics_system_;
     nodec_resources::Resources &resources_;
     nodec_scene_serialization::EntityLoader &entity_loader_;
     nodec_scene_serialization::SceneSerialization &scene_serialization_;
@@ -174,8 +169,6 @@ private:
     // --- Sub systems ---
     std::unique_ptr<systems::PlayerControlSystem> player_control_system_;
     std::unique_ptr<systems::LightParticleSystem> light_particle;
-    // std::unique_ptr<ObjectSpawnSystem> object_spawn_system_;
-    // std::unique_ptr<SceneTransitionSystem> scene_transition_system_;
     std::unique_ptr<systems::BulletSystem> bullet_system_;
 };
 
