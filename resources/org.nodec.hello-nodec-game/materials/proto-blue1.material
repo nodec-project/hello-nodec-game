@@ -1,0 +1,30 @@
+{
+    "material" : {
+        "shader": "org.nodec.game-engine/shaders/pbr-defer",
+        "cull_mode": 2,
+        "float_properties": [],
+        "vector4_properties": [],
+        "texture_properties": [
+            {
+                "key": "albedo",
+                "value": {
+                    "texture": "org.nodec.hello-nodec-game/textures/proto/prototype_512x512_blue1.png",
+                    "sampler": {
+                        "filter_mode": 1,
+                        "wrap_mode": 0
+                    }
+                }
+            },
+            {
+                "key": "normal",
+                "value": {
+                    "texture": "org.nodec.hello-nodec-game/textures/proto/prototype_512x512_normal.png",
+                    "sampler": {
+                        "filter_mode": 1,
+                        "wrap_mode": 0
+                    }
+                }
+            }
+        ]
+    }
+}

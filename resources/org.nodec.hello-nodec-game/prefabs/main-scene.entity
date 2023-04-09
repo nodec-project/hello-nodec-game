@@ -60,6 +60,235 @@
                   "valid": 1,
                   "data": {
                     "local_position": {
+                      "x": 8.0,
+                      "y": 1.0,
+                      "z": 4.0
+                    },
+                    "local_scale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "local_rotation": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 1.0
+                    }
+                  }
+                }
+              },
+              {
+                "polymorphic_id": 3,
+                "ptr_wrapper": {
+                  "valid": 1,
+                  "data": {
+                    "name": "Cube"
+                  }
+                }
+              },
+              {
+                "polymorphic_id": 2147483652,
+                "polymorphic_name": "nodec_rendering::components::SerializableMeshRenderer",
+                "ptr_wrapper": {
+                  "valid": 1,
+                  "data": {
+                    "meshes": [
+                      "org.nodec.game-engine/meshes/cube.mesh"
+                    ],
+                    "materials": [
+                      "org.nodec.hello-nodec-game/materials/proto-blue3.material"
+                    ]
+                  }
+                }
+              }
+            ],
+            "children": []
+          }
+        }
+      },
+      {
+        "ptr_wrapper": {
+          "valid": 1,
+          "data": {
+            "components": [
+              {
+                "polymorphic_id": 2,
+                "ptr_wrapper": {
+                  "valid": 1,
+                  "data": {
+                    "local_position": {
+                      "x": 8.0,
+                      "y": 1.0,
+                      "z": 3.0
+                    },
+                    "local_scale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "local_rotation": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 1.0
+                    }
+                  }
+                }
+              },
+              {
+                "polymorphic_id": 3,
+                "ptr_wrapper": {
+                  "valid": 1,
+                  "data": {
+                    "name": "Cube"
+                  }
+                }
+              },
+              {
+                "polymorphic_id": 4,
+                "ptr_wrapper": {
+                  "valid": 1,
+                  "data": {
+                    "meshes": [
+                      "org.nodec.game-engine/meshes/cube.mesh"
+                    ],
+                    "materials": [
+                      "org.nodec.hello-nodec-game/materials/proto-blue2.material"
+                    ]
+                  }
+                }
+              }
+            ],
+            "children": []
+          }
+        }
+      },
+      {
+        "ptr_wrapper": {
+          "valid": 1,
+          "data": {
+            "components": [
+              {
+                "polymorphic_id": 2,
+                "ptr_wrapper": {
+                  "valid": 1,
+                  "data": {
+                    "local_position": {
+                      "x": 8.0,
+                      "y": 1.0,
+                      "z": 2.0
+                    },
+                    "local_scale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "local_rotation": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 1.0
+                    }
+                  }
+                }
+              },
+              {
+                "polymorphic_id": 3,
+                "ptr_wrapper": {
+                  "valid": 1,
+                  "data": {
+                    "name": "Cube"
+                  }
+                }
+              },
+              {
+                "polymorphic_id": 4,
+                "ptr_wrapper": {
+                  "valid": 1,
+                  "data": {
+                    "meshes": [
+                      "org.nodec.game-engine/meshes/cube.mesh"
+                    ],
+                    "materials": [
+                      "org.nodec.hello-nodec-game/materials/proto-blue1.material"
+                    ]
+                  }
+                }
+              }
+            ],
+            "children": []
+          }
+        }
+      },
+      {
+        "ptr_wrapper": {
+          "valid": 1,
+          "data": {
+            "components": [
+              {
+                "polymorphic_id": 2,
+                "ptr_wrapper": {
+                  "valid": 1,
+                  "data": {
+                    "local_position": {
+                      "x": 8.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "local_scale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "local_rotation": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 1.0
+                    }
+                  }
+                }
+              },
+              {
+                "polymorphic_id": 3,
+                "ptr_wrapper": {
+                  "valid": 1,
+                  "data": {
+                    "name": "Cube"
+                  }
+                }
+              },
+              {
+                "polymorphic_id": 4,
+                "ptr_wrapper": {
+                  "valid": 1,
+                  "data": {
+                    "meshes": [
+                      "org.nodec.game-engine/meshes/cube.mesh"
+                    ],
+                    "materials": [
+                      "org.nodec.hello-nodec-game/materials/proto-white.material"
+                    ]
+                  }
+                }
+              }
+            ],
+            "children": []
+          }
+        }
+      },
+      {
+        "ptr_wrapper": {
+          "valid": 1,
+          "data": {
+            "components": [
+              {
+                "polymorphic_id": 2,
+                "ptr_wrapper": {
+                  "valid": 1,
+                  "data": {
+                    "local_position": {
                       "x": 0.0,
                       "y": 0.0,
                       "z": 0.0
@@ -138,7 +367,7 @@
                   "data": {
                     "components": [
                       {
-                        "polymorphic_id": 2147483652,
+                        "polymorphic_id": 2147483653,
                         "polymorphic_name": "nodec_rendering::components::SerializablePointLight",
                         "ptr_wrapper": {
                           "valid": 1,
@@ -188,8 +417,7 @@
                         }
                       },
                       {
-                        "polymorphic_id": 2147483653,
-                        "polymorphic_name": "nodec_rendering::components::SerializableMeshRenderer",
+                        "polymorphic_id": 4,
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
@@ -276,7 +504,7 @@
                 }
               },
               {
-                "polymorphic_id": 5,
+                "polymorphic_id": 4,
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
@@ -392,7 +620,7 @@
                 }
               },
               {
-                "polymorphic_id": 5,
+                "polymorphic_id": 4,
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
@@ -728,7 +956,7 @@
                 }
               },
               {
-                "polymorphic_id": 5,
+                "polymorphic_id": 4,
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
@@ -785,7 +1013,7 @@
                 }
               },
               {
-                "polymorphic_id": 5,
+                "polymorphic_id": 4,
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
@@ -1039,7 +1267,7 @@
                 }
               },
               {
-                "polymorphic_id": 5,
+                "polymorphic_id": 4,
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
