@@ -1,20 +1,20 @@
 {
-    "material": {
-        "shader": "org.nodec.game-engine/shaders/skybox/panoramic",
-        "cull_mode": 0,
-        "float_properties": [],
-        "vector4_properties": [],
-        "texture_properties": [
-            {
-                "key": "main",
-                "value": {
-                    "texture": "org.nodec.hello-nodec-game/textures/skybox/PlanetaryEarth4k.hdr",
-                    "sampler": {
-                        "filter_mode": 1,
-                        "wrap_mode": 0
-                    }
-                }
-            }
-        ]
-    }
+  "material": {
+    "shader": "org.nodec.game-engine/shaders/skybox/panoramic",
+    "cull_mode": 0,
+    "float_properties": [],
+    "vector4_properties": [],
+    "texture_properties": [
+      {
+        "key": "main",
+        "value": {
+          "texture": "org.nodec.hello-nodec-game/textures/skybox/PlanetaryEarth4k.hdr",
+          "sampler": {
+            "filter_mode": 1,
+            "wrap_mode": 0
+          }
+        }
+      }
+    ]
+  }
 }

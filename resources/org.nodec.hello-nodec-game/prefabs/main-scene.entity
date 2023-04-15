@@ -873,7 +873,7 @@
                   "data": {
                     "effects": [
                       {
-                        "enabled": false,
+                        "enabled": true,
                         "material": "org.nodec.game-engine/materials/post-processings/ssao.material"
                       },
                       {
