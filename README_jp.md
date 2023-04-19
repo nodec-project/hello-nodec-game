@@ -2,9 +2,9 @@
 
 [English](./README.md) | 日本語
 
-![](./gallery/screenshot.png)
-
 本リポジトリは、ゲームエンジン[`nodec_game_engine`](https://github.com/ContentsViewer/nodec_game_engine)を使ってアプリを作成するためのテンプレートプロジェクトです。
+
+![](./gallery/screenshot.png)
 
 ## 対応環境
 
