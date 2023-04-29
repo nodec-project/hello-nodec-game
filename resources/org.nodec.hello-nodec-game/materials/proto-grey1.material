@@ -2,8 +2,36 @@
   "material": {
     "shader": "org.nodec.game-engine/shaders/pbr-defer",
     "cull_mode": 2,
-    "float_properties": [],
-    "vector4_properties": [],
+    "float_properties": [
+      {
+        "key": "metallic",
+        "value": 0.0
+      },
+      {
+        "key": "roughness",
+        "value": 0.0
+      }
+    ],
+    "vector4_properties": [
+      {
+        "key": "albedo",
+        "value": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0,
+          "w": 1.0
+        }
+      },
+      {
+        "key": "tiling",
+        "value": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 0.0,
+          "w": 0.0
+        }
+      }
+    ],
     "texture_properties": [
       {
         "key": "albedo",
