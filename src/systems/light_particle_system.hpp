@@ -33,7 +33,7 @@ public:
                 auto entt = world.scene().create_entity("light");
                 EntityBuilder(serialization).build(proto_light.get(), entt, world.scene());
                 world.scene().hierarchy_system().append_child(center_entt, entt);
-                auto &trfm = world.scene().registry().get_component<Transform>(entt);
+                auto &trfm = world.scene().registry().get_component<LocalTransform>(entt);
                 Vector3f vec{
                     random::global().uniform<float>() * 2.0f - 1.0f,
                     random::global().uniform<float>() * 2.0f - 1.0f,
@@ -48,7 +48,7 @@ public:
         world.stepped().connect([&](nodec_world::World &world) {
             if (!world.scene().registry().is_valid(center_entt)) return;
 
-            auto &trfm = world.scene().registry().get_component<Transform>(center_entt);
+            auto &trfm = world.scene().registry().get_component<LocalTransform>(center_entt);
             trfm.rotation = math::gfx::quaternion_from_angle_axis(curve.evaluate(world.clock().current_time() * 1000).second, Vector3f{0.0f, 1.0f, 0.0f});
             trfm.dirty = true;
         });

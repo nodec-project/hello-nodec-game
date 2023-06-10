@@ -81,13 +81,13 @@ private:
         SceneEntity player_entt{null_entity};
 
         {
-            auto view = world.scene().registry().view<Transform, PlayerControl>();
+            auto view = world.scene().registry().view<LocalTransform, PlayerControl>();
             player_entt = *view.begin();
 
             // Nothing to do more.
             if (player_entt == null_entity) return;
 
-            auto &trfm = view.get<Transform>(player_entt);
+            auto &trfm = view.get<LocalTransform>(player_entt);
             auto &control = view.get<PlayerControl>(player_entt);
 
             const float delta_time = world.clock().delta_time();
@@ -138,9 +138,9 @@ private:
             EntityBuilder(serialization_).build(bullet_prototype_.get(), entt, world.scene());
 
             auto &force = world.scene().registry().emplace_component<ImpulseForce>(entt).first;
-            auto &trfm = world.scene().registry().get_component<Transform>(entt);
+            auto &trfm = world.scene().registry().get_component<LocalTransform>(entt);
 
-            auto &player_trfm = world.scene().registry().get_component<Transform>(player_entt);
+            auto &player_trfm = world.scene().registry().get_component<LocalTransform>(player_entt);
             trfm.position = player_trfm.position;
             trfm.dirty = true;
 
