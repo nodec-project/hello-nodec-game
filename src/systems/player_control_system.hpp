@@ -2,6 +2,7 @@
 #define SYSTEMS__PLAYER_CONTROL_SYSTEM_HPP_
 
 #include "../app.hpp"
+
 #include "../components/bullet.hpp"
 #include "../components/player_control.hpp"
 
@@ -19,6 +20,8 @@ public:
         using namespace nodec_input::keyboard;
         using namespace nodec_input::mouse;
         using namespace nodec_scene_serialization;
+        using namespace nodec_scene::components;
+        using namespace ::components;
 
         world.stepped().connect([&](nodec_world::World &world) { on_stepped(world); });
         keyboard->key_event().connect([&](const nodec_input::keyboard::KeyEvent &event) {
@@ -89,8 +92,8 @@ private:
 
             const float delta_time = world.clock().delta_time();
 
-            auto forward = math::gfx::rotate(Vector3f(0, 0, 1), trfm.local_rotation);
-            auto right = math::gfx::rotate(Vector3f(1, 0, 0), trfm.local_rotation);
+            auto forward = math::gfx::rotate(Vector3f(0, 0, 1), trfm.rotation);
+            auto right = math::gfx::rotate(Vector3f(1, 0, 0), trfm.rotation);
 
             Vector2f move_vec;
 
@@ -101,8 +104,8 @@ private:
             if (math::norm(move_vec) > 0.001f) {
                 move_vec = math::normalize(move_vec);
 
-                trfm.local_position += move_vec.y * forward * control.speed * delta_time;
-                trfm.local_position += move_vec.x * right * control.speed * delta_time;
+                trfm.position += move_vec.y * forward * control.speed * delta_time;
+                trfm.position += move_vec.x * right * control.speed * delta_time;
 
                 trfm.dirty = true;
             }
@@ -111,10 +114,10 @@ private:
                 constexpr float SCALE_FACTOR = 0.1f;
 
                 // Apply rotation around the local right vector after current rotation.
-                trfm.local_rotation = math::gfx::quaternion_from_angle_axis(rotation_delta.y * SCALE_FACTOR, right) * trfm.local_rotation;
+                trfm.rotation = math::gfx::quaternion_from_angle_axis(rotation_delta.y * SCALE_FACTOR, right) * trfm.rotation;
 
                 // And apply rotation around the world up vector.
-                trfm.local_rotation = math::gfx::quaternion_from_angle_axis(rotation_delta.x * SCALE_FACTOR, Vector3f(0.f, 1.f, 0.f)) * trfm.local_rotation;
+                trfm.rotation = math::gfx::quaternion_from_angle_axis(rotation_delta.x * SCALE_FACTOR, Vector3f(0.f, 1.f, 0.f)) * trfm.rotation;
 
                 trfm.dirty = true;
                 rotation_delta.set(0, 0);
@@ -138,10 +141,10 @@ private:
             auto &trfm = world.scene().registry().get_component<Transform>(entt);
 
             auto &player_trfm = world.scene().registry().get_component<Transform>(player_entt);
-            trfm.local_position = player_trfm.local_position;
+            trfm.position = player_trfm.position;
             trfm.dirty = true;
 
-            auto forward = math::gfx::rotate(Vector3f(0, 0, 1), player_trfm.local_rotation);
+            auto forward = math::gfx::rotate(Vector3f(0, 0, 1), player_trfm.rotation);
             force.force = forward * 100.f;
         }();
     }

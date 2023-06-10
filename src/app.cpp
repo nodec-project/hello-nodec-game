@@ -61,11 +61,13 @@ public:
             world_.initialized().connect([&](World &world) { on_initialized(world); });
             world_.stepped().connect([&](World &world) { on_stepped(world); });
         }
+
         // Register components in serialization.
         {
             scene_serialization_.register_component<Bullet>();
             scene_serialization_.register_component<PlayerControl>();
         }
+
         {
             light_particle = std::make_unique<LightParticleSystem>(world_, resources_.registry(), scene_serialization_);
             bullet_system_ = std::make_unique<BulletSystem>(world_, physics_system_);
@@ -81,28 +83,6 @@ public:
             PlayerControl::setup_editor(editor);
         }
 #endif
-
-        //{
-        //    auto &input = engine.get_module<Input>();
-        //    input.keyboard().key_event().connect([=, &engine](const keyboard::KeyEvent &event) {
-        //        // logging::InfoStream(__FILE__, __LINE__) << event;
-
-        //        auto &scene = engine.get_module<Scene>();
-
-        //        if (event.key == keyboard::Key::A && event.type == keyboard::KeyEvent::Type::Release) {
-        //            logging::InfoStream(__FILE__, __LINE__) << "AAA";
-        //            auto &source = scene.registry().get_component<AudioSource>(audioEntity);
-
-        //            source.is_playing = true;
-        //        }
-
-        //        if (event.key == keyboard::Key::D && event.type == keyboard::KeyEvent::Type::Release) {
-        //            logging::InfoStream(__FILE__, __LINE__) << "DDD";
-        //            auto &source = scene.registry().get_component<AudioSource>(audioEntity);
-
-        //            source.is_playing = false;
-        //        }
-        //    });
     }
 
     ~HelloNodecGameApplication() {
@@ -123,34 +103,6 @@ private:
         {
             entity_loader_.load_async("org.nodec.hello-nodec-game/prefabs/main-scene.entity", world.scene().create_entity());
         }
-
-        //{
-        //    using namespace nodec_physics::components;
-
-        //    auto entt = world.scene().create_entity();
-
-        //    auto &rb = world.scene().registry().emplace_component<RigidBody>(entt).first;
-
-        //    rb.mass = 10;
-
-        //    world.scene().registry().emplace_component<PhysicsShape>(entt);
-
-        //    temp = entt;
-        //}
-        //{
-        //    target_material = resources.registry().get_resource<Material>("models/primitives/Default.material").get();
-
-        //    auto dodon_clip = resources.registry().get_resource<AudioClip>("audios/dodon.wav").get();
-        //    auto miku_clip = resources.registry().get_resource<AudioClip>("audios/miku-activated.wav").get();
-
-        //    audioEntity = scene.create_entity("Audio Source Test");
-        //    scene.registry().emplace_component<AudioSource>(audioEntity);
-        //    auto &source = scene.registry().get_component<AudioSource>(audioEntity);
-        //    source.clip = dodon_clip;
-        //    // source.clip = miku_clip;
-        //    // source.loop = true;
-        //    source.is_playing = true;
-        //}
     }
 
     void on_stepped(nodec_world::World &world) {

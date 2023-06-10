@@ -40,7 +40,7 @@ public:
                     random::global().uniform<float>() * 2.0f - 1.0f};
                 vec = math::normalize(vec);
                 vec *= random::global().uniform<float>() * 10.0f;
-                trfm.local_position = vec;
+                trfm.position = vec;
                 trfm.dirty = true;
             }
         });
@@ -49,7 +49,7 @@ public:
             if (!world.scene().registry().is_valid(center_entt)) return;
 
             auto &trfm = world.scene().registry().get_component<Transform>(center_entt);
-            trfm.local_rotation = math::gfx::quaternion_from_angle_axis(curve.evaluate(world.clock().current_time() * 1000).second, Vector3f{0.0f, 1.0f, 0.0f});
+            trfm.rotation = math::gfx::quaternion_from_angle_axis(curve.evaluate(world.clock().current_time() * 1000).second, Vector3f{0.0f, 1.0f, 0.0f});
             trfm.dirty = true;
         });
     }
