@@ -14,21 +14,21 @@
       },
       {
         "polymorphic_id": 2147483650,
-        "polymorphic_name": "nodec_scene::components::SerializableTransform",
+        "polymorphic_name": "nodec_scene::components::SerializableLocalTransform",
         "ptr_wrapper": {
           "valid": 1,
           "data": {
-            "local_position": {
+            "position": {
               "x": 0.0,
               "y": 0.0,
               "z": -2.674999952316284
             },
-            "local_scale": {
+            "scale": {
               "x": 1.0,
               "y": 1.0,
               "z": 1.0
             },
-            "local_rotation": {
+            "rotation": {
               "x": 0.0,
               "y": 0.0,
               "z": 0.0,
@@ -43,7 +43,7 @@
         "ptr_wrapper": {
           "valid": 1,
           "data": {
-            "name": "RetroTV"
+            "value": "RetroTV"
           }
         }
       }
@@ -59,17 +59,17 @@
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
-                    "local_position": {
+                    "position": {
                       "x": 0.0,
                       "y": 0.0,
                       "z": -0.0
                     },
-                    "local_scale": {
+                    "scale": {
                       "x": 1.0,
                       "y": 1.0,
                       "z": 1.0
                     },
-                    "local_rotation": {
+                    "rotation": {
                       "x": 0.7071068286895752,
                       "y": 0.0,
                       "z": 0.0,
@@ -83,7 +83,7 @@
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
-                    "name": "TV"
+                    "value": "TV"
                   }
                 }
               },
@@ -116,17 +116,17 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "local_position": {
+                            "position": {
                               "x": 0.38620999455451968,
                               "y": -0.21689057350158692,
                               "z": -0.6514682173728943
                             },
-                            "local_scale": {
+                            "scale": {
                               "x": 1.0,
                               "y": 1.0,
                               "z": 1.0
                             },
-                            "local_rotation": {
+                            "rotation": {
                               "x": 0.0,
                               "y": 0.0,
                               "z": -0.07236453890800476,
@@ -140,7 +140,7 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "name": "Switch"
+                            "value": "Switch"
                           }
                         }
                       },
@@ -173,17 +173,17 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "local_position": {
+                            "position": {
                               "x": 0.3862101137638092,
                               "y": -0.21742378175258637,
                               "z": -0.7118658423423767
                             },
-                            "local_scale": {
+                            "scale": {
                               "x": 1.0,
                               "y": 1.0,
                               "z": 1.0
                             },
-                            "local_rotation": {
+                            "rotation": {
                               "x": 0.0,
                               "y": 0.0,
                               "z": 0.0,
@@ -197,7 +197,7 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "name": "Selector"
+                            "value": "Selector"
                           }
                         }
                       },

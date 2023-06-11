@@ -22,7 +22,7 @@
 #include <nodec_resources/resources.hpp>
 #include <nodec_scene/components/hierarchy.hpp>
 #include <nodec_scene/components/name.hpp>
-#include <nodec_scene/components/transform.hpp>
+#include <nodec_scene/components/local_transform.hpp>
 #include <nodec_scene/scene.hpp>
 #include <nodec_scene_audio/components/audio_listener.hpp>
 #include <nodec_scene_audio/components/audio_source.hpp>

@@ -14,21 +14,21 @@
       },
       {
         "polymorphic_id": 2147483650,
-        "polymorphic_name": "nodec_scene::components::SerializableTransform",
+        "polymorphic_name": "nodec_scene::components::SerializableLocalTransform",
         "ptr_wrapper": {
           "valid": 1,
           "data": {
-            "local_position": {
+            "position": {
               "x": -2.7149999141693117,
               "y": 0.33000001311302187,
               "z": 0.0
             },
-            "local_scale": {
+            "scale": {
               "x": 1.0,
               "y": 1.0,
               "z": 1.0
             },
-            "local_rotation": {
+            "rotation": {
               "x": 0.0,
               "y": 0.0,
               "z": 0.0,
@@ -43,7 +43,7 @@
         "ptr_wrapper": {
           "valid": 1,
           "data": {
-            "name": "nodec"
+            "value": "nodec"
           }
         }
       }
@@ -59,17 +59,17 @@
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
-                    "local_position": {
+                    "position": {
                       "x": 4.5,
                       "y": 0.0,
                       "z": 0.0
                     },
-                    "local_scale": {
+                    "scale": {
                       "x": 1.0,
                       "y": 1.0,
                       "z": 1.0
                     },
-                    "local_rotation": {
+                    "rotation": {
                       "x": 0.0,
                       "y": 0.0,
                       "z": 0.0,
@@ -83,7 +83,7 @@
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
-                    "name": "e"
+                    "value": "e"
                   }
                 }
               }
@@ -99,17 +99,17 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "local_position": {
+                            "position": {
                               "x": 0.3400000035762787,
                               "y": 0.16500000655651093,
                               "z": 0.0
                             },
-                            "local_scale": {
+                            "scale": {
                               "x": 0.33000001311302187,
                               "y": 1.0,
                               "z": 1.0
                             },
-                            "local_rotation": {
+                            "rotation": {
                               "x": 0.0,
                               "y": 0.0,
                               "z": 0.7071067690849304,
@@ -123,7 +123,7 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "name": "Bottom"
+                            "value": "Bottom"
                           }
                         }
                       },
@@ -157,17 +157,17 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "local_position": {
+                            "position": {
                               "x": 0.3400000035762787,
                               "y": 1.0,
                               "z": 0.0
                             },
-                            "local_scale": {
+                            "scale": {
                               "x": 0.33000001311302187,
                               "y": 1.0,
                               "z": 1.0
                             },
-                            "local_rotation": {
+                            "rotation": {
                               "x": 0.0,
                               "y": 0.0,
                               "z": 0.7071067690849304,
@@ -181,7 +181,7 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "name": "Top"
+                            "value": "Top"
                           }
                         }
                       },
@@ -214,17 +214,17 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "local_position": {
+                            "position": {
                               "x": 0.6700000166893005,
                               "y": 0.8949999809265137,
                               "z": 0.0
                             },
-                            "local_scale": {
+                            "scale": {
                               "x": 0.33000001311302187,
                               "y": 0.5,
                               "z": 1.0
                             },
-                            "local_rotation": {
+                            "rotation": {
                               "x": 0.0,
                               "y": 0.0,
                               "z": 0.0,
@@ -238,7 +238,7 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "name": "Right"
+                            "value": "Right"
                           }
                         }
                       },
@@ -271,17 +271,17 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "local_position": {
+                            "position": {
                               "x": 0.0,
                               "y": 0.5,
                               "z": 0.0
                             },
-                            "local_scale": {
+                            "scale": {
                               "x": 0.33000001311302187,
                               "y": 1.0,
                               "z": 1.0
                             },
-                            "local_rotation": {
+                            "rotation": {
                               "x": 0.0,
                               "y": 0.0,
                               "z": 0.0,
@@ -295,7 +295,7 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "name": "Left"
+                            "value": "Left"
                           }
                         }
                       },
@@ -328,17 +328,17 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "local_position": {
+                            "position": {
                               "x": 0.3400000035762787,
                               "y": 0.6000000238418579,
                               "z": 0.0
                             },
-                            "local_scale": {
+                            "scale": {
                               "x": 0.33000001311302187,
                               "y": 1.0,
                               "z": 1.0
                             },
-                            "local_rotation": {
+                            "rotation": {
                               "x": 0.0,
                               "y": 0.0,
                               "z": 0.7071067690849304,
@@ -352,7 +352,7 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "name": "Mid"
+                            "value": "Mid"
                           }
                         }
                       },
@@ -389,17 +389,17 @@
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
-                    "local_position": {
+                    "position": {
                       "x": 0.0,
                       "y": 0.0,
                       "z": 0.0
                     },
-                    "local_scale": {
+                    "scale": {
                       "x": 1.0,
                       "y": 1.0,
                       "z": 1.0
                     },
-                    "local_rotation": {
+                    "rotation": {
                       "x": 0.0,
                       "y": 0.0,
                       "z": 0.0,
@@ -413,7 +413,7 @@
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
-                    "name": "n"
+                    "value": "n"
                   }
                 }
               }
@@ -429,17 +429,17 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "local_position": {
+                            "position": {
                               "x": 0.0,
                               "y": 0.5,
                               "z": 0.0
                             },
-                            "local_scale": {
+                            "scale": {
                               "x": 0.33000001311302187,
                               "y": 1.0,
                               "z": 1.0
                             },
-                            "local_rotation": {
+                            "rotation": {
                               "x": 0.0,
                               "y": 0.0,
                               "z": 0.0,
@@ -453,7 +453,7 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "name": "Left"
+                            "value": "Left"
                           }
                         }
                       },
@@ -486,17 +486,17 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "local_position": {
+                            "position": {
                               "x": 0.675000011920929,
                               "y": 0.5,
                               "z": 0.0
                             },
-                            "local_scale": {
+                            "scale": {
                               "x": 0.33000001311302187,
                               "y": 1.0,
                               "z": 1.0
                             },
-                            "local_rotation": {
+                            "rotation": {
                               "x": 0.0,
                               "y": 0.0,
                               "z": 0.0,
@@ -510,7 +510,7 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "name": "Right"
+                            "value": "Right"
                           }
                         }
                       },
@@ -543,17 +543,17 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "local_position": {
+                            "position": {
                               "x": 0.33500000834465029,
                               "y": 1.0,
                               "z": 0.0
                             },
-                            "local_scale": {
+                            "scale": {
                               "x": 0.33000001311302187,
                               "y": 1.0,
                               "z": 1.0
                             },
-                            "local_rotation": {
+                            "rotation": {
                               "x": 0.0,
                               "y": 0.0,
                               "z": 0.7071067690849304,
@@ -567,7 +567,7 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "name": "Top"
+                            "value": "Top"
                           }
                         }
                       },
@@ -604,17 +604,17 @@
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
-                    "local_position": {
+                    "position": {
                       "x": 3.0,
                       "y": 0.0,
                       "z": 0.0
                     },
-                    "local_scale": {
+                    "scale": {
                       "x": 1.0,
                       "y": 1.0,
                       "z": 1.0
                     },
-                    "local_rotation": {
+                    "rotation": {
                       "x": 0.0,
                       "y": 0.0,
                       "z": 0.0,
@@ -628,7 +628,7 @@
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
-                    "name": "d"
+                    "value": "d"
                   }
                 }
               }
@@ -644,17 +644,17 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "local_position": {
+                            "position": {
                               "x": 0.3400000035762787,
                               "y": 0.16500000655651093,
                               "z": 0.0
                             },
-                            "local_scale": {
+                            "scale": {
                               "x": 0.33000001311302187,
                               "y": 1.0,
                               "z": 1.0
                             },
-                            "local_rotation": {
+                            "rotation": {
                               "x": 0.0,
                               "y": 0.0,
                               "z": 0.7071067690849304,
@@ -668,7 +668,7 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "name": "Bottom"
+                            "value": "Bottom"
                           }
                         }
                       },
@@ -701,17 +701,17 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "local_position": {
+                            "position": {
                               "x": 0.3400000035762787,
                               "y": 1.0,
                               "z": 0.0
                             },
-                            "local_scale": {
+                            "scale": {
                               "x": 0.33000001311302187,
                               "y": 1.0,
                               "z": 1.0
                             },
-                            "local_rotation": {
+                            "rotation": {
                               "x": 0.0,
                               "y": 0.0,
                               "z": 0.7071067690849304,
@@ -725,7 +725,7 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "name": "Top"
+                            "value": "Top"
                           }
                         }
                       },
@@ -758,17 +758,17 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "local_position": {
+                            "position": {
                               "x": 0.0,
                               "y": 0.5,
                               "z": 0.0
                             },
-                            "local_scale": {
+                            "scale": {
                               "x": 0.33000001311302187,
                               "y": 1.0,
                               "z": 1.0
                             },
-                            "local_rotation": {
+                            "rotation": {
                               "x": 0.0,
                               "y": 0.0,
                               "z": 0.0,
@@ -782,7 +782,7 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "name": "Left"
+                            "value": "Left"
                           }
                         }
                       },
@@ -815,17 +815,17 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "local_position": {
+                            "position": {
                               "x": 0.675000011920929,
                               "y": 1.0,
                               "z": 0.0
                             },
-                            "local_scale": {
+                            "scale": {
                               "x": 0.33000001311302187,
                               "y": 1.600000023841858,
                               "z": 1.0
                             },
-                            "local_rotation": {
+                            "rotation": {
                               "x": 0.0,
                               "y": 0.0,
                               "z": 0.0,
@@ -839,7 +839,7 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "name": "Right"
+                            "value": "Right"
                           }
                         }
                       },
@@ -876,17 +876,17 @@
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
-                    "local_position": {
+                    "position": {
                       "x": 6.0,
                       "y": 0.0,
                       "z": 0.0
                     },
-                    "local_scale": {
+                    "scale": {
                       "x": 1.0,
                       "y": 1.0,
                       "z": 1.0
                     },
-                    "local_rotation": {
+                    "rotation": {
                       "x": 0.0,
                       "y": 0.0,
                       "z": 0.0,
@@ -900,7 +900,7 @@
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
-                    "name": "c"
+                    "value": "c"
                   }
                 }
               }
@@ -916,17 +916,17 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "local_position": {
+                            "position": {
                               "x": 0.0,
                               "y": 0.5,
                               "z": 0.0
                             },
-                            "local_scale": {
+                            "scale": {
                               "x": 0.33000001311302187,
                               "y": 1.0,
                               "z": 1.0
                             },
-                            "local_rotation": {
+                            "rotation": {
                               "x": 0.0,
                               "y": 0.0,
                               "z": 0.0,
@@ -940,7 +940,7 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "name": "Left"
+                            "value": "Left"
                           }
                         }
                       },
@@ -973,17 +973,17 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "local_position": {
+                            "position": {
                               "x": 0.3400000035762787,
                               "y": 1.0,
                               "z": 0.0
                             },
-                            "local_scale": {
+                            "scale": {
                               "x": 0.33000001311302187,
                               "y": 1.0,
                               "z": 1.0
                             },
-                            "local_rotation": {
+                            "rotation": {
                               "x": 0.0,
                               "y": 0.0,
                               "z": 0.7071067690849304,
@@ -997,7 +997,7 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "name": "Top"
+                            "value": "Top"
                           }
                         }
                       },
@@ -1030,17 +1030,17 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "local_position": {
+                            "position": {
                               "x": 0.3400000035762787,
                               "y": 0.16500000655651093,
                               "z": 0.0
                             },
-                            "local_scale": {
+                            "scale": {
                               "x": 0.33000001311302187,
                               "y": 1.0,
                               "z": 1.0
                             },
-                            "local_rotation": {
+                            "rotation": {
                               "x": 0.0,
                               "y": 0.0,
                               "z": 0.7071067690849304,
@@ -1054,7 +1054,7 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "name": "Bottom"
+                            "value": "Bottom"
                           }
                         }
                       },
@@ -1091,17 +1091,17 @@
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
-                    "local_position": {
+                    "position": {
                       "x": 1.5,
                       "y": 0.0,
                       "z": 0.0
                     },
-                    "local_scale": {
+                    "scale": {
                       "x": 1.0,
                       "y": 1.0,
                       "z": 1.0
                     },
-                    "local_rotation": {
+                    "rotation": {
                       "x": 0.0,
                       "y": 0.0,
                       "z": 0.0,
@@ -1115,7 +1115,7 @@
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
-                    "name": "o"
+                    "value": "o"
                   }
                 }
               }
@@ -1131,17 +1131,17 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "local_position": {
+                            "position": {
                               "x": 0.675000011920929,
                               "y": 0.5,
                               "z": 0.0
                             },
-                            "local_scale": {
+                            "scale": {
                               "x": 0.33000001311302187,
                               "y": 1.0,
                               "z": 1.0
                             },
-                            "local_rotation": {
+                            "rotation": {
                               "x": 0.0,
                               "y": 0.0,
                               "z": 0.0,
@@ -1155,7 +1155,7 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "name": "Right"
+                            "value": "Right"
                           }
                         }
                       },
@@ -1188,17 +1188,17 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "local_position": {
+                            "position": {
                               "x": 0.0,
                               "y": 0.5,
                               "z": 0.0
                             },
-                            "local_scale": {
+                            "scale": {
                               "x": 0.33000001311302187,
                               "y": 1.0,
                               "z": 1.0
                             },
-                            "local_rotation": {
+                            "rotation": {
                               "x": 0.0,
                               "y": 0.0,
                               "z": 0.0,
@@ -1212,7 +1212,7 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "name": "Left"
+                            "value": "Left"
                           }
                         }
                       },
@@ -1245,17 +1245,17 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "local_position": {
+                            "position": {
                               "x": 0.3400000035762787,
                               "y": 1.0,
                               "z": 0.0
                             },
-                            "local_scale": {
+                            "scale": {
                               "x": 0.33000001311302187,
                               "y": 1.0,
                               "z": 1.0
                             },
-                            "local_rotation": {
+                            "rotation": {
                               "x": 0.0,
                               "y": 0.0,
                               "z": 0.7071067690849304,
@@ -1269,7 +1269,7 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "name": "Top"
+                            "value": "Top"
                           }
                         }
                       },
@@ -1302,17 +1302,17 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "local_position": {
+                            "position": {
                               "x": 0.3400000035762787,
                               "y": 0.16500000655651093,
                               "z": 0.0
                             },
-                            "local_scale": {
+                            "scale": {
                               "x": 0.33000001311302187,
                               "y": 1.0,
                               "z": 1.0
                             },
-                            "local_rotation": {
+                            "rotation": {
                               "x": 0.0,
                               "y": 0.0,
                               "z": 0.7071067690849304,
@@ -1326,7 +1326,7 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "name": "Bottom"
+                            "value": "Bottom"
                           }
                         }
                       },
