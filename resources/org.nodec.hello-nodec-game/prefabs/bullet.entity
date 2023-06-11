@@ -37,21 +37,21 @@
       },
       {
         "polymorphic_id": 2147483652,
-        "polymorphic_name": "nodec_scene::components::SerializableTransform",
+        "polymorphic_name": "nodec_scene::components::SerializableLocalTransform",
         "ptr_wrapper": {
           "valid": 1,
           "data": {
-            "local_position": {
+            "position": {
               "x": 0.0,
               "y": 0.0,
               "z": 0.0
             },
-            "local_scale": {
+            "scale": {
               "x": 1.0,
               "y": 1.0,
               "z": 1.0
             },
-            "local_rotation": {
+            "rotation": {
               "x": 0.0,
               "y": 0.0,
               "z": 0.0,
@@ -99,17 +99,17 @@
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
-                    "local_position": {
+                    "position": {
                       "x": 0.0,
                       "y": 0.0,
                       "z": 0.0
                     },
-                    "local_scale": {
+                    "scale": {
                       "x": 0.10000000149011612,
                       "y": 0.10000000149011612,
                       "z": 0.10000000149011612
                     },
-                    "local_rotation": {
+                    "rotation": {
                       "x": 0.0,
                       "y": 0.0,
                       "z": 0.0,
