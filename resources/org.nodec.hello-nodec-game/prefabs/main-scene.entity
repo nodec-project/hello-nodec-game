@@ -43,7 +43,7 @@
         "ptr_wrapper": {
           "valid": 1,
           "data": {
-            "name": "Main Scene"
+            "value": "Main Scene"
           }
         }
       }
@@ -124,7 +124,7 @@
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
-                    "name": "Sphere"
+                    "value": "Sphere"
                   }
                 }
               }
@@ -167,7 +167,7 @@
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
-                    "name": "Proto Cubes"
+                    "value": "Proto Cubes"
                   }
                 }
               }
@@ -221,7 +221,7 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "name": "Yellow"
+                            "value": "Yellow"
                           }
                         }
                       }
@@ -278,7 +278,7 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "name": "Red"
+                            "value": "Red"
                           }
                         }
                       }
@@ -335,7 +335,7 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "name": "Purple"
+                            "value": "Purple"
                           }
                         }
                       }
@@ -392,7 +392,7 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "name": "Pink"
+                            "value": "Pink"
                           }
                         }
                       }
@@ -449,7 +449,7 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "name": "Orange"
+                            "value": "Orange"
                           }
                         }
                       }
@@ -506,7 +506,7 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "name": "Olive"
+                            "value": "Olive"
                           }
                         }
                       }
@@ -563,7 +563,7 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "name": "Brown"
+                            "value": "Brown"
                           }
                         }
                       }
@@ -620,7 +620,7 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "name": "Magenta"
+                            "value": "Magenta"
                           }
                         }
                       }
@@ -677,7 +677,7 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "name": "Cyan"
+                            "value": "Cyan"
                           }
                         }
                       }
@@ -734,7 +734,7 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "name": "White"
+                            "value": "White"
                           }
                         }
                       }
@@ -791,7 +791,7 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "name": "Blue1"
+                            "value": "Blue1"
                           }
                         }
                       }
@@ -848,7 +848,7 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "name": "Blue2"
+                            "value": "Blue2"
                           }
                         }
                       }
@@ -905,7 +905,7 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "name": "Blue3"
+                            "value": "Blue3"
                           }
                         }
                       }
@@ -962,7 +962,7 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "name": "Grey4"
+                            "value": "Grey4"
                           }
                         }
                       }
@@ -1019,7 +1019,7 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "name": "Grey3"
+                            "value": "Grey3"
                           }
                         }
                       }
@@ -1076,7 +1076,7 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "name": "Grey2"
+                            "value": "Grey2"
                           }
                         }
                       }
@@ -1133,7 +1133,7 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "name": "Grey1"
+                            "value": "Grey1"
                           }
                         }
                       }
@@ -1180,7 +1180,7 @@
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
-                    "name": "Point Lights"
+                    "value": "Point Lights"
                   }
                 }
               }
@@ -1251,7 +1251,7 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "name": "Light"
+                            "value": "Light"
                           }
                         }
                       }
@@ -1336,7 +1336,7 @@
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
-                    "name": "Sphere"
+                    "value": "Sphere"
                   }
                 }
               }
@@ -1395,7 +1395,7 @@
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
-                    "name": "Scene Lighting"
+                    "value": "Scene Lighting"
                   }
                 }
               }
@@ -1452,7 +1452,7 @@
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
-                    "name": "Sphere"
+                    "value": "Sphere"
                   }
                 }
               }
@@ -1505,7 +1505,7 @@
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
-                    "name": "RetroTV"
+                    "value": "RetroTV"
                   }
                 }
               }
@@ -1558,7 +1558,7 @@
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
-                    "name": "nodec"
+                    "value": "nodec"
                   }
                 }
               }
@@ -1617,7 +1617,7 @@
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
-                    "name": "Light"
+                    "value": "Light"
                   }
                 }
               }
@@ -1707,7 +1707,7 @@
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
-                    "name": "Camera"
+                    "value": "Camera"
                   }
                 }
               }
@@ -1788,7 +1788,7 @@
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
-                    "name": "Plane"
+                    "value": "Plane"
                   }
                 }
               }
@@ -1845,7 +1845,7 @@
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
-                    "name": "Cube"
+                    "value": "Cube"
                   }
                 }
               }
@@ -1908,7 +1908,7 @@
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
-                    "name": "Text"
+                    "value": "Text"
                   }
                 }
               }
@@ -1963,7 +1963,7 @@
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
-                    "name": "Audio"
+                    "value": "Audio"
                   }
                 }
               }
@@ -2018,7 +2018,7 @@
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
-                    "name": "Test Image"
+                    "value": "Test Image"
                   }
                 }
               }
@@ -2099,7 +2099,7 @@
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
-                    "name": "Cube"
+                    "value": "Cube"
                   }
                 }
               }
