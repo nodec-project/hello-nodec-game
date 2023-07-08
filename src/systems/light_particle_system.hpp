@@ -15,7 +15,7 @@ public:
         using namespace nodec_scene::components;
         using namespace nodec_scene_serialization;
         using namespace nodec_scene_serialization::components;
-        using namespace nodec_animations;
+        using namespace nodec_animation;
 
         curve.add_keyframe(Keyframe{0, 0.0f});
         curve.add_keyframe(Keyframe{30 * 1000, 360.0f});
@@ -56,7 +56,7 @@ public:
 
 private:
     nodec_scene::SceneEntity center_entt{nodec::entities::null_entity};
-    nodec_animations::AnimationCurve curve;
+    nodec_animation::AnimationCurve curve;
 };
 } // namespace systems
 

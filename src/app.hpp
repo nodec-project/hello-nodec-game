@@ -3,7 +3,7 @@
 
 // #define EDITOR_MODE
 
-#include <nodec_animations/animation_curve.hpp>
+#include <nodec_animation/animation_curve.hpp>
 #include <nodec_application/application.hpp>
 #include <nodec_input/input_devices.hpp>
 #include <nodec_input/keyboard/keyboard.hpp>
