@@ -5,6 +5,12 @@
 #include "systems/light_particle_system.hpp"
 #include "systems/player_control_system.hpp"
 
+//struct TestComponent : public nodec_scene_serialization::BaseSerializableComponent {
+//    TestComponent()
+//        : BaseSerializableComponent(this) {}
+//};
+//NODEC_SCENE_REGISTER_SERIALIZABLE_COMPONENT(TestComponent)
+
 class HelloNodecGameApplication {
 public:
     HelloNodecGameApplication(nodec_application::Application &app)
@@ -66,6 +72,7 @@ public:
         {
             scene_serialization_.register_component<Bullet>();
             scene_serialization_.register_component<PlayerControl>();
+            //scene_serialization_.register_component<TestComponent>();
         }
 
         {
@@ -81,6 +88,8 @@ public:
             auto &editor = app.get_service<SceneEditor>();
             Bullet::setup_editor(editor);
             PlayerControl::setup_editor(editor);
+            //editor.inspector_component_registry().register_component<TestComponent>("Test Component",
+            //                                                                        [](TestComponent &) {});
         }
 #endif
     }
@@ -106,6 +115,21 @@ private:
     }
 
     void on_stepped(nodec_world::World &world) {
+        //using namespace nodec_scene;
+        //using namespace nodec_scene::components;
+        //using namespace ::components;
+
+        //auto &scene_registry = world.scene().registry();
+
+        //scene_registry.view<PlayerControl, LocalTransform>().each([&](SceneEntity, PlayerControl&, LocalTransform &player_trfm) {
+        //    scene_registry.view<TestComponent, LocalTransform>().each([&](SceneEntity entity, TestComponent &test, LocalTransform &trfm) {
+        //        auto dir = player_trfm.position - trfm.position;
+        //        auto look_rotation = nodec::math::gfx::look_rotation(dir);
+
+        //        trfm.rotation = look_rotation;
+        //        trfm.dirty = true;
+        //    });
+        //});
     }
 
 private:
