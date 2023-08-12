@@ -76,7 +76,8 @@
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
-                    "mass": 10.0
+                    "mass": 10.0,
+                    "constraints": 0
                   }
                 }
               },
@@ -1289,7 +1290,8 @@
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
-                    "mass": 10.0
+                    "mass": 10.0,
+                    "constraints": 0
                   }
                 }
               },
@@ -1741,7 +1743,8 @@
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
-                    "mass": 0.0
+                    "mass": 0.0,
+                    "constraints": 0
                   }
                 }
               },
@@ -2052,7 +2055,8 @@
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
-                    "mass": 10.0
+                    "mass": 10.0,
+                    "constraints": 0
                   }
                 }
               },
