@@ -18,8 +18,9 @@ if(MSVC)
     set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE "${EXECUTABLE_OUTPUT_DIRECTORY}")
     set(CMAKE_LIBRARY_OUTPUT_DIRECTORY_DEBUG "${EXECUTABLE_OUTPUT_DIRECTORY}")
     set(CMAKE_LIBRARY_OUTPUT_DIRECTORY_RELEASE "${EXECUTABLE_OUTPUT_DIRECTORY}")
-    
+
     add_compile_options(/bigobj)
+
     # Since the static libraries is linked, no need to place them in the executable directory.
     # set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY_DEBUG "${EXECUTABLE_OUTPUT_DIRECTORY}")
     # set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY_RELEASE "${EXECUTABLE_OUTPUT_DIRECTORY}")
@@ -30,13 +31,10 @@ set(NODEC_GAME_EDITOR_ENABLED ON CACHE BOOL "" FORCE)
 
 add_subdirectory(nodec_game_engine)
 
-if(WIN32)
-    add_executable(${PROJECT_NAME} WIN32
-        src/app.cpp
-    )
-else()
-    message(FATAL_MESSAGE "This platform does not supported.")
-endif()
+add_executable(${PROJECT_NAME} WIN32
+    src/app.cpp
+)
+
 
 if(NODEC_GAME_EDITOR_ENABLED)
     target_compile_definitions(${PROJECT_NAME}
@@ -49,16 +47,7 @@ target_link_libraries(${PROJECT_NAME}
     nodec_game_engine
 )
 
-# get_target_property(RUNTIME_OUTPUT_DIRECTORY_Debug ${PROJECT_NAME} RUNTIME_OUTPUT_DIRECTORY_Debug)
-
-# message("!!!" ${RUNTIME_OUTPUT_DIRECTORY_Debug})
 if(WIN32)
-    # add_custom_command(TARGET ${PROJECT_NAME}
-    # COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_CURRENT_SOURCE_DIR}/nodec_game_engine/game_engine/resources ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/resources
-
-    # # WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
-    # )
-
     # NOTE: Why use junction.
     # I honestly used cmake's "create_symlink" command. However, I got an garbled error.
     # Then, I tried to create a symbolic link using the native command "mklink".
@@ -68,10 +57,7 @@ if(WIN32)
         COMMAND ${CMAKE_COMMAND} -E remove_directory ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/resources
         COMMAND ${CMAKE_COMMAND} -E make_directory ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/resources
         COMMAND mklink /J \"${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/resources/org.nodec.game-engine\" \"${CMAKE_CURRENT_SOURCE_DIR}/nodec_game_engine/game_engine/resources/org.nodec.game-engine\"
+        COMMAND mklink /J \"${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/resources/org.nodec.game-editor\" \"${CMAKE_CURRENT_SOURCE_DIR}/nodec_game_engine/game_editor/resources/org.nodec.game-editor\"
         COMMAND mklink /J \"${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/resources/org.nodec.hello-nodec-game\" \"${CMAKE_CURRENT_SOURCE_DIR}/resources/org.nodec.hello-nodec-game\"
-
-        # COMMAND ${CMAKE_COMMAND} -E create_symlink \"${CMAKE_CURRENT_SOURCE_DIR}/nodec_game_engine/game_engine/resources\" \"${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/resources\"
-
-        # WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
     )
 endif()

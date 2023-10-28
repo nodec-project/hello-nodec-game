@@ -1,12 +1,22 @@
-#ifndef SYSTEMS__PLAYER_CONTROL_SYSTEM_HPP_
-#define SYSTEMS__PLAYER_CONTROL_SYSTEM_HPP_
+#ifndef HELLO_NODEC_GAME__SYSTEMS__PLAYER_CONTROL_SYSTEM_HPP_
+#define HELLO_NODEC_GAME__SYSTEMS__PLAYER_CONTROL_SYSTEM_HPP_
 
-#include "../app.hpp"
+#include <nodec/math/gfx.hpp>
+#include <nodec/math/math.hpp>
+
+#include <nodec_input/keyboard/keyboard.hpp>
+#include <nodec_input/mouse/mouse.hpp>
+#include <nodec_physics/components/impluse_force.hpp>
+#include <nodec_resources/resources.hpp>
+#include <nodec_scene_serialization/scene_serialization.hpp>
+#include <nodec_world/world.hpp>
 
 #include "../components/bullet.hpp"
-#include "../components/player_control.hpp"
+#include "../components/player.hpp"
 
+namespace hello_nodec_game {
 namespace systems {
+
 class PlayerControlSystem {
 public:
     PlayerControlSystem(nodec_world::World &world,
@@ -21,7 +31,7 @@ public:
         using namespace nodec_input::mouse;
         using namespace nodec_scene_serialization;
         using namespace nodec_scene::components;
-        using namespace ::components;
+        using namespace components;
 
         world.stepped().connect([&](nodec_world::World &world) { on_stepped(world); });
         keyboard->key_event().connect([&](const nodec_input::keyboard::KeyEvent &event) {
@@ -72,11 +82,10 @@ private:
         using namespace nodec::entities;
         using namespace nodec_scene;
         using namespace nodec_scene::components;
-        using namespace nodec_rendering::components;
         using namespace nodec_scene_serialization::components;
         using namespace nodec_scene_serialization;
         using namespace nodec_physics::components;
-        using namespace ::components;
+        using namespace components;
 
         SceneEntity player_entt{null_entity};
 
@@ -164,5 +173,8 @@ private:
 
     std::shared_ptr<nodec_scene_serialization::SerializableEntity> bullet_prototype_;
 };
+
 } // namespace systems
+} // namespace hello_nodec_game
+
 #endif

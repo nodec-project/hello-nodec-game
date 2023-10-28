@@ -1,17 +1,23 @@
-#ifndef SYSTEMS__LIGHT_PARTICLE_HPP_
-#define SYSTEMS__LIGHT_PARTICLE_HPP_
+#ifndef HELLO_NODEC_GAME__SYSTEMS__LIGHT_PARTICLE_HPP_
+#define HELLO_NODEC_GAME__SYSTEMS__LIGHT_PARTICLE_HPP_
 
-#include "../app.hpp"
-
+#include <nodec/math/gfx.hpp>
+#include <nodec/math/math.hpp>
 #include <nodec/random.hpp>
+#include <nodec/resource_management/resource_registry.hpp>
+#include <nodec_scene_serialization/components/non_serialized.hpp>
 
+#include <nodec_animation/animation_curve.hpp>
+#include <nodec_scene_serialization/scene_serialization.hpp>
+#include <nodec_world/world.hpp>
+
+namespace hello_nodec_game {
 namespace systems {
 class LightParticleSystem {
 public:
     LightParticleSystem(nodec_world::World &world, nodec::resource_management::ResourceRegistry &resource_registry,
                         nodec_scene_serialization::SceneSerialization &serialization) {
         using namespace nodec;
-        using namespace nodec_rendering::components;
         using namespace nodec_scene::components;
         using namespace nodec_scene_serialization;
         using namespace nodec_scene_serialization::components;
@@ -58,6 +64,8 @@ private:
     nodec_scene::SceneEntity center_entt{nodec::entities::null_entity};
     nodec_animation::AnimationCurve curve;
 };
+
 } // namespace systems
+} // namespace hello_nodec_game
 
 #endif
