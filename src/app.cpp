@@ -1,15 +1,23 @@
-#include "app.hpp"
+#include <nodec_application/application.hpp>
+#include <nodec_input/input_devices.hpp>
+#include <nodec_physics/systems/physics_system.hpp>
+#include <nodec_resources/resources.hpp>
+#include <nodec_scene_editor/scene_editor.hpp>
+#include <nodec_scene_serialization/entity_loader.hpp>
+#include <nodec_screen/screen.hpp>
+#include <nodec_world/world.hpp>
+
 #include "components/bullet.hpp"
-#include "components/player_control.hpp"
+#include "components/player.hpp"
 #include "systems/bullet_system.hpp"
 #include "systems/light_particle_system.hpp"
 #include "systems/player_control_system.hpp"
 
-//struct TestComponent : public nodec_scene_serialization::BaseSerializableComponent {
-//    TestComponent()
-//        : BaseSerializableComponent(this) {}
-//};
-//NODEC_SCENE_REGISTER_SERIALIZABLE_COMPONENT(TestComponent)
+#ifdef EDITOR_MODE
+#    include "editors/player_editor.hpp"
+#endif
+
+namespace hello_nodec_game {
 
 class HelloNodecGameApplication {
 public:
@@ -28,17 +36,13 @@ public:
         using namespace nodec_scene::components;
         using namespace nodec_screen;
         using namespace nodec_resources;
-        using namespace nodec_rendering::components;
-        using namespace nodec_rendering::resources;
         using namespace nodec_scene_serialization;
-        using namespace nodec_scene_audio::resources;
-        using namespace nodec_scene_audio::components;
         using namespace nodec_world;
         using namespace nodec_input::keyboard;
         using namespace nodec_input::mouse;
         using namespace nodec_physics::systems;
-        using namespace ::systems;
-        using namespace ::components;
+        using namespace systems;
+        using namespace components;
 
         logging::InfoStream(__FILE__, __LINE__) << "[HelloNodecGameApplication::HelloNodecGameApplication] >>> Hello :)";
 
@@ -72,7 +76,6 @@ public:
         {
             scene_serialization_.register_component<Bullet>();
             scene_serialization_.register_component<PlayerControl>();
-            //scene_serialization_.register_component<TestComponent>();
         }
 
         {
@@ -85,11 +88,11 @@ public:
         // Set up systems if editor mode enabled.
         {
             using namespace nodec_scene_editor;
+            using namespace editors;
             auto &editor = app.get_service<SceneEditor>();
-            Bullet::setup_editor(editor);
-            PlayerControl::setup_editor(editor);
-            //editor.inspector_component_registry().register_component<TestComponent>("Test Component",
-            //                                                                        [](TestComponent &) {});
+
+            editor.component_registry().register_component<PlayerControl, PlayerControlEditor>("Player Control");
+            editor.component_registry().register_component<Bullet>("Bullet");
         }
 #endif
     }
@@ -115,21 +118,6 @@ private:
     }
 
     void on_stepped(nodec_world::World &world) {
-        //using namespace nodec_scene;
-        //using namespace nodec_scene::components;
-        //using namespace ::components;
-
-        //auto &scene_registry = world.scene().registry();
-
-        //scene_registry.view<PlayerControl, LocalTransform>().each([&](SceneEntity, PlayerControl&, LocalTransform &player_trfm) {
-        //    scene_registry.view<TestComponent, LocalTransform>().each([&](SceneEntity entity, TestComponent &test, LocalTransform &trfm) {
-        //        auto dir = player_trfm.position - trfm.position;
-        //        auto look_rotation = nodec::math::gfx::look_rotation(dir);
-
-        //        trfm.rotation = look_rotation;
-        //        trfm.dirty = true;
-        //    });
-        //});
     }
 
 private:
@@ -148,7 +136,11 @@ private:
     std::unique_ptr<systems::BulletSystem> bullet_system_;
 };
 
+} // namespace hello_nodec_game
+
 void nodec_application::on_configure(nodec_application::Application &app) {
+    using namespace hello_nodec_game;
+
     // Make this application instance, and append it to the nodec application.
     app.add_service<HelloNodecGameApplication>(std::make_shared<HelloNodecGameApplication>(app));
 }

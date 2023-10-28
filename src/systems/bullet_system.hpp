@@ -1,9 +1,12 @@
-#ifndef SYSTEMS__BULLET_SYSTEM_HPP_
-#define SYSTEMS__BULLET_SYSTEM_HPP_
+#ifndef HELLO_NODEC_GAME__SYSTEMS__BULLET_SYSTEM_HPP_
+#define HELLO_NODEC_GAME__SYSTEMS__BULLET_SYSTEM_HPP_
 
-#include "../app.hpp"
+#include <nodec_physics/systems/physics_system.hpp>
+#include <nodec_world/world.hpp>
+
 #include "../components/bullet.hpp"
 
+namespace hello_nodec_game {
 namespace systems {
 
 class BulletSystem {
@@ -14,7 +17,7 @@ public:
         using namespace nodec_physics;
         using namespace nodec;
         using namespace nodec_scene;
-        using namespace ::components;
+        using namespace components;
 
         world.stepped().connect([&](nodec_world::World &world) { on_stepped(world); });
 
@@ -33,8 +36,7 @@ public:
 private:
     void on_stepped(nodec_world::World &world) {
         using namespace nodec_scene;
-        using namespace nodec_physics::components;
-        using namespace ::components;
+        using namespace components;
 
         auto &scene_registry = world.scene().registry();
 
@@ -53,5 +55,6 @@ private:
     }
 };
 } // namespace systems
+} // namespace hello_nodec_game
 
 #endif
