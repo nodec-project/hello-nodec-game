@@ -1,3 +1,4 @@
+#include <nodec/logging/logging.hpp>
 #include <nodec_application/application.hpp>
 #include <nodec_input/input_devices.hpp>
 #include <nodec_physics/systems/physics_system.hpp>
@@ -44,7 +45,7 @@ public:
         using namespace systems;
         using namespace components;
 
-        logging::InfoStream(__FILE__, __LINE__) << "[HelloNodecGameApplication::HelloNodecGameApplication] >>> Hello :)";
+        logging::info(__FILE__, __LINE__) << "[HelloNodecGameApplication::HelloNodecGameApplication] >>> Hello :)";
 
         // --- Get input devices ---
         auto keyboard = input_devices_.get_available_devices<Keyboard>().front();
@@ -98,7 +99,7 @@ public:
     }
 
     ~HelloNodecGameApplication() {
-        nodec::logging::InfoStream(__FILE__, __LINE__) << "[HelloNodecGameApplication::~HelloNodecGameApplication] >>> See you ;)";
+        nodec::logging::info(__FILE__, __LINE__) << "[HelloNodecGameApplication::~HelloNodecGameApplication] >>> See you ;)";
     }
 
 private:
@@ -109,7 +110,7 @@ private:
         using namespace nodec_input::keyboard;
         using namespace nodec_input::mouse;
 
-        logging::InfoStream(__FILE__, __LINE__) << "[HelloNodecGameApplication::on_initialized]";
+        logging::info(__FILE__, __LINE__) << "[HelloNodecGameApplication::on_initialized]";
 
         // Load the main scene.
         {
