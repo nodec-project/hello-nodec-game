@@ -71,7 +71,7 @@ public:
             // Resources module is invalid in the configuration phase.
             bullet_prototype_ = resources_.registry().get_resource_direct<SerializableEntity>("org.nodec.hello-nodec-game/prefabs/bullet.entity");
             if (!bullet_prototype_) {
-                logging::WarnStream(__FILE__, __LINE__) << "Failed to get bullet scene.";
+                logging::warn(__FILE__, __LINE__) << "Failed to get bullet scene.";
             }
         });
     }
@@ -139,7 +139,7 @@ private:
 
             prev_fire_time_ = world.clock().current_time();
 
-            logging::InfoStream(__FILE__, __LINE__) << "fire!";
+            logging::info(__FILE__, __LINE__) << "fire!";
 
             if (!bullet_prototype_) return;
 
