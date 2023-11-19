@@ -14,6 +14,16 @@
       },
       {
         "polymorphic_id": 2147483650,
+        "polymorphic_name": "nodec_scene::components::SerializableName",
+        "ptr_wrapper": {
+          "valid": 1,
+          "data": {
+            "value": "Main Scene"
+          }
+        }
+      },
+      {
+        "polymorphic_id": 2147483651,
         "polymorphic_name": "nodec_scene::components::SerializableLocalTransform",
         "ptr_wrapper": {
           "valid": 1,
@@ -23,27 +33,17 @@
               "y": 0.0,
               "z": 0.0
             },
-            "scale": {
-              "x": 1.0,
-              "y": 1.0,
-              "z": 1.0
-            },
             "rotation": {
               "x": 0.0,
               "y": 0.0,
               "z": 0.0,
               "w": 1.0
+            },
+            "scale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
             }
-          }
-        }
-      },
-      {
-        "polymorphic_id": 2147483651,
-        "polymorphic_name": "nodec_scene::components::SerializableName",
-        "ptr_wrapper": {
-          "valid": 1,
-          "data": {
-            "value": "Main Scene"
           }
         }
       }
@@ -56,6 +56,18 @@
             "components": [
               {
                 "polymorphic_id": 2147483652,
+                "polymorphic_name": "nodec_physics::components::SerializableRigidBody",
+                "ptr_wrapper": {
+                  "valid": 1,
+                  "data": {
+                    "body_type": 0,
+                    "mass": 10.0,
+                    "constraints": 0
+                  }
+                }
+              },
+              {
+                "polymorphic_id": 2147483653,
                 "polymorphic_name": "nodec_physics::components::SerializablePhysicsShape",
                 "ptr_wrapper": {
                   "valid": 1,
@@ -66,18 +78,8 @@
                       "y": 1.0,
                       "z": 1.0
                     },
-                    "radius": 0.5
-                  }
-                }
-              },
-              {
-                "polymorphic_id": 2147483653,
-                "polymorphic_name": "nodec_physics::components::SerializableRigidBody",
-                "ptr_wrapper": {
-                  "valid": 1,
-                  "data": {
-                    "mass": 10.0,
-                    "constraints": 0
+                    "radius": 0.5,
+                    "height": 1.0
                   }
                 }
               },
@@ -101,22 +103,7 @@
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
-                    "position": {
-                      "x": 3.0899689197540285,
-                      "y": 0.6000000238418579,
-                      "z": -1.2887828350067139
-                    },
-                    "scale": {
-                      "x": 1.0,
-                      "y": 1.0,
-                      "z": 1.0
-                    },
-                    "rotation": {
-                      "x": 0.00003496880890452303,
-                      "y": -3.109240087617593e-10,
-                      "z": 0.00000352441406903381,
-                      "w": 1.0
-                    }
+                    "value": "Sphere"
                   }
                 }
               },
@@ -125,7 +112,22 @@
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
-                    "value": "Sphere"
+                    "position": {
+                      "x": 3.0899689197540285,
+                      "y": 0.6000000238418579,
+                      "z": -1.2887828350067139
+                    },
+                    "rotation": {
+                      "x": 0.00003496880890452303,
+                      "y": -3.109240087617593e-10,
+                      "z": 0.00000352441406903381,
+                      "w": 1.0
+                    },
+                    "scale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    }
                   }
                 }
               }
@@ -144,22 +146,7 @@
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
-                    "position": {
-                      "x": 6.0,
-                      "y": 0.5,
-                      "z": 8.0
-                    },
-                    "scale": {
-                      "x": 1.0,
-                      "y": 1.0,
-                      "z": 1.0
-                    },
-                    "rotation": {
-                      "x": 0.0,
-                      "y": 0.0,
-                      "z": 0.0,
-                      "w": 1.0
-                    }
+                    "value": "Proto Cubes"
                   }
                 }
               },
@@ -168,7 +155,22 @@
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
-                    "value": "Proto Cubes"
+                    "position": {
+                      "x": 6.0,
+                      "y": 0.5,
+                      "z": 8.0
+                    },
+                    "rotation": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 1.0
+                    },
+                    "scale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    }
                   }
                 }
               }
@@ -198,22 +200,7 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "position": {
-                              "x": 3.0,
-                              "y": 1.0,
-                              "z": 0.0
-                            },
-                            "scale": {
-                              "x": 1.0,
-                              "y": 1.0,
-                              "z": 1.0
-                            },
-                            "rotation": {
-                              "x": 0.0,
-                              "y": 0.0,
-                              "z": 0.0,
-                              "w": 1.0
-                            }
+                            "value": "Yellow"
                           }
                         }
                       },
@@ -222,7 +209,22 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "value": "Yellow"
+                            "position": {
+                              "x": 3.0,
+                              "y": 1.0,
+                              "z": 0.0
+                            },
+                            "rotation": {
+                              "x": 0.0,
+                              "y": 0.0,
+                              "z": 0.0,
+                              "w": 1.0
+                            },
+                            "scale": {
+                              "x": 1.0,
+                              "y": 1.0,
+                              "z": 1.0
+                            }
                           }
                         }
                       }
@@ -255,22 +257,7 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "position": {
-                              "x": 3.0,
-                              "y": 0.0,
-                              "z": 0.0
-                            },
-                            "scale": {
-                              "x": 1.0,
-                              "y": 1.0,
-                              "z": 1.0
-                            },
-                            "rotation": {
-                              "x": 0.0,
-                              "y": 0.0,
-                              "z": 0.0,
-                              "w": 1.0
-                            }
+                            "value": "Red"
                           }
                         }
                       },
@@ -279,7 +266,22 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "value": "Red"
+                            "position": {
+                              "x": 3.0,
+                              "y": 0.0,
+                              "z": 0.0
+                            },
+                            "rotation": {
+                              "x": 0.0,
+                              "y": 0.0,
+                              "z": 0.0,
+                              "w": 1.0
+                            },
+                            "scale": {
+                              "x": 1.0,
+                              "y": 1.0,
+                              "z": 1.0
+                            }
                           }
                         }
                       }
@@ -312,22 +314,7 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "position": {
-                              "x": 2.0,
-                              "y": 4.0,
-                              "z": 0.0
-                            },
-                            "scale": {
-                              "x": 1.0,
-                              "y": 1.0,
-                              "z": 1.0
-                            },
-                            "rotation": {
-                              "x": 0.0,
-                              "y": 0.0,
-                              "z": 0.0,
-                              "w": 1.0
-                            }
+                            "value": "Purple"
                           }
                         }
                       },
@@ -336,7 +323,22 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "value": "Purple"
+                            "position": {
+                              "x": 2.0,
+                              "y": 4.0,
+                              "z": 0.0
+                            },
+                            "rotation": {
+                              "x": 0.0,
+                              "y": 0.0,
+                              "z": 0.0,
+                              "w": 1.0
+                            },
+                            "scale": {
+                              "x": 1.0,
+                              "y": 1.0,
+                              "z": 1.0
+                            }
                           }
                         }
                       }
@@ -369,22 +371,7 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "position": {
-                              "x": 2.0,
-                              "y": 3.0,
-                              "z": 0.0
-                            },
-                            "scale": {
-                              "x": 1.0,
-                              "y": 1.0,
-                              "z": 1.0
-                            },
-                            "rotation": {
-                              "x": 0.0,
-                              "y": 0.0,
-                              "z": 0.0,
-                              "w": 1.0
-                            }
+                            "value": "Pink"
                           }
                         }
                       },
@@ -393,7 +380,22 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "value": "Pink"
+                            "position": {
+                              "x": 2.0,
+                              "y": 3.0,
+                              "z": 0.0
+                            },
+                            "rotation": {
+                              "x": 0.0,
+                              "y": 0.0,
+                              "z": 0.0,
+                              "w": 1.0
+                            },
+                            "scale": {
+                              "x": 1.0,
+                              "y": 1.0,
+                              "z": 1.0
+                            }
                           }
                         }
                       }
@@ -426,22 +428,7 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "position": {
-                              "x": 2.0,
-                              "y": 2.0,
-                              "z": 0.0
-                            },
-                            "scale": {
-                              "x": 1.0,
-                              "y": 1.0,
-                              "z": 1.0
-                            },
-                            "rotation": {
-                              "x": 0.0,
-                              "y": 0.0,
-                              "z": 0.0,
-                              "w": 1.0
-                            }
+                            "value": "Orange"
                           }
                         }
                       },
@@ -450,7 +437,22 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "value": "Orange"
+                            "position": {
+                              "x": 2.0,
+                              "y": 2.0,
+                              "z": 0.0
+                            },
+                            "rotation": {
+                              "x": 0.0,
+                              "y": 0.0,
+                              "z": 0.0,
+                              "w": 1.0
+                            },
+                            "scale": {
+                              "x": 1.0,
+                              "y": 1.0,
+                              "z": 1.0
+                            }
                           }
                         }
                       }
@@ -483,22 +485,7 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "position": {
-                              "x": 2.0,
-                              "y": 1.0,
-                              "z": 0.0
-                            },
-                            "scale": {
-                              "x": 1.0,
-                              "y": 1.0,
-                              "z": 1.0
-                            },
-                            "rotation": {
-                              "x": 0.0,
-                              "y": 0.0,
-                              "z": 0.0,
-                              "w": 1.0
-                            }
+                            "value": "Olive"
                           }
                         }
                       },
@@ -507,7 +494,22 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "value": "Olive"
+                            "position": {
+                              "x": 2.0,
+                              "y": 1.0,
+                              "z": 0.0
+                            },
+                            "rotation": {
+                              "x": 0.0,
+                              "y": 0.0,
+                              "z": 0.0,
+                              "w": 1.0
+                            },
+                            "scale": {
+                              "x": 1.0,
+                              "y": 1.0,
+                              "z": 1.0
+                            }
                           }
                         }
                       }
@@ -540,22 +542,7 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "position": {
-                              "x": 2.0,
-                              "y": 0.0,
-                              "z": 0.0
-                            },
-                            "scale": {
-                              "x": 1.0,
-                              "y": 1.0,
-                              "z": 1.0
-                            },
-                            "rotation": {
-                              "x": 0.0,
-                              "y": 0.0,
-                              "z": 0.0,
-                              "w": 1.0
-                            }
+                            "value": "Brown"
                           }
                         }
                       },
@@ -564,7 +551,22 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "value": "Brown"
+                            "position": {
+                              "x": 2.0,
+                              "y": 0.0,
+                              "z": 0.0
+                            },
+                            "rotation": {
+                              "x": 0.0,
+                              "y": 0.0,
+                              "z": 0.0,
+                              "w": 1.0
+                            },
+                            "scale": {
+                              "x": 1.0,
+                              "y": 1.0,
+                              "z": 1.0
+                            }
                           }
                         }
                       }
@@ -597,22 +599,7 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "position": {
-                              "x": 1.0,
-                              "y": 4.0,
-                              "z": 0.0
-                            },
-                            "scale": {
-                              "x": 1.0,
-                              "y": 1.0,
-                              "z": 1.0
-                            },
-                            "rotation": {
-                              "x": 0.0,
-                              "y": 0.0,
-                              "z": 0.0,
-                              "w": 1.0
-                            }
+                            "value": "Magenta"
                           }
                         }
                       },
@@ -621,7 +608,22 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "value": "Magenta"
+                            "position": {
+                              "x": 1.0,
+                              "y": 4.0,
+                              "z": 0.0
+                            },
+                            "rotation": {
+                              "x": 0.0,
+                              "y": 0.0,
+                              "z": 0.0,
+                              "w": 1.0
+                            },
+                            "scale": {
+                              "x": 1.0,
+                              "y": 1.0,
+                              "z": 1.0
+                            }
                           }
                         }
                       }
@@ -654,22 +656,7 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "position": {
-                              "x": 1.0,
-                              "y": 3.0,
-                              "z": 0.0
-                            },
-                            "scale": {
-                              "x": 1.0,
-                              "y": 1.0,
-                              "z": 1.0
-                            },
-                            "rotation": {
-                              "x": 0.0,
-                              "y": 0.0,
-                              "z": 0.0,
-                              "w": 1.0
-                            }
+                            "value": "Cyan"
                           }
                         }
                       },
@@ -678,7 +665,22 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "value": "Cyan"
+                            "position": {
+                              "x": 1.0,
+                              "y": 3.0,
+                              "z": 0.0
+                            },
+                            "rotation": {
+                              "x": 0.0,
+                              "y": 0.0,
+                              "z": 0.0,
+                              "w": 1.0
+                            },
+                            "scale": {
+                              "x": 1.0,
+                              "y": 1.0,
+                              "z": 1.0
+                            }
                           }
                         }
                       }
@@ -711,22 +713,7 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "position": {
-                              "x": 0.0,
-                              "y": 4.0,
-                              "z": 0.0
-                            },
-                            "scale": {
-                              "x": 1.0,
-                              "y": 1.0,
-                              "z": 1.0
-                            },
-                            "rotation": {
-                              "x": 0.0,
-                              "y": 0.0,
-                              "z": 0.0,
-                              "w": 1.0
-                            }
+                            "value": "White"
                           }
                         }
                       },
@@ -735,7 +722,22 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "value": "White"
+                            "position": {
+                              "x": 0.0,
+                              "y": 4.0,
+                              "z": 0.0
+                            },
+                            "rotation": {
+                              "x": 0.0,
+                              "y": 0.0,
+                              "z": 0.0,
+                              "w": 1.0
+                            },
+                            "scale": {
+                              "x": 1.0,
+                              "y": 1.0,
+                              "z": 1.0
+                            }
                           }
                         }
                       }
@@ -768,22 +770,7 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "position": {
-                              "x": 1.0,
-                              "y": 2.0,
-                              "z": 0.0
-                            },
-                            "scale": {
-                              "x": 1.0,
-                              "y": 1.0,
-                              "z": 1.0
-                            },
-                            "rotation": {
-                              "x": 0.0,
-                              "y": 0.0,
-                              "z": 0.0,
-                              "w": 1.0
-                            }
+                            "value": "Blue1"
                           }
                         }
                       },
@@ -792,7 +779,22 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "value": "Blue1"
+                            "position": {
+                              "x": 1.0,
+                              "y": 2.0,
+                              "z": 0.0
+                            },
+                            "rotation": {
+                              "x": 0.0,
+                              "y": 0.0,
+                              "z": 0.0,
+                              "w": 1.0
+                            },
+                            "scale": {
+                              "x": 1.0,
+                              "y": 1.0,
+                              "z": 1.0
+                            }
                           }
                         }
                       }
@@ -825,22 +827,7 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "position": {
-                              "x": 1.0,
-                              "y": 1.0,
-                              "z": 0.0
-                            },
-                            "scale": {
-                              "x": 1.0,
-                              "y": 1.0,
-                              "z": 1.0
-                            },
-                            "rotation": {
-                              "x": 0.0,
-                              "y": 0.0,
-                              "z": 0.0,
-                              "w": 1.0
-                            }
+                            "value": "Blue2"
                           }
                         }
                       },
@@ -849,7 +836,22 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "value": "Blue2"
+                            "position": {
+                              "x": 1.0,
+                              "y": 1.0,
+                              "z": 0.0
+                            },
+                            "rotation": {
+                              "x": 0.0,
+                              "y": 0.0,
+                              "z": 0.0,
+                              "w": 1.0
+                            },
+                            "scale": {
+                              "x": 1.0,
+                              "y": 1.0,
+                              "z": 1.0
+                            }
                           }
                         }
                       }
@@ -882,22 +884,7 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "position": {
-                              "x": 1.0,
-                              "y": 0.0,
-                              "z": 0.0
-                            },
-                            "scale": {
-                              "x": 1.0,
-                              "y": 1.0,
-                              "z": 1.0
-                            },
-                            "rotation": {
-                              "x": 0.0,
-                              "y": 0.0,
-                              "z": 0.0,
-                              "w": 1.0
-                            }
+                            "value": "Blue3"
                           }
                         }
                       },
@@ -906,7 +893,22 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "value": "Blue3"
+                            "position": {
+                              "x": 1.0,
+                              "y": 0.0,
+                              "z": 0.0
+                            },
+                            "rotation": {
+                              "x": 0.0,
+                              "y": 0.0,
+                              "z": 0.0,
+                              "w": 1.0
+                            },
+                            "scale": {
+                              "x": 1.0,
+                              "y": 1.0,
+                              "z": 1.0
+                            }
                           }
                         }
                       }
@@ -939,22 +941,7 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "position": {
-                              "x": 0.0,
-                              "y": 0.0,
-                              "z": 0.0
-                            },
-                            "scale": {
-                              "x": 1.0,
-                              "y": 1.0,
-                              "z": 1.0
-                            },
-                            "rotation": {
-                              "x": 0.0,
-                              "y": 0.0,
-                              "z": 0.0,
-                              "w": 1.0
-                            }
+                            "value": "Grey4"
                           }
                         }
                       },
@@ -963,7 +950,22 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "value": "Grey4"
+                            "position": {
+                              "x": 0.0,
+                              "y": 0.0,
+                              "z": 0.0
+                            },
+                            "rotation": {
+                              "x": 0.0,
+                              "y": 0.0,
+                              "z": 0.0,
+                              "w": 1.0
+                            },
+                            "scale": {
+                              "x": 1.0,
+                              "y": 1.0,
+                              "z": 1.0
+                            }
                           }
                         }
                       }
@@ -996,22 +998,7 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "position": {
-                              "x": 0.0,
-                              "y": 1.0,
-                              "z": 0.0
-                            },
-                            "scale": {
-                              "x": 1.0,
-                              "y": 1.0,
-                              "z": 1.0
-                            },
-                            "rotation": {
-                              "x": 0.0,
-                              "y": 0.0,
-                              "z": 0.0,
-                              "w": 1.0
-                            }
+                            "value": "Grey3"
                           }
                         }
                       },
@@ -1020,7 +1007,22 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "value": "Grey3"
+                            "position": {
+                              "x": 0.0,
+                              "y": 1.0,
+                              "z": 0.0
+                            },
+                            "rotation": {
+                              "x": 0.0,
+                              "y": 0.0,
+                              "z": 0.0,
+                              "w": 1.0
+                            },
+                            "scale": {
+                              "x": 1.0,
+                              "y": 1.0,
+                              "z": 1.0
+                            }
                           }
                         }
                       }
@@ -1053,22 +1055,7 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "position": {
-                              "x": 0.0,
-                              "y": 2.0,
-                              "z": 0.0
-                            },
-                            "scale": {
-                              "x": 1.0,
-                              "y": 1.0,
-                              "z": 1.0
-                            },
-                            "rotation": {
-                              "x": 0.0,
-                              "y": 0.0,
-                              "z": 0.0,
-                              "w": 1.0
-                            }
+                            "value": "Grey2"
                           }
                         }
                       },
@@ -1077,7 +1064,22 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "value": "Grey2"
+                            "position": {
+                              "x": 0.0,
+                              "y": 2.0,
+                              "z": 0.0
+                            },
+                            "rotation": {
+                              "x": 0.0,
+                              "y": 0.0,
+                              "z": 0.0,
+                              "w": 1.0
+                            },
+                            "scale": {
+                              "x": 1.0,
+                              "y": 1.0,
+                              "z": 1.0
+                            }
                           }
                         }
                       }
@@ -1110,22 +1112,7 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "position": {
-                              "x": 0.0,
-                              "y": 3.0,
-                              "z": 0.0
-                            },
-                            "scale": {
-                              "x": 1.0,
-                              "y": 1.0,
-                              "z": 1.0
-                            },
-                            "rotation": {
-                              "x": 0.0,
-                              "y": 0.0,
-                              "z": 0.0,
-                              "w": 1.0
-                            }
+                            "value": "Grey1"
                           }
                         }
                       },
@@ -1134,7 +1121,22 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "value": "Grey1"
+                            "position": {
+                              "x": 0.0,
+                              "y": 3.0,
+                              "z": 0.0
+                            },
+                            "rotation": {
+                              "x": 0.0,
+                              "y": 0.0,
+                              "z": 0.0,
+                              "w": 1.0
+                            },
+                            "scale": {
+                              "x": 1.0,
+                              "y": 1.0,
+                              "z": 1.0
+                            }
                           }
                         }
                       }
@@ -1157,22 +1159,7 @@
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
-                    "position": {
-                      "x": 0.0,
-                      "y": 0.0,
-                      "z": 0.0
-                    },
-                    "scale": {
-                      "x": 1.0,
-                      "y": 1.0,
-                      "z": 1.0
-                    },
-                    "rotation": {
-                      "x": 0.0,
-                      "y": 0.0,
-                      "z": 0.0,
-                      "w": 1.0
-                    }
+                    "value": "Point Lights"
                   }
                 }
               },
@@ -1181,7 +1168,22 @@
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
-                    "value": "Point Lights"
+                    "position": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0
+                    },
+                    "rotation": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 1.0
+                    },
+                    "scale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    }
                   }
                 }
               }
@@ -1228,22 +1230,7 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "position": {
-                              "x": 0.0,
-                              "y": 1.5950000286102296,
-                              "z": -1.6649999618530274
-                            },
-                            "scale": {
-                              "x": 0.10000000149011612,
-                              "y": 0.10000000149011612,
-                              "z": 0.10000000149011612
-                            },
-                            "rotation": {
-                              "x": 0.0,
-                              "y": 0.0,
-                              "z": 0.0,
-                              "w": 1.0
-                            }
+                            "value": "Light"
                           }
                         }
                       },
@@ -1252,7 +1239,22 @@
                         "ptr_wrapper": {
                           "valid": 1,
                           "data": {
-                            "value": "Light"
+                            "position": {
+                              "x": 0.0,
+                              "y": 1.5950000286102296,
+                              "z": -1.6649999618530274
+                            },
+                            "rotation": {
+                              "x": 0.0,
+                              "y": 0.0,
+                              "z": 0.0,
+                              "w": 1.0
+                            },
+                            "scale": {
+                              "x": 0.10000000149011612,
+                              "y": 0.10000000149011612,
+                              "z": 0.10000000149011612
+                            }
                           }
                         }
                       }
@@ -1275,13 +1277,9 @@
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
-                    "shape_type": 1,
-                    "size": {
-                      "x": 1.0,
-                      "y": 1.0,
-                      "z": 1.0
-                    },
-                    "radius": 0.5
+                    "body_type": 0,
+                    "mass": 10.0,
+                    "constraints": 0
                   }
                 }
               },
@@ -1290,8 +1288,14 @@
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
-                    "mass": 10.0,
-                    "constraints": 0
+                    "shape_type": 1,
+                    "size": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "radius": 0.5,
+                    "height": 1.0
                   }
                 }
               },
@@ -1314,22 +1318,7 @@
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
-                    "position": {
-                      "x": -1.4500000476837159,
-                      "y": 1.5049999952316285,
-                      "z": -2.990000009536743
-                    },
-                    "scale": {
-                      "x": 1.0,
-                      "y": 1.0,
-                      "z": 1.0
-                    },
-                    "rotation": {
-                      "x": 0.0,
-                      "y": 0.0,
-                      "z": 0.0,
-                      "w": 1.0
-                    }
+                    "value": "Sphere"
                   }
                 }
               },
@@ -1338,7 +1327,22 @@
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
-                    "value": "Sphere"
+                    "position": {
+                      "x": -1.4500000476837159,
+                      "y": 1.5049999952316285,
+                      "z": -2.990000009536743
+                    },
+                    "rotation": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 1.0
+                    },
+                    "scale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    }
                   }
                 }
               }
@@ -1373,22 +1377,7 @@
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
-                    "position": {
-                      "x": 0.0,
-                      "y": 0.0,
-                      "z": 0.0
-                    },
-                    "scale": {
-                      "x": 1.0,
-                      "y": 1.0,
-                      "z": 1.0
-                    },
-                    "rotation": {
-                      "x": 0.0,
-                      "y": 0.0,
-                      "z": 0.0,
-                      "w": 1.0
-                    }
+                    "value": "Scene Lighting"
                   }
                 }
               },
@@ -1397,7 +1386,22 @@
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
-                    "value": "Scene Lighting"
+                    "position": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0
+                    },
+                    "rotation": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 1.0
+                    },
+                    "scale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    }
                   }
                 }
               }
@@ -1430,22 +1434,7 @@
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
-                    "position": {
-                      "x": 1.4249999523162842,
-                      "y": 1.4850000143051148,
-                      "z": -2.990000009536743
-                    },
-                    "scale": {
-                      "x": 1.0,
-                      "y": 1.0,
-                      "z": 1.0
-                    },
-                    "rotation": {
-                      "x": 0.0,
-                      "y": 0.0,
-                      "z": 0.0,
-                      "w": 1.0
-                    }
+                    "value": "Sphere"
                   }
                 }
               },
@@ -1454,7 +1443,22 @@
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
-                    "value": "Sphere"
+                    "position": {
+                      "x": 1.4249999523162842,
+                      "y": 1.4850000143051148,
+                      "z": -2.990000009536743
+                    },
+                    "rotation": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 1.0
+                    },
+                    "scale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    }
                   }
                 }
               }
@@ -1483,22 +1487,7 @@
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
-                    "position": {
-                      "x": 0.0,
-                      "y": 0.0,
-                      "z": -2.674999952316284
-                    },
-                    "scale": {
-                      "x": 1.0,
-                      "y": 1.0,
-                      "z": 1.0
-                    },
-                    "rotation": {
-                      "x": 0.0,
-                      "y": 0.0,
-                      "z": 0.0,
-                      "w": 1.0
-                    }
+                    "value": "RetroTV"
                   }
                 }
               },
@@ -1507,7 +1496,22 @@
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
-                    "value": "RetroTV"
+                    "position": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": -2.674999952316284
+                    },
+                    "rotation": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 1.0
+                    },
+                    "scale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    }
                   }
                 }
               }
@@ -1536,22 +1540,7 @@
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
-                    "position": {
-                      "x": -2.7149999141693117,
-                      "y": 0.33000001311302187,
-                      "z": 0.0
-                    },
-                    "scale": {
-                      "x": 1.0,
-                      "y": 1.0,
-                      "z": 1.0
-                    },
-                    "rotation": {
-                      "x": 0.0,
-                      "y": 0.0,
-                      "z": 0.0,
-                      "w": 1.0
-                    }
+                    "value": "nodec"
                   }
                 }
               },
@@ -1560,7 +1549,22 @@
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
-                    "value": "nodec"
+                    "position": {
+                      "x": -2.7149999141693117,
+                      "y": 0.33000001311302187,
+                      "z": 0.0
+                    },
+                    "rotation": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 1.0
+                    },
+                    "scale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    }
                   }
                 }
               }
@@ -1595,22 +1599,7 @@
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
-                    "position": {
-                      "x": 0.0,
-                      "y": 0.0,
-                      "z": 0.0
-                    },
-                    "scale": {
-                      "x": 1.0,
-                      "y": 1.0,
-                      "z": 1.0
-                    },
-                    "rotation": {
-                      "x": 0.3583679795265198,
-                      "y": 9.019331947968113e-9,
-                      "z": -2.3496159684555097e-8,
-                      "w": 0.9335803985595703
-                    }
+                    "value": "Light"
                   }
                 }
               },
@@ -1619,7 +1608,22 @@
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
-                    "value": "Light"
+                    "position": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0
+                    },
+                    "rotation": {
+                      "x": 0.3583679795265198,
+                      "y": 9.019331947968113e-9,
+                      "z": -2.3496159684555097e-8,
+                      "w": 0.9335803985595703
+                    },
+                    "scale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    }
                   }
                 }
               }
@@ -1685,22 +1689,7 @@
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
-                    "position": {
-                      "x": 0.26400259137153628,
-                      "y": 2.8119661808013918,
-                      "z": -8.169958114624024
-                    },
-                    "scale": {
-                      "x": 1.0,
-                      "y": 1.0,
-                      "z": 1.0
-                    },
-                    "rotation": {
-                      "x": 0.0911877229809761,
-                      "y": -0.007229428738355637,
-                      "z": -0.007941443473100663,
-                      "w": 0.9957781434059143
-                    }
+                    "value": "Camera"
                   }
                 }
               },
@@ -1709,7 +1698,22 @@
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
-                    "value": "Camera"
+                    "position": {
+                      "x": 0.26400259137153628,
+                      "y": 2.8119661808013918,
+                      "z": -8.169958114624024
+                    },
+                    "rotation": {
+                      "x": 0.0911877229809761,
+                      "y": -0.007229428738355637,
+                      "z": -0.007941443473100663,
+                      "w": 0.9957781434059143
+                    },
+                    "scale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    }
                   }
                 }
               }
@@ -1728,13 +1732,9 @@
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
-                    "shape_type": 0,
-                    "size": {
-                      "x": 1.0,
-                      "y": 1.0,
-                      "z": 1.0
-                    },
-                    "radius": 0.5
+                    "body_type": 1,
+                    "mass": 1.0,
+                    "constraints": 0
                   }
                 }
               },
@@ -1743,8 +1743,14 @@
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
-                    "mass": 0.0,
-                    "constraints": 0
+                    "shape_type": 0,
+                    "size": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "radius": 0.5,
+                    "height": 1.0
                   }
                 }
               },
@@ -1767,22 +1773,7 @@
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
-                    "position": {
-                      "x": 0.0,
-                      "y": -0.5,
-                      "z": 0.0
-                    },
-                    "scale": {
-                      "x": 20.0,
-                      "y": 1.0,
-                      "z": 20.0
-                    },
-                    "rotation": {
-                      "x": 0.0,
-                      "y": 0.0,
-                      "z": 0.0,
-                      "w": 1.0
-                    }
+                    "value": "Plane"
                   }
                 }
               },
@@ -1791,7 +1782,22 @@
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
-                    "value": "Plane"
+                    "position": {
+                      "x": 0.0,
+                      "y": -0.5,
+                      "z": 0.0
+                    },
+                    "rotation": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 1.0
+                    },
+                    "scale": {
+                      "x": 20.0,
+                      "y": 1.0,
+                      "z": 20.0
+                    }
                   }
                 }
               }
@@ -1824,22 +1830,7 @@
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
-                    "position": {
-                      "x": 0.0,
-                      "y": 2.569999933242798,
-                      "z": 0.0
-                    },
-                    "scale": {
-                      "x": 1.0,
-                      "y": 1.0,
-                      "z": 1.0
-                    },
-                    "rotation": {
-                      "x": 0.35355344414711,
-                      "y": -0.3535534143447876,
-                      "z": -0.14644664525985719,
-                      "w": 0.8535533547401428
-                    }
+                    "value": "Cube"
                   }
                 }
               },
@@ -1848,7 +1839,22 @@
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
-                    "value": "Cube"
+                    "position": {
+                      "x": 0.0,
+                      "y": 2.569999933242798,
+                      "z": 0.0
+                    },
+                    "rotation": {
+                      "x": 0.35355344414711,
+                      "y": -0.3535534143447876,
+                      "z": -0.14644664525985719,
+                      "w": 0.8535533547401428
+                    },
+                    "scale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    }
                   }
                 }
               }
@@ -1887,22 +1893,7 @@
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
-                    "position": {
-                      "x": -5.489999771118164,
-                      "y": 3.4049999713897707,
-                      "z": 0.0
-                    },
-                    "scale": {
-                      "x": 1.0,
-                      "y": 1.0,
-                      "z": 1.0
-                    },
-                    "rotation": {
-                      "x": 0.0,
-                      "y": 0.0,
-                      "z": 0.0,
-                      "w": 1.0
-                    }
+                    "value": "Text"
                   }
                 }
               },
@@ -1911,7 +1902,22 @@
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
-                    "value": "Text"
+                    "position": {
+                      "x": -5.489999771118164,
+                      "y": 3.4049999713897707,
+                      "z": 0.0
+                    },
+                    "rotation": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 1.0
+                    },
+                    "scale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    }
                   }
                 }
               }
@@ -1942,22 +1948,7 @@
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
-                    "position": {
-                      "x": 0.0,
-                      "y": 0.0,
-                      "z": 0.0
-                    },
-                    "scale": {
-                      "x": 1.0,
-                      "y": 1.0,
-                      "z": 1.0
-                    },
-                    "rotation": {
-                      "x": 0.0,
-                      "y": 0.0,
-                      "z": 0.0,
-                      "w": 1.0
-                    }
+                    "value": "Audio"
                   }
                 }
               },
@@ -1966,7 +1957,22 @@
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
-                    "value": "Audio"
+                    "position": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0
+                    },
+                    "rotation": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 1.0
+                    },
+                    "scale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    }
                   }
                 }
               }
@@ -1997,22 +2003,7 @@
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
-                    "position": {
-                      "x": 0.0,
-                      "y": 3.0,
-                      "z": 5.0
-                    },
-                    "scale": {
-                      "x": 1.0,
-                      "y": 1.0,
-                      "z": 1.0
-                    },
-                    "rotation": {
-                      "x": 0.0,
-                      "y": 0.0,
-                      "z": 0.0,
-                      "w": 1.0
-                    }
+                    "value": "Test Image"
                   }
                 }
               },
@@ -2021,7 +2012,22 @@
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
-                    "value": "Test Image"
+                    "position": {
+                      "x": 0.0,
+                      "y": 3.0,
+                      "z": 5.0
+                    },
+                    "rotation": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 1.0
+                    },
+                    "scale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    }
                   }
                 }
               }
@@ -2040,13 +2046,9 @@
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
-                    "shape_type": 0,
-                    "size": {
-                      "x": 1.0,
-                      "y": 1.0,
-                      "z": 1.0
-                    },
-                    "radius": 0.5
+                    "body_type": 0,
+                    "mass": 10.0,
+                    "constraints": 0
                   }
                 }
               },
@@ -2055,8 +2057,14 @@
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
-                    "mass": 10.0,
-                    "constraints": 0
+                    "shape_type": 0,
+                    "size": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "radius": 0.5,
+                    "height": 1.0
                   }
                 }
               },
@@ -2079,22 +2087,7 @@
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
-                    "position": {
-                      "x": -2.0,
-                      "y": 2.569999933242798,
-                      "z": -1.3450000286102296
-                    },
-                    "scale": {
-                      "x": 1.0,
-                      "y": 1.0,
-                      "z": 1.0
-                    },
-                    "rotation": {
-                      "x": 0.21954278647899629,
-                      "y": -0.402608186006546,
-                      "z": -0.09285818040370941,
-                      "w": 0.883790135383606
-                    }
+                    "value": "Cube"
                   }
                 }
               },
@@ -2103,7 +2096,22 @@
                 "ptr_wrapper": {
                   "valid": 1,
                   "data": {
-                    "value": "Cube"
+                    "position": {
+                      "x": -2.0,
+                      "y": 2.569999933242798,
+                      "z": -1.3450000286102296
+                    },
+                    "rotation": {
+                      "x": 0.21954278647899629,
+                      "y": -0.402608186006546,
+                      "z": -0.09285818040370941,
+                      "w": 0.883790135383606
+                    },
+                    "scale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    }
                   }
                 }
               }

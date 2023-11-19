@@ -2,7 +2,7 @@
 
 [English](./README.md) | 日本語
 
-本リポジトリは、ゲームエンジン[`nodec_game_engine`](https://github.com/ContentsViewer/nodec_game_engine)を使ってアプリを作成するためのテンプレートプロジェクトです。
+本リポジトリは、ゲームエンジン[`nodec_game_engine`](https://github.com/nodec-project/nodec_game_engine)を使ってアプリを作成するためのテンプレートプロジェクトです。
 
 ![](./gallery/screenshot.png)
 
