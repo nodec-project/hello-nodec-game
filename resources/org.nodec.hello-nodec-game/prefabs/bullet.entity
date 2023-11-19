@@ -21,7 +21,8 @@
               "y": 1.0,
               "z": 1.0
             },
-            "radius": 0.05
+            "radius": 0.05,
+            "height": 1.0
           }
         }
       },
@@ -31,6 +32,7 @@
         "ptr_wrapper": {
           "valid": 1,
           "data": {
+            "body_type": 0,
             "mass": 10.0,
             "constraints": 0
           }

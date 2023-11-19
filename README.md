@@ -2,7 +2,7 @@
 
 English | [日本語](./README_jp.md)
 
-This repository is a template project for creating applications with [`nodec_game_engine`](https://github.com/ContentsViewer/nodec_game_engine).
+This repository is a template project for creating applications with [`nodec_game_engine`](https://github.com/nodec-project/nodec_game_engine).
 
 ![](./gallery/screenshot.png)
 
