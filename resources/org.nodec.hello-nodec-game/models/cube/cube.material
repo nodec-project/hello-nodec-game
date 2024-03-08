@@ -36,17 +36,7 @@
       {
         "key": "albedo",
         "value": {
-          "texture": "org.nodec.hello-nodec-game/textures/proto/prototype_512x512_grey1.png",
-          "sampler": {
-            "filter_mode": 1,
-            "wrap_mode": 0
-          }
-        }
-      },
-      {
-        "key": "normal",
-        "value": {
-          "texture": "org.nodec.hello-nodec-game/textures/proto/prototype_512x512_normal.png",
+          "texture": "org.nodec.hello-nodec-game/textures/proto/prototype_512x512_blue1.png",
           "sampler": {
             "filter_mode": 1,
             "wrap_mode": 0

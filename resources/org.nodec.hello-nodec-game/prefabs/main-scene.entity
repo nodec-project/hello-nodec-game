@@ -1939,7 +1939,9 @@
                   "data": {
                     "clip": "org.nodec.hello-nodec-game/audios/dodon.wav",
                     "is_playing": true,
-                    "loop": false
+                    "loop": false,
+                    "volume": 1.0,
+                    "is_spatial": false
                   }
                 }
               },
