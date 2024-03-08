@@ -25,6 +25,7 @@
           }
         }
       }
-    ]
+    ],
+    "is_transparent": false
   }
 }
