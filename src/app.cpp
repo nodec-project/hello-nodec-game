@@ -18,13 +18,14 @@
 #    include "editors/player_editor.hpp"
 #endif
 
-namespace hello_nodec_game {
+namespace app {
 
-class HelloNodecGameApplication {
+class MainApplication {
 public:
-    HelloNodecGameApplication(nodec_application::Application &app)
-        // Get engine services.
-        : world_(app.get_service<nodec_world::World>()),
+    MainApplication(nodec_application::Application &app)
+        : logger_(nodec::logging::get_logger("app.main")),
+          // Get engine services.
+          world_(app.get_service<nodec_world::World>()),
           screen_(app.get_service<nodec_screen::Screen>()),
           physics_system_(app.get_service<nodec_physics::systems::PhysicsSystem>()),
           resources_(app.get_service<nodec_resources::Resources>()),
@@ -42,10 +43,10 @@ public:
         using namespace nodec_input::keyboard;
         using namespace nodec_input::mouse;
         using namespace nodec_physics::systems;
-        using namespace systems;
-        using namespace components;
+        using namespace app::systems;
+        using namespace app::components;
 
-        logging::info(__FILE__, __LINE__) << "[HelloNodecGameApplication::HelloNodecGameApplication] >>> Hello :)";
+        logger_->info(__FILE__, __LINE__) << "Hello :)";
 
         // --- Get input devices ---
         auto keyboard = input_devices_.get_available_devices<Keyboard>().front();
@@ -77,12 +78,24 @@ public:
         {
             scene_serialization_.register_component<Bullet>();
             scene_serialization_.register_component<PlayerControl>();
+
+            scene_serialization_.register_component<LightParticleSystemEnabler>();
+            scene_serialization_.register_component<BulletSystemEnabler>();
+            scene_serialization_.register_component<PlayerControlSystemEnabler>();
         }
 
         {
-            light_particle = std::make_unique<LightParticleSystem>(world_, resources_.registry(), scene_serialization_);
-            bullet_system_ = std::make_unique<BulletSystem>(world_, physics_system_);
-            player_control_system_ = std::make_unique<PlayerControlSystem>(world_, resources_, keyboard, mouse, scene_serialization_);
+            world_.system_registry().register_system<LightParticleSystem, LightParticleSystemEnabler>([=](){
+                return std::make_unique<LightParticleSystem>(world_, resources_.registry(), scene_serialization_);
+            });
+
+            world_.system_registry().register_system<BulletSystem, BulletSystemEnabler>([=](){
+                return std::make_unique<BulletSystem>(world_, physics_system_);
+            });
+
+            world_.system_registry().register_system<PlayerControlSystem, PlayerControlSystemEnabler>([=](){
+                return std::make_unique<PlayerControlSystem>(world_, resources_, keyboard, mouse, scene_serialization_);
+            });
         }
 
 #ifdef EDITOR_MODE
@@ -94,12 +107,16 @@ public:
 
             editor.component_registry().register_component<PlayerControl, PlayerControlEditor>("Player Control");
             editor.component_registry().register_component<Bullet>("Bullet");
+
+            editor.component_registry().register_component<LightParticleSystemEnabler>("Light Particle System Enabler");
+            editor.component_registry().register_component<BulletSystemEnabler>("Bullet System Enabler");
+            editor.component_registry().register_component<PlayerControlSystemEnabler>("Player Control System Enabler");
         }
 #endif
     }
 
-    ~HelloNodecGameApplication() {
-        nodec::logging::info(__FILE__, __LINE__) << "[HelloNodecGameApplication::~HelloNodecGameApplication] >>> See you ;)";
+    ~MainApplication() {
+        logger_->info(__FILE__, __LINE__) << "See you ;)";
     }
 
 private:
@@ -110,7 +127,7 @@ private:
         using namespace nodec_input::keyboard;
         using namespace nodec_input::mouse;
 
-        logging::info(__FILE__, __LINE__) << "[HelloNodecGameApplication::on_initialized]";
+        logger_->info(__FILE__, __LINE__) << "on_initialized";
 
         // Load the main scene.
         {
@@ -122,6 +139,8 @@ private:
     }
 
 private:
+    std::shared_ptr<nodec::logging::Logger> logger_;
+
     // --- Game engine services ---
     nodec_world::World &world_;
     nodec_screen::Screen &screen_;
@@ -137,11 +156,11 @@ private:
     std::unique_ptr<systems::BulletSystem> bullet_system_;
 };
 
-} // namespace hello_nodec_game
+} // namespace app
 
 void nodec_application::on_configure(nodec_application::Application &app) {
-    using namespace hello_nodec_game;
+    using namespace app;
 
     // Make this application instance, and append it to the nodec application.
-    app.add_service<HelloNodecGameApplication>(std::make_shared<HelloNodecGameApplication>(app));
+    app.add_service<MainApplication>(std::make_shared<MainApplication>(app));
 }

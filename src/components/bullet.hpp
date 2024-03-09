@@ -1,9 +1,9 @@
-#ifndef HELLO_NODEC_GAME__COMPONENTS__BULLET_HPP_
-#define HELLO_NODEC_GAME__COMPONENTS__BULLET_HPP_
+#ifndef APP__COMPONENTS__BULLET_HPP_
+#define APP__COMPONENTS__BULLET_HPP_
 
 #include <nodec_scene_serialization/serializable_component.hpp>
 
-namespace hello_nodec_game {
+namespace app {
 namespace components {
 
 class Bullet : public nodec_scene_serialization::BaseSerializableComponent {
@@ -19,7 +19,7 @@ public:
 };
 
 } // namespace components
-} // namespace hello_nodec_game
+} // namespace app
 
-NODEC_SCENE_REGISTER_SERIALIZABLE_COMPONENT(hello_nodec_game::components::Bullet)
+NODEC_SCENE_REGISTER_SERIALIZABLE_COMPONENT(app::components::Bullet)
 #endif

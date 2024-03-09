@@ -1,5 +1,5 @@
-#ifndef HELLO_NODEC_GAME__EDITORS__PLAYER_EDITOR_HPP_
-#define HELLO_NODEC_GAME__EDITORS__PLAYER_EDITOR_HPP_
+#ifndef APP__EDITORS__PLAYER_EDITOR_HPP_
+#define APP__EDITORS__PLAYER_EDITOR_HPP_
 
 #include <imgui.h>
 
@@ -7,7 +7,7 @@
 
 #include "../components/player.hpp"
 
-namespace hello_nodec_game {
+namespace app {
 namespace editors {
 
 class PlayerControlEditor
@@ -20,5 +20,5 @@ public:
 };
 
 } // namespace editors
-} // namespace hello_nodec_game
+} // namespace app
 #endif
