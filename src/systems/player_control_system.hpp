@@ -1,5 +1,5 @@
-#ifndef HELLO_NODEC_GAME__SYSTEMS__PLAYER_CONTROL_SYSTEM_HPP_
-#define HELLO_NODEC_GAME__SYSTEMS__PLAYER_CONTROL_SYSTEM_HPP_
+#ifndef APP__SYSTEMS__PLAYER_CONTROL_SYSTEM_HPP_
+#define APP__SYSTEMS__PLAYER_CONTROL_SYSTEM_HPP_
 
 #include <nodec/math/gfx.hpp>
 #include <nodec/math/math.hpp>
@@ -9,12 +9,30 @@
 #include <nodec_physics/components/impluse_force.hpp>
 #include <nodec_resources/resources.hpp>
 #include <nodec_scene_serialization/scene_serialization.hpp>
+#include <nodec_scene_serialization/serializable_component.hpp>
 #include <nodec_world/world.hpp>
 
 #include "../components/bullet.hpp"
 #include "../components/player.hpp"
 
-namespace hello_nodec_game {
+namespace app {
+namespace components {
+struct PlayerControlSystemEnabler : nodec_scene_serialization::BaseSerializableComponent {
+    PlayerControlSystemEnabler()
+        : BaseSerializableComponent{this} {
+    }
+
+    template<class Archive>
+    void serialize(Archive &archive) {
+    }
+};
+
+} // namespace components
+} // namespace app
+
+NODEC_SCENE_REGISTER_SERIALIZABLE_COMPONENT(app::components::PlayerControlSystemEnabler)
+
+namespace app {
 namespace systems {
 
 class PlayerControlSystem {
@@ -33,47 +51,52 @@ public:
         using namespace nodec_scene::components;
         using namespace components;
 
-        world.stepped().connect([&](nodec_world::World &world) { on_stepped(world); });
-        keyboard->key_event().connect([&](const nodec_input::keyboard::KeyEvent &event) {
-            // logging::InfoStream(__FILE__, __LINE__) << event;
-            if (event.key == Key::W) {
-                w_pressed = (event.type == KeyEvent::Type::Press);
-            }
-            if (event.key == Key::A) {
-                a_pressed = (event.type == KeyEvent::Type::Press);
-            }
-            if (event.key == Key::S) {
-                s_pressed = (event.type == KeyEvent::Type::Press);
-            }
-            if (event.key == Key::D) {
-                d_pressed = (event.type == KeyEvent::Type::Press);
-            }
-        });
+        connections_.push_back(
+            world.stepped().connect([&](nodec_world::World &world) { on_stepped(world); }));
 
-        mouse->mouse_event().connect([&](const nodec_input::mouse::MouseEvent &event) {
-            // logging::InfoStream(__FILE__, __LINE__) << event;
-            static Vector2i prev_pos;
+        connections_.push_back(
+            keyboard->key_event().connect([&](const nodec_input::keyboard::KeyEvent &event) {
+                // logging::InfoStream(__FILE__, __LINE__) << event;
+                if (event.key == Key::W) {
+                    w_pressed = (event.type == KeyEvent::Type::Press);
+                }
+                if (event.key == Key::A) {
+                    a_pressed = (event.type == KeyEvent::Type::Press);
+                }
+                if (event.key == Key::S) {
+                    s_pressed = (event.type == KeyEvent::Type::Press);
+                }
+                if (event.key == Key::D) {
+                    d_pressed = (event.type == KeyEvent::Type::Press);
+                }
+            }));
 
-            if (event.type == MouseEvent::Type::Press && event.button == MouseButton::Right) {
-                prev_pos = event.position;
-            }
-            if (event.type == MouseEvent::Type::Move && (event.buttons & MouseButton::Right)) {
-                rotation_delta += event.position - prev_pos;
-                prev_pos = event.position;
-            }
+        connections_.push_back(
+            mouse->mouse_event().connect([&](const nodec_input::mouse::MouseEvent &event) {
+                // logging::InfoStream(__FILE__, __LINE__) << event;
+                static Vector2i prev_pos;
 
-            if (event.button & MouseButton::Left) {
-                left_pressed_ = (event.type == MouseEvent::Type::Press);
-            }
-        });
+                if (event.type == MouseEvent::Type::Press && event.button == MouseButton::Right) {
+                    prev_pos = event.position;
+                }
+                if (event.type == MouseEvent::Type::Move && (event.buttons & MouseButton::Right)) {
+                    rotation_delta += event.position - prev_pos;
+                    prev_pos = event.position;
+                }
 
-        world.initialized().connect([=](nodec_world::World &world) {
-            // Resources module is invalid in the configuration phase.
-            bullet_prototype_ = resources_.registry().get_resource_direct<SerializableEntity>("org.nodec.hello-nodec-game/prefabs/bullet.entity");
-            if (!bullet_prototype_) {
-                logging::warn(__FILE__, __LINE__) << "Failed to get bullet scene.";
-            }
-        });
+                if (event.button & MouseButton::Left) {
+                    left_pressed_ = (event.type == MouseEvent::Type::Press);
+                }
+            }));
+
+        connections_.push_back(
+            world.initialized().connect([=](nodec_world::World &world) {
+                // Resources module is invalid in the configuration phase.
+                bullet_prototype_ = resources_.registry().get_resource_direct<SerializableEntity>("org.nodec.hello-nodec-game/prefabs/bullet.entity");
+                if (!bullet_prototype_) {
+                    logging::warn(__FILE__, __LINE__) << "Failed to get bullet scene.";
+                }
+            }));
     }
 
 private:
@@ -172,9 +195,11 @@ private:
     float prev_fire_time_{0.0f};
 
     std::shared_ptr<nodec_scene_serialization::SerializableEntity> bullet_prototype_;
+
+    std::vector<nodec::signals::Connection> connections_;
 };
 
 } // namespace systems
-} // namespace hello_nodec_game
+} // namespace app
 
 #endif

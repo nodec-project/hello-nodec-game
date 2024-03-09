@@ -1,12 +1,31 @@
-#ifndef HELLO_NODEC_GAME__SYSTEMS__BULLET_SYSTEM_HPP_
-#define HELLO_NODEC_GAME__SYSTEMS__BULLET_SYSTEM_HPP_
+#ifndef APP__SYSTEMS__BULLET_SYSTEM_HPP_
+#define APP__SYSTEMS__BULLET_SYSTEM_HPP_
 
 #include <nodec_physics/systems/physics_system.hpp>
+#include <nodec_scene_serialization/serializable_component.hpp>
 #include <nodec_world/world.hpp>
 
 #include "../components/bullet.hpp"
 
-namespace hello_nodec_game {
+namespace app {
+namespace components {
+
+struct BulletSystemEnabler : nodec_scene_serialization::BaseSerializableComponent {
+    BulletSystemEnabler()
+        : BaseSerializableComponent{this} {
+    }
+
+    template<class Archive>
+    void serialize(Archive &archive) {
+    }
+};
+
+} // namespace components
+} // namespace app
+
+NODEC_SCENE_REGISTER_SERIALIZABLE_COMPONENT(app::components::BulletSystemEnabler)
+
+namespace app {
 namespace systems {
 
 class BulletSystem {
@@ -15,7 +34,8 @@ class BulletSystem {
 public:
     BulletSystem(nodec_world::World &world, nodec_physics::systems::PhysicsSystem &physics_system)
         : physics_system_(physics_system) {
-        world.stepped().connect([&](nodec_world::World &world) { on_stepped(world); });
+        connections_.push_back(
+            world.stepped().connect([&](nodec_world::World &world) { on_stepped(world); }));
     }
 
 private:
@@ -46,8 +66,10 @@ private:
 
 private:
     nodec_physics::systems::PhysicsSystem &physics_system_;
+
+    std::vector<nodec::signals::Connection> connections_;
 };
 } // namespace systems
-} // namespace hello_nodec_game
+} // namespace app
 
 #endif

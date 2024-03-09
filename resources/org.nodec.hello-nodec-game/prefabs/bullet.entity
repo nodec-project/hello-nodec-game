@@ -3,7 +3,7 @@
     "components": [
       {
         "polymorphic_id": 2147483649,
-        "polymorphic_name": "hello_nodec_game::components::Bullet",
+        "polymorphic_name": "app::components::Bullet",
         "ptr_wrapper": {
           "valid": 1,
           "data": {}
