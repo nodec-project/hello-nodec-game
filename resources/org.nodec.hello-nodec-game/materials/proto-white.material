@@ -2,7 +2,16 @@
   "material": {
     "shader": "org.nodec.game-engine/shaders/pbr-defer",
     "cull_mode": 2,
-    "float_properties": [],
+    "float_properties": [
+      {
+        "key": "metallic",
+        "value": 0
+      },
+      {
+        "key": "roughness",
+        "value": 0.2
+      }
+    ],
     "vector4_properties": [],
     "texture_properties": [
       {

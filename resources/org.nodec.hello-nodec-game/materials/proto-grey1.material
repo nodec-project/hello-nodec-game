@@ -5,11 +5,11 @@
     "float_properties": [
       {
         "key": "metallic",
-        "value": 0.0
+        "value": 0
       },
       {
         "key": "roughness",
-        "value": 0.0
+        "value": 0.2
       }
     ],
     "vector4_properties": [
