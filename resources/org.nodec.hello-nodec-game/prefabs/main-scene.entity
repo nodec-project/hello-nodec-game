@@ -213,15 +213,19 @@
                     "effects": [
                       {
                         "enabled": true,
-                        "material": "org.nodec.game-engine/materials/post-processings/ssao.material"
-                      },
-                      {
-                        "enabled": false,
-                        "material": "org.nodec.game-engine/materials/post-processings/bloom.material"
+                        "material": "org.nodec.game-engine/materials/post-processings/ssao-default.material"
                       },
                       {
                         "enabled": true,
-                        "material": "org.nodec.game-engine/materials/post-processings/hdr.material"
+                        "material": "org.nodec.game-engine/materials/post-processings/ssr-default.material"
+                      },
+                      {
+                        "enabled": true,
+                        "material": "org.nodec.game-engine/materials/post-processings/fog-default.material"
+                      },
+                      {
+                        "enabled": true,
+                        "material": "org.nodec.game-engine/materials/post-processings/hdr-default.material"
                       }
                     ]
                   }
